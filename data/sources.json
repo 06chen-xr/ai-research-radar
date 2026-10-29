@@ -1,7 +1,7 @@
 {
-  "updated_at": null,
+  "updated_at": "2026-10-29T09:12:34Z",
   "source_index": "https://github.com/joeseesun/ai-blog-res/blob/main/AI%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%BA%90-%E5%AE%8C%E6%95%B4%E7%B4%A2%E5%BC%95.md",
-  "note": "Curated English-first registry. Only approved sources are monitored; new upstream entries remain pending review.",
+  "note": "Strict curated allowlist. Upstream personal-blog, official-blog, academic, and AI-safety candidates remain pending until manually approved; generic tool/course sections are not ingested.",
   "sources": [
     {
       "id": "lilian-weng",
@@ -78,7 +78,7 @@
       "description": "Visual guides to transformers and modern language models.",
       "tier": null,
       "enabled": false,
-      "review_status": "not-curated",
+      "review_status": "pending",
       "source_quality": "watchlist",
       "feed_url": null,
       "source_index": "joeseesun/ai-blog-res"
@@ -298,7 +298,7 @@
       "description": "Long-form research discussion and AI safety essays.",
       "tier": null,
       "enabled": false,
-      "review_status": "not-curated",
+      "review_status": "pending",
       "source_quality": "watchlist",
       "feed_url": null,
       "source_index": "joeseesun/ai-blog-res"
@@ -720,7 +720,7 @@
       "description": "Model releases and technical updates.",
       "tier": null,
       "enabled": false,
-      "review_status": "not-curated",
+      "review_status": "pending",
       "source_quality": "watchlist",
       "feed_url": null,
       "source_index": "joeseesun/ai-blog-res"
@@ -740,7 +740,7 @@
       "description": "Enterprise LLM applications and retrieval.",
       "tier": null,
       "enabled": false,
-      "review_status": "not-curated",
+      "review_status": "pending",
       "source_quality": "watchlist",
       "feed_url": null,
       "source_index": "joeseesun/ai-blog-res"
@@ -780,7 +780,7 @@
       "description": "Data, evaluation, and model development.",
       "tier": null,
       "enabled": false,
-      "review_status": "not-curated",
+      "review_status": "pending",
       "source_quality": "watchlist",
       "feed_url": null,
       "source_index": "joeseesun/ai-blog-res"
@@ -800,7 +800,7 @@
       "description": "Open model training and inference infrastructure.",
       "tier": null,
       "enabled": false,
-      "review_status": "not-curated",
+      "review_status": "pending",
       "source_quality": "watchlist",
       "feed_url": null,
       "source_index": "joeseesun/ai-blog-res"
@@ -940,7 +940,7 @@
       "description": "AI research, society, and policy.",
       "tier": null,
       "enabled": false,
-      "review_status": "not-curated",
+      "review_status": "pending",
       "source_quality": "watchlist",
       "feed_url": null,
       "source_index": "joeseesun/ai-blog-res"
@@ -960,7 +960,7 @@
       "description": "Computer science and AI research updates.",
       "tier": null,
       "enabled": false,
-      "review_status": "not-curated",
+      "review_status": "pending",
       "source_quality": "watchlist",
       "feed_url": null,
       "source_index": "joeseesun/ai-blog-res"
@@ -1020,7 +1020,7 @@
       "description": "Interactive explanations of machine learning.",
       "tier": null,
       "enabled": false,
-      "review_status": "not-curated",
+      "review_status": "pending",
       "source_quality": "watchlist",
       "feed_url": null,
       "source_index": "joeseesun/ai-blog-res"
@@ -1765,6 +1765,630 @@
       "source_quality": "core",
       "feed_url": null,
       "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "idx-colah-github-io-befe693",
+      "name": "Colah's Blog",
+      "url": "https://colah.github.io",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "可解释性",
+        "神经网络可视化 回路分析",
+        "流形结构",
+        "研究债务"
+      ],
+      "language": "en",
+      "description": "Anthropic · 可解释性、神经网络可视化",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-ruder-io-795e6aa",
+      "name": "Sebastian Ruder",
+      "url": "https://ruder.io",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "NLP",
+        "多语言模型",
+        "迁移学习 多任务学习",
+        "迁移学习",
+        "NLP前沿"
+      ],
+      "language": "en",
+      "description": "Cohere（前DeepMind） · NLP、多语言模型、迁移学习",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-blog-gregbrockman-com-a52ee66",
+      "name": "Greg Brockman",
+      "url": "https://blog.gregbrockman.com",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "技术领导力",
+        "AI基础设施 技术领导力",
+        "ML转型",
+        "分布式系统"
+      ],
+      "language": "en",
+      "description": "OpenAI · 技术领导力、AI基础设施",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-neelnanda-io-793d37f",
+      "name": "Neel Nanda",
+      "url": "https://neelnanda.io",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "机制可解释性",
+        "逆向工程 Grokking现象",
+        "感应头",
+        "TransformerLens"
+      ],
+      "language": "en",
+      "description": "DeepMind（前Anthropic） · 机制可解释性、逆向工程",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-yitay-net-282003d",
+      "name": "Yi Tay",
+      "url": "https://yitay.net",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "高效Transformer",
+        "架构设计 T5 vs GPT",
+        "归纳偏置",
+        "Scaling"
+      ],
+      "language": "en",
+      "description": "DeepMind · 高效Transformer、架构设计",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-yann-lecun-com-2ad7a3c",
+      "name": "Yann LeCun",
+      "url": "https://yann.lecun.com",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "世界模型",
+        "JEPA",
+        "开源哲学 世界模型",
+        "非自回归",
+        "开源哲学"
+      ],
+      "language": "en",
+      "description": "Meta · 世界模型、JEPA、开源哲学",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-rossgirshick-info-34b1046",
+      "name": "Ross Girshick",
+      "url": "https://rossgirshick.info",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "计算机视觉",
+        "目标检测 R-CNN系列",
+        "SAM",
+        "视觉Transformer"
+      ],
+      "language": "en",
+      "description": "Meta FAIR · 计算机视觉、目标检测",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-smithamilli-com-7b7f47c",
+      "name": "Smitha Milli",
+      "url": "https://smithamilli.com",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "AI对齐",
+        "博弈论 对齐博弈",
+        "推荐系统社会动力学"
+      ],
+      "language": "en",
+      "description": "Meta FAIR · AI对齐、博弈论",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-github-com-b659017",
+      "name": "Guillaume Lample",
+      "url": "https://github.com/glample",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "高效模型",
+        "Chinchilla优化 Llama训练",
+        "RAG",
+        "数据最优比"
+      ],
+      "language": "en",
+      "description": "Mistral AI · 高效模型、Chinchilla优化",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-albertqjiang-github-io-b186b70",
+      "name": "Albert Q. Jiang",
+      "url": "https://albertqjiang.github.io",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "数学推理",
+        "MoE模型 数学超智能",
+        "Mixtral",
+        "稀疏激活"
+      ],
+      "language": "en",
+      "description": "Mistral AI · 数学推理、MoE模型",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-sophiamyang-medium-com-dde47ca",
+      "name": "Sophia Yang",
+      "url": "https://sophiamyang.medium.com",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "开发者关系",
+        "应用落地 Mistral实战",
+        "RAG构建",
+        "函数调用"
+      ],
+      "language": "en",
+      "description": "Mistral AI · 开发者关系、应用落地",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-alignmentforum-org-f88347c",
+      "name": "Alignment Forum (evhub)",
+      "url": "https://www.alignmentforum.org/users/evhub",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "内对齐",
+        "欺骗性对齐 内对齐",
+        "欺骗性对齐"
+      ],
+      "language": "en",
+      "description": "Anthropic · 内对齐、欺骗性对齐",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-github-com-08f05d3",
+      "name": "GitHub/YouTube",
+      "url": "https://github.com/hwchung27",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "指令微调",
+        "模型行为 指令微调规模化",
+        "激励vs教导"
+      ],
+      "language": "en",
+      "description": "Meta（前OpenAI/Google） · 指令微调、模型行为",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-matthias-gerstgrasser-net-699f768",
+      "name": "Personal Site",
+      "url": "https://matthias.gerstgrasser.net",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "多智能体学习",
+        "机制设计 多智能体系统",
+        "激励设计"
+      ],
+      "language": "en",
+      "description": "OpenAI · 多智能体学习、机制设计",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-sites-google-com-3511407",
+      "name": "The Maximalists",
+      "url": "https://sites.google.com/view/ravi-theja",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "企业级RAG GraphRAG",
+        "CorrectiveRAG",
+        "MoA"
+      ],
+      "language": "en",
+      "description": "Mistral AI（顾问） · 企业级RAG",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-artfish-ai-5a0bbcd",
+      "name": "Art Fish Intelligence",
+      "url": "https://www.artfish.ai",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "数据叙事",
+        "LLM行为 自我数据分析",
+        "LLM创造力评测"
+      ],
+      "language": "en",
+      "description": "DeepMind · 数据叙事、LLM行为",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-sites-google-com-cc64cd3",
+      "name": "Personal Site",
+      "url": "https://sites.google.com/view/ashwinvaswani",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "多模态",
+        "医疗AI 多模态融合",
+        "Speech2Face"
+      ],
+      "language": "en",
+      "description": "DeepMind · 多模态、医疗AI",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-profiles-stanford-edu-b2727c6",
+      "name": "Fei-Fei Li",
+      "url": "https://profiles.stanford.edu/fei-fei-li",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "计算机视觉",
+        "ImageNet",
+        "AI伦理 ImageNet",
+        "视觉识别",
+        "AI人文关怀"
+      ],
+      "language": "en",
+      "description": "Stanford/Google Cloud · 计算机视觉、ImageNet、AI伦理",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-cs-toronto-edu-a49392e",
+      "name": "Ilya Sutskever",
+      "url": "https://www.cs.toronto.edu/~ilya",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "深度学习理论",
+        "AGI安全 序列建模",
+        "无监督学习",
+        "AGI安全"
+      ],
+      "language": "en",
+      "description": "SSI（前OpenAI） · 深度学习理论、AGI安全",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-cs-toronto-edu-94ac22b",
+      "name": "Alex Krizhevsky",
+      "url": "https://www.cs.toronto.edu/~kriz",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "卷积神经网络",
+        "ImageNet AlexNet",
+        "CIFAR数据集",
+        "卷积网络"
+      ],
+      "language": "en",
+      "description": "独立（前Google） · 卷积神经网络、ImageNet",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-cs-toronto-edu-0995f5d",
+      "name": "Geoffrey Hinton",
+      "url": "https://www.cs.toronto.edu/~hinton",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "深度学习基础",
+        "反向传播",
+        "胶囊网络 反向传播",
+        "Dropout",
+        "胶囊网络",
+        "AI风险"
+      ],
+      "language": "en",
+      "description": "独立（前Google） · 深度学习基础、反向传播、胶囊网络",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-yoshuabengio-org-c857935",
+      "name": "Yoshua Bengio",
+      "url": "https://yoshuabengio.org",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "深度学习理论",
+        "因果推理",
+        "AI安全 注意力机制",
+        "生成模型",
+        "因果AI",
+        "AI伦理"
+      ],
+      "language": "en",
+      "description": "Mila/Montreal · 深度学习理论、因果推理、AI安全",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-deepmind-com-96a0ba2",
+      "name": "Demis Hassabis",
+      "url": "https://www.deepmind.com/about/demis-hassabis",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "AGI",
+        "强化学习",
+        "神经科学 AlphaGo",
+        "AlphaFold",
+        "AGI路径"
+      ],
+      "language": "en",
+      "description": "Google DeepMind · AGI、强化学习、神经科学",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-research-google-58c281c",
+      "name": "Jeff Dean",
+      "url": "https://research.google/people/jeff",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "大规模系统",
+        "分布式训练 TensorFlow",
+        "大规模ML系统",
+        "TPU"
+      ],
+      "language": "en",
+      "description": "Google · 大规模系统、分布式训练",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-openai-com-17038ee",
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "GPT系列",
+        "一手资讯 GPT技术解读",
+        "API更新",
+        "安全研究"
+      ],
+      "language": "en",
+      "description": "GPT系列、一手资讯 · GPT技术解读、API更新、安全研究",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-deepmind-google-a9563a6",
+      "name": "DeepMind Blog",
+      "url": "https://deepmind.google/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "AI先驱",
+        "跨学科研究 强化学习",
+        "蛋白质预测",
+        "游戏AI"
+      ],
+      "language": "en",
+      "description": "AI先驱、跨学科研究 · 强化学习、蛋白质预测、游戏AI",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-anthropic-com-1a8d6c4",
+      "name": "Anthropic Blog",
+      "url": "https://www.anthropic.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "AI对齐和安全 对齐技术",
+        "安全评估",
+        "可解释性"
+      ],
+      "language": "en",
+      "description": "AI对齐和安全 · 对齐技术、安全评估、可解释性",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-stability-ai-39acb67",
+      "name": "Stability AI Blog",
+      "url": "https://stability.ai/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "开源生成模型",
+        "Stable Diffusion Stable Diffusion",
+        "图像生成",
+        "开源生成"
+      ],
+      "language": "en",
+      "description": "开源生成模型、Stable Diffusion · Stable Diffusion、图像生成、开源生成",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-aisafetysupport-org-6ffb10b",
+      "name": "AI Safety Support",
+      "url": "https://www.aisafetysupport.org",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "AI安全职业与学习资源"
+      ],
+      "language": "en",
+      "description": "AI安全职业与学习资源",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-80000hours-org-85aebfa",
+      "name": "80,000 Hours AI Safety",
+      "url": "https://80000hours.org/problem-profiles/artificial-intelligence",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "AI安全职业指南"
+      ],
+      "language": "en",
+      "description": "AI安全职业指南",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
     }
   ]
 }
