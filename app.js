@@ -9,12 +9,14 @@ const CATEGORY_LABELS = {
   interviews: 'Interviews & talks',
   'ai-community': 'Research communities'
 };
+const QUALITY_LABELS = { core: 'Core source', selected: 'Selected source', watchlist: 'Watchlist' };
+const QUALITY_RANK = { core: 0, selected: 1, watchlist: 2 };
 const TYPE_LABELS = {
   'personal-blog': 'Personal blog', 'personal-site': 'Personal site', newsletter: 'Newsletter',
   'official-blog': 'Official blog', 'official-site': 'Official site', 'research-blog': 'Research blog',
   'research-index': 'Research index', 'research-publication': 'Research publication', community: 'Community', podcast: 'Podcast'
 };
-const state = { articles: [], sources: [], statuses: {}, view: 'articles', category: 'all', page: 1, query: '', tier: 'all', sort: 'newest', sourceQuery: '', sourceCategory: 'all', sourceTier: 'all' };
+const state = { articles: [], sources: [], statuses: {}, view: 'articles', category: 'all', page: 1, query: '', tier: 'all', sort: 'newest', sourceQuery: '', sourceCategory: 'all', sourceTier: 'all', includeInactiveSources: false };
 const $ = (id) => document.getElementById(id);
 
 function escapeHTML(value) {
@@ -36,6 +38,9 @@ function formatRunDate(value) {
   return new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'UTC' }).format(d) + ' UTC';
 }
 function displayCategory(category) { return CATEGORY_LABELS[category] || 'Other sources'; }
+function hasNonEnglishScript(value) { return /[\u3400-\u4DBF\u4E00-\u9FFF\u3040-\u30FF\uAC00-\uD7AF\u0400-\u052F\u0590-\u05FF\u0600-\u06FF\u0E00-\u0E7F\u0900-\u097F]/u.test(String(value || '')); }
+function isEnglishArticle(article) { return (article.language || 'en') === 'en' && !hasNonEnglishScript(article.title || ''); }
+function isActiveEnglishSource(source) { return source.language === 'en' && source.enabled !== false && !hasNonEnglishScript(source.name || ''); }
 function updateView(view) {
   state.view = view;
   document.querySelectorAll('.view').forEach(el => el.classList.toggle('active-view', el.id === `view-${view}`));
@@ -90,10 +95,11 @@ function renderArticles() {
       const topics = (article.topics || []).slice(0, 4).map(topic => `<span class="article-tag">${escapeHTML(topic.replaceAll('-', ' '))}</span>`).join('');
       const pubDate = article.published_at ? formatDate(article.published_at) : `Date unknown · indexed ${formatDate(article.discovered_at)}`;
       const tier = article.tier ? `<span class="tier-pill">${escapeHTML(article.tier)}</span>` : '';
+      const quality = article.source_quality ? `<span class="quality-pill quality-${escapeHTML(article.source_quality)}">${escapeHTML(QUALITY_LABELS[article.source_quality] || article.source_quality)}</span>` : '';
       const type = TYPE_LABELS[article.source_type] || article.source_type || 'Source';
       return `<article class="article-card">
         <div class="article-main">
-          <div class="article-meta"><span class="category-pill category-${escapeHTML(category)}">${escapeHTML(displayCategory(category))}</span>${tier}<span class="type-pill">${escapeHTML(type)}</span><span class="article-date">${escapeHTML(pubDate)}</span></div>
+          <div class="article-meta"><span class="category-pill category-${escapeHTML(category)}">${escapeHTML(displayCategory(category))}</span>${quality}${tier}<span class="type-pill">${escapeHTML(type)}</span><span class="article-date">${escapeHTML(pubDate)}</span></div>
           <a class="article-title" href="${escapeHTML(safeUrl(article.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(article.title)}</a>
           <div class="article-subline"><span>From <strong>${escapeHTML(article.source_name || 'Unknown source')}</strong></span><span>·</span><a href="${escapeHTML(safeUrl(article.source_url || article.url))}" target="_blank" rel="noopener noreferrer">Source home ↗</a></div>
           ${topics ? `<div class="article-tags">${topics}</div>` : ''}
@@ -116,6 +122,10 @@ function clearFilters() {
 }
 function sourceStatus(source) { return state.statuses[source.id] || null; }
 function sourceMatches(source) {
+  // The default directory is English-only. Non-English sources never appear,
+  // even when the user chooses to inspect paused/pending English candidates.
+  if ((source.language || 'en') !== 'en' || hasNonEnglishScript(source.name || '')) return false;
+  if (!state.includeInactiveSources && !isActiveEnglishSource(source)) return false;
   if (state.sourceCategory !== 'all' && source.category !== state.sourceCategory) return false;
   if (state.sourceTier !== 'all' && source.tier !== state.sourceTier) return false;
   const query = state.sourceQuery.trim().toLowerCase();
@@ -126,23 +136,28 @@ function renderSources() {
   const filtered = state.sources.filter(sourceMatches).sort((a, b) => {
     const tierA = Number((a.tier || '').replace('Tier ', '')) || 99;
     const tierB = Number((b.tier || '').replace('Tier ', '')) || 99;
-    if (state.sourceCategory === 'all' && state.sourceTier === 'all') return tierA - tierB || a.name.localeCompare(b.name);
+    if (state.sourceCategory === 'all' && state.sourceTier === 'all') return (QUALITY_RANK[a.source_quality] ?? 9) - (QUALITY_RANK[b.source_quality] ?? 9) || tierA - tierB || a.name.localeCompare(b.name);
     return a.name.localeCompare(b.name);
   });
-  $('source-summary').textContent = `${filtered.length} sources shown · ${state.sources.length} tracked in total · Directory entries can exist without an automatic feed.`;
+  const englishSources = state.sources.filter(source => (source.language || 'en') === 'en' && !hasNonEnglishScript(source.name || ''));
+  const activeCount = englishSources.filter(isActiveEnglishSource).length;
+  const inactiveCount = englishSources.length - activeCount;
+  $('source-summary').textContent = state.includeInactiveSources ? `${filtered.length} shown · ${activeCount} curated English sources · ${inactiveCount} paused/pending English sources included.` : `${filtered.length} curated English sources shown · ${inactiveCount} unapproved English sources hidden.`;
   $('source-list').innerHTML = filtered.map(source => {
     const status = sourceStatus(source);
-    let statusLabel = 'Not checked yet'; let statusClass = '';
-    if (status?.status === 'ok') { statusLabel = `${status.articles_found} found`; statusClass = 'ok'; }
-    else if (status?.status === 'error') statusLabel = 'Fetch error';
-    else if (status?.status === 'directory-only') statusLabel = 'Directory only';
-    else if (status?.status === 'robots-disallowed') statusLabel = 'Robots disallow';
-    else if (status?.status === 'no-content') statusLabel = 'No new items';
+    let statusLabel = source.enabled === false ? (source.review_status === 'pending' ? 'Pending review' : 'Paused') : 'Not checked yet'; let statusClass = '';
+    if (source.enabled !== false && status?.status === 'ok') { statusLabel = `${status.articles_found} found`; statusClass = 'ok'; }
+    else if (source.enabled !== false && status?.status === 'error') statusLabel = 'Fetch error';
+    else if (source.enabled !== false && status?.status === 'directory-only') statusLabel = 'Directory only';
+    else if (source.enabled !== false && status?.status === 'robots-disallowed') statusLabel = 'Robots disallow';
+    else if (source.enabled !== false && status?.status === 'no-content') statusLabel = 'No new items';
     const topics = (source.topics || []).slice(0, 3).map(topic => `<span class="source-topic">${escapeHTML(topic.replaceAll('-', ' '))}</span>`).join('');
     const tier = source.tier ? `<span class="tier-pill">${escapeHTML(source.tier)}</span>` : '';
     const sourceType = TYPE_LABELS[source.source_type] || source.source_type || 'Source';
+    const quality = QUALITY_LABELS[source.source_quality] || 'Watchlist';
+    const qualityClass = `quality-${source.source_quality || 'watchlist'}`;
     const monogram = escapeHTML((source.name || 'RR').split(/\s+/).slice(0, 2).map(x => x[0] || '').join('').toUpperCase());
-    return `<article class="source-card"><div class="source-card-head"><div class="source-monogram">${monogram}</div><div class="source-name-wrap"><a class="source-name" href="${escapeHTML(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(source.name)}</a><span class="source-url">${escapeHTML(source.url)}</span></div><span class="source-status ${statusClass}">${escapeHTML(statusLabel)}</span></div><p class="source-description">${escapeHTML(source.description || '')}</p><div class="source-topics">${topics}</div><div class="source-card-bottom"><span class="source-bottom-meta">${escapeHTML(sourceType)} ${tier ? '· ' + escapeHTML(source.tier) : ''}</span><a class="source-link" href="${escapeHTML(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">Visit source ↗</a></div></article>`;
+    return `<article class="source-card"><div class="source-card-head"><div class="source-monogram">${monogram}</div><div class="source-name-wrap"><a class="source-name" href="${escapeHTML(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(source.name)}</a><span class="source-url">${escapeHTML(source.url)}</span></div><span class="source-status ${statusClass}">${escapeHTML(statusLabel)}</span></div><p class="source-description">${escapeHTML(source.description || '')}</p><div class="source-topics">${topics}</div><div class="source-card-bottom"><span class="source-bottom-meta">${escapeHTML(sourceType)} ${tier ? '· ' + escapeHTML(source.tier) : ''}</span><span class="quality-pill ${qualityClass}">${escapeHTML(quality)}</span><a class="source-link" href="${escapeHTML(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">Visit source ↗</a></div></article>`;
   }).join('') || `<div class="empty-state"><strong>No sources match.</strong><p>Try another search term or remove a filter.</p></div>`;
 }
 async function loadData() {
@@ -157,12 +172,13 @@ async function loadData() {
     const articlesPayload = await articlesResponse.json();
     const sourcesPayload = await sourcesResponse.json();
     const statusPayload = statusResponse.ok ? await statusResponse.json() : {};
-    state.articles = articlesPayload.articles || [];
     state.sources = sourcesPayload.sources || [];
+    const activeSourceIds = new Set(state.sources.filter(isActiveEnglishSource).map(source => source.id));
+    state.articles = (articlesPayload.articles || []).filter(article => activeSourceIds.has(article.source_id) && isEnglishArticle(article));
     state.statuses = Object.fromEntries((statusPayload.sources || []).map(item => [item.source_id, item]));
     $('nav-article-count').textContent = state.articles.length > 99 ? '99+' : String(state.articles.length);
     $('stat-articles').textContent = state.articles.length.toLocaleString('en');
-    $('stat-sources').textContent = state.sources.length.toLocaleString('en');
+    $('stat-sources').textContent = state.sources.filter(isActiveEnglishSource).length.toLocaleString('en');
     $('stat-active').textContent = `${statusPayload.sources_with_articles ?? 0}/${statusPayload.checked_count ?? 0}`;
     $('last-checked').textContent = statusPayload.last_checked_at ? `Checked ${formatRunDate(statusPayload.last_checked_at)}` : 'Collection not run yet';
     $('footer-updated').textContent = articlesPayload.last_updated_at ? `INDEX UPDATED ${formatRunDate(articlesPayload.last_updated_at)}` : 'WAITING FOR FIRST COLLECTION';
@@ -186,6 +202,7 @@ $('next-page').addEventListener('click', () => { state.page += 1; renderArticles
 $('source-search').addEventListener('input', e => { state.sourceQuery = e.target.value; renderSources(); });
 $('source-category-filter').addEventListener('change', e => { state.sourceCategory = e.target.value; renderSources(); });
 $('source-tier-filter').addEventListener('change', e => { state.sourceTier = e.target.value; renderSources(); });
+$('show-inactive-sources').addEventListener('change', e => { state.includeInactiveSources = e.target.checked; renderSources(); });
 $('refresh-button').addEventListener('click', loadData);
 document.addEventListener('keydown', e => {
   if (e.key === '/' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) { e.preventDefault(); $('search-input').focus(); }

@@ -1,0 +1,29 @@
+AI Research Radar - Quality Update
+
+Apply this patch to your EXISTING local Git repository. Do not replace the whole repository folder.
+
+1. Extract this ZIP directly into:
+   C:\Users\43874\Downloads\ai-research-radar\ai-research-radar
+   Allow Windows to overwrite matching files.
+
+2. This patch intentionally does NOT include data/articles.json or data/collector_status.json, so your existing article cache/status is preserved until the collector runs.
+
+3. In PowerShell, from the repository folder, run:
+   python -m unittest discover -s tests -v
+   git status
+
+4. If tests pass, commit and push:
+   git add README.md app.js index.html styles.css data/sources.json scripts/source_policy.py scripts/seed_sources.py scripts/sync_source_index.py scripts/update_content.py tests/test_source_policy.py APPLY_QUALITY_UPDATE.txt
+   git commit -m "Curate research sources and filter low-signal posts"
+   git push
+
+5. GitHub Actions should run automatically. Update article index first applies the source allowlist, filters non-English and off-topic articles, removes old items from unapproved sources, and commits the cleaned JSON index. The Pages workflow redeploys after collection succeeds.
+
+What changes:
+- 88 source records remain available for discovery, but only 50 curated English sources are active by default.
+- New sources discovered from the upstream Markdown index remain pending and cannot auto-enable.
+- Generic company announcements and unrelated articles are filtered using deterministic title/excerpt rules; no AI API is used.
+- Source cards and article cards show Core / Selected source labels.
+- English title filtering and source-level allowlisting are both enforced.
+
+Note: These deterministic rules prioritize quality over recall and can miss a relevant essay if neither its title nor publisher-provided excerpt contains an AI/quant topic keyword.

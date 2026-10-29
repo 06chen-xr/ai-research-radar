@@ -13,6 +13,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse, urlunparse, parse_qsl, urlencode
 
+from source_policy import apply_source_policy, has_non_latin_script
+
 import requests
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,15 +42,25 @@ def slug(text: str) -> str:
     return value[:34] or "source"
 
 
+def allowed_source_section(section: str) -> bool:
+    """Parse only substantive blog/research source sections, not tools or courses."""
+    value = (section or "").strip().lower()
+    return any(term in value for term in (
+        "个人技术博客", "公司官方博客", "学术机构博客", "ai安全与对齐", "ai 安全与对齐"
+    ))
+
+
 def infer_section_category(section: str) -> str:
     s = section.lower()
-    if any(x in s for x in ("学术机构博客", "学术机构", "mila", "berkeley", "stanford", "mit csail", "cmu")):
-        return "ai-academic"
-    if any(x in s for x in ("个人技术博客", "openai系", "anthropic系", "google/deepmind系", "meta/fair系", "mistral ai系", "深度学习先驱", "独立/跨机构")):
+    if "个人技术博客" in s:
         return "ai-researcher"
-    if any(x in s for x in ("中国ai研究者与团队博客", "公司官方博客", "国际公司官方博客", "中国ai团队")):
+    if "公司官方博客" in s:
         return "ai-company"
-    if any(x in s for x in ("特殊主题资源", "ai安全与对齐", "开源工具与平台", "中文ai社区", "视频教程资源")):
+    if "学术机构博客" in s:
+        return "ai-academic"
+    if "开源工具与平台" in s or "视频教程资源" in s:
+        return "ai-engineering"
+    if "ai安全与对齐" in s:
         return "ai-community"
     return "ai-community"
 
@@ -59,6 +71,7 @@ def infer_source_type(category: str) -> str:
         "ai-company": "official-blog",
         "ai-academic": "research-blog",
         "ai-community": "community",
+        "ai-engineering": "official-blog",
     }.get(category, "community")
 
 
@@ -75,6 +88,8 @@ def extract_url(cell: str) -> str | None:
 
 
 def row_to_source(cells: list[str], section: str) -> dict | None:
+    if not allowed_source_section(section):
+        return None
     if len(cells) < 2 or not any(cells):
         return None
     if all(not c.strip(" :-") for c in cells):
@@ -98,6 +113,24 @@ def row_to_source(cells: list[str], section: str) -> dict | None:
     else:
         name = cells[0].strip()
     if not name or name in {"---", "作者", "公司", "机构"}:
+        return None
+    # English-only registry: do not infer language from the Chinese commentary
+    # columns in the upstream index. Filter based on the actual source label.
+    if has_non_latin_script(name):
+        return None
+    parsed_url = urlparse(url)
+    host = parsed_url.netloc.lower().removeprefix("www.")
+    blocked_hosts = {
+        "moonshot.cn", "minimaxi.com", "zhipuai.cn", "shlab.org.cn",
+        "deepseek.com", "developer.aliyun.com", "ai.tencent.com", "ai.baidu.com",
+        "sensetime.com", "megvii.com", "modelbest.cn", "zhipu-ai.feishu.cn",
+    }
+    if any(host == blocked or host.endswith("." + blocked) for blocked in blocked_hosts):
+        return None
+    # Company and academic sections must point to an actual content area, not a
+    # corporate home page. Personal blogs may legitimately live at the root.
+    content_path = re.search(r"/(blog|blogs|news|insights|research|publications|engineering|tech|articles|posts|updates|writing|notes)(/|$)", parsed_url.path.lower())
+    if section in {"三、公司官方博客", "四、学术机构博客"} and not content_path and host not in {"distill.pub", "alignmentforum.org", "blog.ml.cmu.edu"}:
         return None
 
     description_parts = []
@@ -133,10 +166,12 @@ def row_to_source(cells: list[str], section: str) -> dict | None:
         "category": category,
         "source_type": infer_source_type(category),
         "topics": topics,
-        "language": "zh" if cjk(name + " " + description) else "en",
+        "language": "en",
         "description": (description or "Listed in the upstream AI blog resource index.")[:300],
         "tier": None,
-        "enabled": True,
+        "enabled": False,
+        "review_status": "pending",
+        "source_quality": "watchlist",
         "feed_url": None,
         "source_index": "joeseesun/ai-blog-res"
     }
@@ -151,7 +186,7 @@ def parse_index(markdown: str) -> list[dict]:
         if line.startswith("#"):
             section = line.lstrip("# ").strip()
             continue
-        if "|" not in line or line.startswith("<!--"):
+        if "|" not in line or line.startswith("<!--") or not allowed_source_section(section):
             continue
         cells = [cell.strip() for cell in line.strip("|").split("|")]
         item = row_to_source(cells, section)
@@ -178,27 +213,32 @@ def main() -> int:
     except (FileNotFoundError, json.JSONDecodeError):
         payload = {"sources": []}
     current = payload.get("sources", [])
+    policy_changed = apply_source_policy(current)
     by_url = {normalize_url(item.get("url", "")): item for item in current if normalize_url(item.get("url", ""))}
     added = 0
     marked = 0
     for item in upstream:
         key = normalize_url(item["url"])
         if key in by_url:
+            # Preserve the provenance and approval state of manually curated sources.
             existing = by_url[key]
-            if existing.get("source_index") != "joeseesun/ai-blog-res":
+            if not existing.get("source_index"):
                 existing["source_index"] = "joeseesun/ai-blog-res"
                 marked += 1
             continue
         current.append(item)
         by_url[key] = item
         added += 1
-    if added or marked:
+    policy_changed = apply_source_policy(current) or policy_changed
+    if added or marked or policy_changed:
         payload["sources"] = current
         payload["source_index"] = "https://github.com/joeseesun/ai-blog-res/blob/main/AI%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%BA%90-%E5%AE%8C%E6%95%B4%E7%B4%A2%E5%BC%95.md"
         payload["updated_at"] = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
-        payload["note"] = "Source registry syncs newly listed resources from the upstream AI blog index and preserves manually curated quant/interview sources."
+        payload["note"] = "Strict curated allowlist. Upstream personal-blog, official-blog, academic, and AI-safety candidates remain pending until manually approved; generic tool/course sections are not ingested."
         SOURCES_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Upstream index rows parsed: {len(upstream)}; added {added}; provenance marked {marked}; total sources {len(current)}.")
+    active_count = sum(1 for item in current if item.get("enabled") and item.get("language") == "en")
+    pending_count = sum(1 for item in current if item.get("review_status") == "pending")
+    print(f"Curated upstream candidates parsed: {len(upstream)}; added {added} pending candidates; provenance marked {marked}; active English sources {active_count}; pending review {pending_count}; total registry {len(current)}.")
     return 0
 
 

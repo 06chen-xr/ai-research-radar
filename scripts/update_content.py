@@ -26,6 +26,8 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 
+from source_policy import apply_source_policy, is_english_source, is_english_title, is_relevant_article
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 SOURCES_PATH = DATA / "sources.json"
@@ -139,6 +141,8 @@ def article_record(source: dict, title: str, url: str, published_at: str | None,
     clean_title = re.sub(r"\s+", " ", unescape(title or "")).strip()
     if not clean_url or not clean_title or len(clean_title) < 3:
         return None
+    if not is_relevant_article(source, clean_title, excerpt):
+        return None
     if clean_url.rstrip("/") == normalize_url(source["url"]).rstrip("/"):
         return None
     if clean_title.lower() in {"home", "homepage", "login", "sign in", "about", "contact", "privacy policy", "terms of service"}:
@@ -155,6 +159,7 @@ def article_record(source: dict, title: str, url: str, published_at: str | None,
         "source_type": source["source_type"],
         "topics": source.get("topics", []),
         "tier": source.get("tier"),
+        "source_quality": source.get("source_quality", "watchlist"),
         "language": source.get("language", "en"),
         "published_at": pub,
         "discovered_at": datetime.now(timezone.utc).date().isoformat(),
@@ -361,7 +366,13 @@ def parse_homepage_links(source: dict, homepage_html: bytes | None) -> list[dict
             continue
         seen.add(href)
         path = urlparse(href).path.lower()
-        if any(part in path for part in ("/tag/", "/category/", "/author/", "/page/", "/search", "/login", "/privacy", "/terms", "/about", "/contact")):
+        if any(part in path for part in ("/tag/", "/category/", "/author/", "/page/", "/search", "/login", "/privacy", "/terms", "/about", "/contact", "/careers", "/jobs", "/events")):
+            continue
+        # Do not treat arbitrary navigation/project pages as articles. Fallback
+        # links must resemble an article path or contain a date-like URL segment.
+        article_path = re.search(r"/(blog|blogs|post|posts|article|articles|writing|notes|research|insights|news|engineering|publications)(/|$)", path)
+        dated_path = re.search(r"/20\d{2}(/|$)", path)
+        if not article_path and not dated_path:
             continue
         if len(text) < 12 or len(path.strip("/").split("/")) < 1:
             continue
@@ -426,7 +437,12 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="Collect and report results without writing JSON files.")
     args = parser.parse_args()
     sources_payload = load_json(SOURCES_PATH, {"sources": []})
-    sources = sources_payload.get("sources", [])
+    all_sources = sources_payload.get("sources", [])
+    policy_changed = apply_source_policy(all_sources)
+    sources_payload["sources"] = all_sources
+    if policy_changed and not args.dry_run:
+        SOURCES_PATH.write_text(json.dumps(sources_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    sources = [source for source in all_sources if source.get("enabled", True) and is_english_source(source)]
     if args.limit > 0:
         sources = sources[:args.limit]
     old_payload = load_json(ARTICLES_PATH, {"articles": []})
@@ -447,13 +463,26 @@ def main() -> int:
             collected.extend(articles)
             print(f"[{status['status']}] {source['name']}: {status['articles_found']} ({status['method']})")
 
-    # Merge by canonical URL, preserve first-seen metadata, and refresh fields when newer data appears.
+    # Merge only current approved English sources. This also removes old items
+    # from paused sources and non-English titles from the existing index.
+    source_by_id = {source["id"]: source for source in all_sources if source.get("enabled", True) and is_english_source(source)}
     merged = {}
     for item in existing + collected:
+        source = source_by_id.get(item.get("source_id"))
+        if source is None or not is_relevant_article(source, item.get("title", ""), item.get("excerpt", "")):
+            continue
         url = normalize_url(item.get("url", ""))
         if not url:
             continue
         item["url"] = url
+        item["language"] = "en"
+        item["source_name"] = source.get("name", item.get("source_name", "Unknown source"))
+        item["source_url"] = source.get("url", item.get("source_url", ""))
+        item["category"] = source.get("category", item.get("category", "other"))
+        item["source_type"] = source.get("source_type", item.get("source_type", "Source"))
+        item["topics"] = source.get("topics", item.get("topics", []))
+        item["tier"] = source.get("tier", item.get("tier"))
+        item["source_quality"] = source.get("source_quality", item.get("source_quality", "watchlist"))
         previous = merged.get(url)
         if previous is None:
             merged[url] = item
@@ -481,7 +510,7 @@ def main() -> int:
         "checked_count": len(statuses),
         "sources_with_articles": ok_count,
         "article_count": len(articles),
-        "note": "No AI-generated summaries. Publisher-provided excerpts may be displayed as-is.",
+        "note": "No AI-generated summaries. Strictly curated English sources and deterministic topic filters are applied; publisher-provided excerpts are used only as source metadata.",
         "sources": statuses
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Done: {len(articles)} stored articles; {ok_count}/{len(statuses)} sources yielded content.")

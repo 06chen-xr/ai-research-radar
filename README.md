@@ -1,14 +1,14 @@
 # Research Radar — AI & Quant Intelligence
 
-A source-first, static research feed for AI researcher blogs, AI engineering practice, academic research, quantitative trading firms, and interviews/podcasts.
+A deliberately curated, English-first static research feed for original AI thinking, frontier-lab research, practical agent engineering, selected quant-firm technical writing, and high-signal interviews.
 
 **First-version principles**
 
 - No AI API, LLM summaries, embeddings, or paid service dependencies.
 - Article cards show the original title, source, publication date when available, topics, and direct publisher link.
-- The initial source directory is seeded from [AI博客资源-完整索引](https://github.com/joeseesun/ai-blog-res/blob/main/AI%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%BA%90-%E5%AE%8C%E6%95%B4%E7%B4%A2%E5%BC%95.md), then extended with quantitative firms and interview/podcast sources.
-- GitHub Actions checks sources daily and commits updated JSON files. GitHub Pages hosts the static site.
-- Some sources do not expose a stable RSS/Atom feed or a clear public archive. They remain visible in the source directory; collection coverage is reported honestly in `data/collector_status.json`.
+- The upstream [AI blog resource index](https://github.com/joeseesun/ai-blog-res/blob/main/AI%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%BA%90-%E5%AE%8C%E6%95%B4%E7%B4%A2%E5%BC%95.md) is treated as a discovery list, not an approval list. Only the explicit allowlist in `scripts/source_policy.py` is active by default; new candidates remain pending.
+- GitHub Actions checks approved English sources daily and commits updated JSON files. New upstream discoveries are disabled until reviewed. GitHub Pages hosts the static site.
+- Source quality labels (`core`, `selected`, `watchlist`) describe editorial monitoring priority, not objective truth. The collector also filters article titles and publisher-provided excerpts using deterministic AI/quant topic rules and drops generic corporate announcements unless technical substance is evident. No model is called.
 
 ## Repository layout
 
@@ -23,9 +23,12 @@ A source-first, static research feed for AI researcher blogs, AI engineering pra
 │   └── collector_status.json      # Per-source collection status
 ├── scripts/
 │   ├── seed_sources.py            # Rebuilds the initial source registry
+│   ├── source_policy.py           # Curated allowlist + English/topic filters
 │   ├── sync_source_index.py       # Syncs new rows from the upstream GitHub index
 │   └── update_content.py          # RSS/Atom + sitemap + homepage-link collector
 ├── requirements.txt
+├── tests/
+│   └── test_source_policy.py       # Deterministic source/filter tests
 └── .github/workflows/
     ├── update-content.yml         # Daily collection at 00:17 UTC
     └── pages.yml                  # Static site deployment
@@ -61,16 +64,26 @@ The exact URL cannot be confirmed until the repository exists and Pages deployme
 
 ## Run the daily collector
 
-The `Update article index` workflow runs daily at **00:17 UTC (08:17 Singapore time)**. It first parses the upstream AI blog Markdown index for newly listed sources, then checks the registered sources for posts. GitHub can delay scheduled jobs during periods of high load. You can also run it manually:
+The `Update article index` workflow runs daily at **00:17 UTC (08:17 Singapore time)**. It checks approved English sources for posts, then applies deterministic topic filters. It only parses personal-blog, official-blog, academic, and AI-safety sections in the upstream Markdown index; generic tool directories and video-course lists are not ingested. New candidates are disabled/pending and never enter the main feed before review. GitHub can delay scheduled jobs during periods of high load. You can also run it manually:
 
 1. Open **Actions → Update article index**.
 2. Click **Run workflow**.
 
 The workflow uses the repository's built-in `GITHUB_TOKEN` with `contents: write` to update `data/sources.json`, `data/articles.json`, and `data/collector_status.json`. No custom secret or API key is required. When the collection workflow finishes, the Pages workflow redeploys the latest repository state (including the refreshed JSON files).
 
+## Source-quality policy
+
+The default feed is intentionally small. The active allowlist is defined in `scripts/source_policy.py`; the upstream index is only a candidate-discovery mechanism and cannot auto-approve sources. The current seed has 88 source records, of which 50 are active by default; inactive English candidates remain available in the directory toggle.
+
+- `core`: a high-priority primary source for original AI thinking, research, strong technical essays, or substantive quant research.
+- `selected`: a reputable source or interview feed that is useful but broader or less consistently high-signal.
+- `watchlist`: unapproved, paused, or non-curated source; it does not feed the main article list.
+
+These labels are editorial monitoring priorities, not objective measures of correctness. The collector uses deterministic title/excerpt rules: AI and engineering sources must show AI-topic relevance; quant-firm sources must show quant or AI/engineering relevance; interview feeds must show AI or quant relevance. Generic company announcements are filtered unless the title/excerpt contains technical substance. English filtering rejects titles containing non-Latin scripts. This is intentionally conservative and can miss good articles whose titles and publisher excerpts are vague.
+
 ## Add or edit sources
 
-Edit `data/sources.json`. A source has this shape:
+Edit `data/sources.json`. The main feed is English-only and uses a strict allowlist in `scripts/source_policy.py`. To add a source manually, use `language: "en"`, `enabled: true`, and `source_index: "manual"`; manual sources are still subject to the English and topical article filters. To approve an upstream candidate, add its stable `id` to `APPROVED_SOURCE_IDS` and assign a quality label in `SOURCE_QUALITY`, then set `enabled: true` and `review_status: "approved"`. To pause a source, set `enabled: false`. Upstream discoveries are marked `review_status: "pending"` and remain hidden unless you turn on “Show inactive English sources” in the directory. A source has this shape:
 
 ```json
 {
@@ -127,7 +140,7 @@ For a limited, non-writing test run, use `python scripts/update_content.py --lim
 
 ## Important collection behavior
 
-- The collector does not generate summaries or infer publication dates with an LLM.
+- The collector does not generate summaries or infer publication dates with an LLM. It rejects non-English-script titles, off-topic items, generic low-signal company announcements, and articles from paused/unapproved sources.
 - If a publication date is not available from the feed/page, the site shows the discovery date and marks the publication date as unknown.
 - RSS/Atom entries are preferred. Sitemap `lastmod` is only a fallback hint and may represent page modification rather than original publication.
 - The collector stores title, original URL, source metadata, publication/discovery dates, topics, and publisher-provided excerpts when present. The UI intentionally does not display excerpts in this first version.
@@ -138,4 +151,4 @@ For a limited, non-writing test run, use `python scripts/update_content.py --lim
 
 - Source coverage is best-effort; a tracked source is not a guarantee that every new post will be discovered.
 - Some quant firms primarily publish through interviews, conferences, or third-party podcasts rather than a public blog. Those sources may need additional direct episode feeds or manually added archive URLs.
-- The current site has no database, login, saved articles synced across devices, email newsletter, AI summaries, or personalized ranking.
+- The current site has no database, login, saved articles synced across devices, email newsletter, AI summaries, semantic classifier, or personalized ranking. Relevance filters are intentionally deterministic and conservative; occasional false positives/negatives are expected.
