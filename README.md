@@ -73,13 +73,13 @@ The workflow uses the repository's built-in `GITHUB_TOKEN` with `contents: write
 
 ## Source-quality policy
 
-The default feed is intentionally small. The active allowlist is defined in `scripts/source_policy.py`; the upstream index is only a candidate-discovery mechanism and cannot auto-approve sources. The current seed has 88 source records, of which 50 are active by default; inactive English candidates remain available in the directory toggle.
+The default feed is intentionally small. The active allowlist is defined in `scripts/source_policy.py`; the upstream index is only a candidate-discovery mechanism and cannot auto-approve sources. The current registry has 121 source records, of which 59 are active by default; inactive English candidates remain available in the directory toggle.
 
 - `core`: a high-priority primary source for original AI thinking, research, strong technical essays, or substantive quant research.
 - `selected`: a reputable source or interview feed that is useful but broader or less consistently high-signal.
 - `watchlist`: unapproved, paused, or non-curated source; it does not feed the main article list.
 
-These labels are editorial monitoring priorities, not objective measures of correctness. The collector uses deterministic title/excerpt rules: AI and engineering sources must show AI-topic relevance; quant-firm sources must show quant or AI/engineering relevance; interview feeds must show AI or quant relevance. Generic company announcements are filtered unless the title/excerpt contains technical substance. English filtering rejects titles containing non-Latin scripts. This is intentionally conservative and can miss good articles whose titles and publisher excerpts are vague.
+These labels are editorial monitoring priorities, not objective measures of correctness. The collector uses deterministic title/excerpt rules: lab and researcher sources must show AI-topic relevance; quant-research sources must show quant or AI/engineering relevance; podcast/community feeds must show AI or quant relevance. Generic company announcements are filtered unless the title/excerpt contains technical substance. English filtering rejects titles containing non-Latin scripts. This is intentionally conservative and can miss good articles whose titles and publisher excerpts are vague.
 
 ## Add or edit sources
 
@@ -102,15 +102,13 @@ Edit `data/sources.json`. The main feed is English-only and uses a strict allowl
 }
 ```
 
-Allowed categories currently used by the interface:
+Allowed categories (three editorial sections):
 
-- `ai-researcher` — individual researchers and personal blogs
-- `ai-engineering` — prompt/context engineering, coding agents, skills, workflows, and practical AI engineering
-- `ai-company` — AI labs and company blogs
-- `ai-academic` — universities and research institutes
-- `quant-firm` — quantitative trading firms and systematic investment managers
-- `interviews` — interviews, talks, and podcasts
-- `ai-community` — research communities and discussion forums
+- `ai-lab-research` — AI labs, frontier research groups, universities, and research institutes
+- `ai-researcher-blog` — individual researcher and practitioner blogs, newsletters, engineering writing, interviews, and research communities
+- `quant-research` — quantitative trading firms, systematic managers, and quant-focused interviews
+
+Legacy ids (`ai-company`, `ai-academic`, `ai-researcher`, `ai-engineering`, `interviews`, `ai-community`, `quant-firm`) are still accepted in older records and are mapped by `normalize_category` in `scripts/source_policy.py`.
 
 For quant firms, set `tier` to `Tier 1` through `Tier 5`. Tiers are a **monitoring-priority convention**, not an objective ranking of firm quality or performance.
 

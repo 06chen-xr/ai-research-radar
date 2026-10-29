@@ -1,13 +1,9 @@
 const PAGE_SIZE = 12;
 const CATEGORY_LABELS = {
   all: 'All updates',
-  'ai-researcher': 'AI research & thinking',
-  'ai-engineering': 'AI engineering & agents',
-  'ai-company': 'AI labs & companies',
-  'ai-academic': 'Academic research',
-  'quant-firm': 'Quant firms',
-  interviews: 'Interviews & talks',
-  'ai-community': 'Research communities'
+  'ai-lab-research': 'AI lab research',
+  'ai-researcher-blog': 'AI researcher blog',
+  'quant-research': 'Trading firm quantitative research'
 };
 const QUALITY_LABELS = { core: 'Core source', selected: 'Selected source', watchlist: 'Watchlist' };
 const QUALITY_RANK = { core: 0, selected: 1, watchlist: 2 };

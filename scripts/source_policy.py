@@ -14,6 +14,10 @@ APPROVED_SOURCE_IDS = {
     "tim-dettmers", "francois-chollet", "simon-willison", "hamel-husain",
     "swyx", "jan-leike", "gwern", "import-ai", "interconnects",
     "one-useful-thing", "ai-snake-oil",
+    # Frontier-lab researcher blogs and publications
+    "chris-olah", "sander-dieleman", "greg-brockman", "inference-vc",
+    "transformer-circuits", "beren-millidge", "ben-recht", "jay-alammar",
+    "alignment-forum",
     # Long-form AI interviews and engineering conversations
     "dwarkesh", "latent-space", "cognitive-revolution",
     # Frontier labs: research and engineering, not generic corporate news
@@ -32,6 +36,7 @@ APPROVED_SOURCE_IDS = {
 CORE_SOURCE_IDS = {
     "lilian-weng", "andrej-karpathy", "francois-chollet", "simon-willison",
     "gwern", "import-ai", "interconnects", "ai-snake-oil", "one-useful-thing",
+    "chris-olah", "sander-dieleman", "transformer-circuits", "neel-nanda",
     "epoch-ai", "metr", "apollo-research", "openai-blog", "anthropic-blog",
     "anthropic-engineering", "deepmind-blog", "jane-street", "xtx-markets",
     "two-sigma", "man-group", "aqr", "dwarkesh", "latent-space",
@@ -41,6 +46,43 @@ SOURCE_QUALITY = {sid: ("core" if sid in CORE_SOURCE_IDS else "selected") for si
 
 # The Qwen blog is English even though the original index row had Chinese notes.
 LANGUAGE_OVERRIDES = {"qwen": "en"}
+
+# The interface deliberately keeps three editorial sections only.
+LAB_CATEGORY = "ai-lab-research"
+RESEARCHER_CATEGORY = "ai-researcher-blog"
+QUANT_CATEGORY = "quant-research"
+CATEGORIES = (LAB_CATEGORY, RESEARCHER_CATEGORY, QUANT_CATEGORY)
+
+# Legacy category ids still present in older records and upstream candidates.
+CATEGORY_MIGRATIONS = {
+    "ai-company": LAB_CATEGORY,
+    "ai-academic": LAB_CATEGORY,
+    "ai-researcher": RESEARCHER_CATEGORY,
+    "ai-engineering": RESEARCHER_CATEGORY,
+    "ai-community": RESEARCHER_CATEGORY,
+    "interviews": RESEARCHER_CATEGORY,
+    "quant-firm": QUANT_CATEGORY,
+}
+
+# Quant-firm sources and quant-focused interview feeds belong to quant research
+# even though their legacy category was "interviews".
+QUANT_SOURCE_IDS = {
+    "jane-street", "xtx-markets", "citadel-securities", "citadel", "hrt",
+    "jump-trading", "two-sigma", "deshaw", "optiver", "imc", "sig", "drw",
+    "tower", "man-group", "aqr", "pdt", "squarepoint", "qube", "point72",
+    "worldquant", "voleon", "virtu", "flow-traders", "akuna", "wolverine",
+    "belvedere", "maven", "tibra", "eclipse-trading", "geneva-trading",
+    "ctc-trading", "peak6", "top-traders-unplugged", "chat-with-traders",
+    "alpha-exchange", "flirting-with-models",
+}
+
+
+def normalize_category(category: str | None, source_id: str = "") -> str:
+    """Map legacy category ids onto the three current sections."""
+    if source_id in QUANT_SOURCE_IDS:
+        return QUANT_CATEGORY
+    return CATEGORY_MIGRATIONS.get(category or "", category or "")
+
 
 NON_LATIN_SCRIPT_RE = re.compile(
     r"[\u3400-\u4dbf\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af"
@@ -191,13 +233,13 @@ def is_relevant_article(source: dict, title: str | None, excerpt: str | None = "
     if not is_english_title(clean_title) or not is_english_source(source):
         return False
     text = f"{clean_title} {excerpt or ''}"[:5000]
-    category = source.get("category", "")
-    if category == "quant-firm":
+    category = normalize_category(source.get("category"), source.get("id", ""))
+    if category == QUANT_CATEGORY:
         # Quant-firm engineering posts (e.g. storage/ML infrastructure) can be
         # relevant even when the title does not mention trading explicitly.
         if not (QUANT_TOPIC_RE.search(text) or AI_TOPIC_RE.search(text)):
             return False
-    elif category == "interviews":
+    elif source.get("source_type") in {"podcast", "community"}:
         if not (AI_TOPIC_RE.search(text) or QUANT_TOPIC_RE.search(text)):
             return False
     else:
@@ -205,7 +247,7 @@ def is_relevant_article(source: dict, title: str | None, excerpt: str | None = "
             return False
 
     # Avoid generic company PR unless the title/excerpt contains technical substance.
-    if category in {"ai-company", "ai-engineering", "quant-firm"}:
+    if source.get("source_type") not in {"personal-blog", "personal-site", "podcast", "community"}:
         if (LOW_SIGNAL_ANNOUNCEMENT_RE.search(clean_title) or LOW_SIGNAL_PR_RE.search(clean_title)) \
                 and not TECHNICAL_ANNOUNCEMENT_RE.search(text):
             return False
@@ -221,8 +263,11 @@ def apply_source_policy(sources: list[dict]) -> bool:
     """
     changed = False
     for source in sources:
-        before = (source.get("language"), source.get("enabled"), source.get("review_status"), source.get("source_quality"))
+        before = (source.get("language"), source.get("enabled"), source.get("review_status"), source.get("source_quality"), source.get("category"))
         sid = source.get("id", "")
+        category = normalize_category(source.get("category"), sid)
+        if category != source.get("category"):
+            source["category"] = category
         if sid in LANGUAGE_OVERRIDES:
             source["language"] = LANGUAGE_OVERRIDES[sid]
         english = is_english_source(source)
@@ -252,7 +297,7 @@ def apply_source_policy(sources: list[dict]) -> bool:
             source["review_status"] = "pending" if source_index == "joeseesun/ai-blog-res" else "not-curated"
 
         source["source_quality"] = SOURCE_QUALITY.get(sid, "watchlist")
-        after = (source.get("language"), source.get("enabled"), source.get("review_status"), source.get("source_quality"))
+        after = (source.get("language"), source.get("enabled"), source.get("review_status"), source.get("source_quality"), source.get("category"))
         if before != after:
             changed = True
     return changed

@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse, urlunparse, parse_qsl, urlencode
 
-from source_policy import apply_source_policy, has_non_latin_script
+from source_policy import apply_source_policy, has_non_latin_script, normalize_category
 
 import requests
 
@@ -106,7 +106,9 @@ def row_to_source(cells: list[str], section: str) -> dict | None:
             break
     if not url:
         return None
-    category = infer_section_category(section)
+    legacy_category = infer_section_category(section)
+    source_type = infer_source_type(legacy_category)
+    category = normalize_category(legacy_category)
     # Main tables put the public blog title in column 2; compact link lists use column 1.
     if url_cell_index >= 2 and len(cells) > 1 and cells[1].strip():
         name = cells[1].strip()
@@ -164,7 +166,7 @@ def row_to_source(cells: list[str], section: str) -> dict | None:
         "name": name[:140],
         "url": url,
         "category": category,
-        "source_type": infer_source_type(category),
+        "source_type": source_type,
         "topics": topics,
         "language": "en",
         "description": (description or "Listed in the upstream AI blog resource index.")[:300],

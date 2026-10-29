@@ -1,11 +1,13 @@
 import unittest
 from scripts.source_policy import (
     APPROVED_SOURCE_IDS,
+    CATEGORIES,
     apply_source_policy,
     article_title_key,
     article_url_state,
     is_english_title,
     is_relevant_article,
+    normalize_category,
 )
 
 
@@ -67,6 +69,25 @@ class SourcePolicyTests(unittest.TestCase):
         sources = [{"id": sid, "name": sid, "language": "en", "enabled": True, "review_status": "approved"} for sid in APPROVED_SOURCE_IDS]
         apply_source_policy(sources)
         self.assertTrue(all(s["enabled"] and s["review_status"] == "approved" for s in sources))
+
+    def test_categories_collapse_to_three_sections(self):
+        self.assertEqual(CATEGORIES, ("ai-lab-research", "ai-researcher-blog", "quant-research"))
+        self.assertEqual(normalize_category("ai-company", "openai-blog"), "ai-lab-research")
+        self.assertEqual(normalize_category("ai-academic", "epoch-ai"), "ai-lab-research")
+        self.assertEqual(normalize_category("ai-researcher", "chris-olah"), "ai-researcher-blog")
+        self.assertEqual(normalize_category("ai-engineering", "simon-willison"), "ai-researcher-blog")
+        self.assertEqual(normalize_category("interviews", "dwarkesh"), "ai-researcher-blog")
+        self.assertEqual(normalize_category("interviews", "alpha-exchange"), "quant-research")
+        self.assertEqual(normalize_category("quant-firm", "jane-street"), "quant-research")
+
+    def test_researcher_blog_requires_ai_topic(self):
+        source = {"id": "chris-olah", "language": "en", "name": "Christopher Olah", "category": "ai-researcher-blog", "source_type": "personal-blog"}
+        self.assertTrue(is_relevant_article(source, "The Building Blocks of Interpretability"))
+        self.assertFalse(is_relevant_article(source, "My favourite recipes for autumn"))
+
+    def test_quant_interview_feed_stays_relevant(self):
+        source = {"id": "alpha-exchange", "language": "en", "name": "The Alpha Exchange", "category": "quant-research", "source_type": "podcast"}
+        self.assertTrue(is_relevant_article(source, "Market microstructure with a systematic fund manager"))
 
 
 if __name__ == "__main__":

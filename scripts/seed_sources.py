@@ -1,36 +1,49 @@
 import json
 from pathlib import Path
 
-from source_policy import APPROVED_SOURCE_IDS, LANGUAGE_OVERRIDES, SOURCE_QUALITY
+from source_policy import (
+    APPROVED_SOURCE_IDS,
+    LANGUAGE_OVERRIDES,
+    QUANT_SOURCE_IDS,
+    SOURCE_QUALITY,
+    normalize_category,
+)
 
 # Fields: id, name, url, category, source_type, topics, language, description, tier, feed_url
 rows = [
 # AI thinkers and independent researchers
 ("lilian-weng", "Lilian Weng / Lil'Log", "https://lilianweng.github.io", "ai-researcher", "personal-blog", ["agents", "reinforcement-learning", "research-surveys"], "en", "Deep technical explainers and research surveys.", "", "https://lilianweng.github.io/index.xml"),
 ("jason-wei", "Jason Wei", "https://www.jasonwei.net", "ai-researcher", "personal-site", ["reasoning", "prompt-engineering", "scaling"], "en", "Research notes on reasoning, prompting, and model behavior.", "", ""),
-("andrej-karpathy", "Andrej Karpathy", "https://karpathy.github.io", "ai-researcher", "personal-blog", ["deep-learning", "ai-engineering", "education"], "en", "Code-driven explanations and reflections on AI and software.", "", ""),
-("jay-alammar", "Jay Alammar", "https://jalammar.github.io", "ai-researcher", "personal-blog", ["visualization", "llms", "transformers"], "en", "Visual guides to transformers and modern language models.", "", ""),
-("neel-nanda", "Neel Nanda", "https://www.neelnanda.io", "ai-researcher", "personal-site", ["interpretability", "agents", "research-methods"], "en", "Mechanistic interpretability research and hands-on resources.", "", ""),
-("nelson-elhage", "Nelson Elhage", "https://blog.nelhage.com", "ai-researcher", "personal-blog", ["systems", "performance", "interpretability"], "en", "Deep dives into systems engineering and AI research.", "", ""),
+("andrej-karpathy", "Andrej Karpathy", "https://karpathy.github.io", "ai-researcher", "personal-blog", ["deep-learning", "ai-engineering", "education"], "en", "Code-driven explanations and reflections on AI and software.", "", "https://karpathy.github.io/feed.xml"),
+("jay-alammar", "Jay Alammar", "https://jalammar.github.io", "ai-researcher", "personal-blog", ["visualization", "llms", "transformers"], "en", "Visual guides to transformers and modern language models.", "", "https://jalammar.github.io/feed.xml"),
+("neel-nanda", "Neel Nanda", "https://www.neelnanda.io", "ai-researcher", "personal-site", ["interpretability", "agents", "research-methods"], "en", "Mechanistic interpretability research and hands-on resources.", "", "https://www.neelnanda.io/blog?format=rss"),
+("nelson-elhage", "Nelson Elhage", "https://blog.nelhage.com", "ai-researcher", "personal-blog", ["systems", "performance", "interpretability"], "en", "Deep dives into systems engineering and AI research.", "", "https://blog.nelhage.com/atom.xml"),
+("chris-olah", "Christopher Olah", "https://colah.github.io", "ai-researcher", "personal-blog", ["interpretability", "neural-networks", "circuits"], "en", "Foundational essays on neural network interpretability and feature visualization.", "", "https://colah.github.io/rss.xml"),
+("sander-dieleman", "Sander Dieleman", "https://sander.ai", "ai-researcher", "personal-blog", ["generative-models", "diffusion-models", "deep-learning"], "en", "Google DeepMind researcher writing on generative models, diffusion, and deep learning.", "", "https://sander.ai/feed.xml"),
+("greg-brockman", "Greg Brockman", "https://blog.gregbrockman.com", "ai-researcher", "personal-blog", ["ai-research", "scaling", "human-ai-interaction"], "en", "Essays and engineering notes from an OpenAI co-founder.", "", "https://blog.gregbrockman.com/rss.xml"),
+("inference-vc", "Inference / Ferenc Huszar", "https://www.inference.vc", "ai-researcher", "personal-blog", ["deep-learning", "generative-models", "ai-research"], "en", "Critical technical essays on machine learning by a Cambridge researcher.", "", "https://www.inference.vc/rss/"),
+("transformer-circuits", "Transformer Circuits", "https://transformer-circuits.pub", "ai-academic", "research-publication", ["interpretability", "mechanistic-interpretability", "transformers"], "en", "Anthropic's mechanistic interpretability and transformer research publication.", "", "https://transformer-circuits.pub/feed.xml"),
+("beren-millidge", "Beren Millidge", "https://www.beren.io", "ai-researcher", "personal-blog", ["alignment", "reasoning", "ai-research"], "en", "Researcher notes on alignment, reasoning, and AI progress.", "", "https://www.beren.io/feed.xml"),
+("ben-recht", "Ben Recht / argmin", "https://www.argmin.net", "ai-researcher", "personal-blog", ["ml-theory", "optimization", "ai-research"], "en", "Critical perspectives on machine learning theory and research practice.", "", "https://www.argmin.net/feed.xml"),
 ("chip-huyen", "Chip Huyen", "https://huyenchip.com", "ai-engineering", "personal-blog", ["ml-systems", "agents", "evaluation"], "en", "Practical machine-learning systems and production AI.", "", ""),
-("eugene-yan", "Eugene Yan", "https://eugeneyan.com", "ai-engineering", "personal-blog", ["llm-applications", "evaluation", "recommendation"], "en", "Applied ML, LLM systems, evaluation, and engineering patterns.", "", ""),
-("tim-dettmers", "Tim Dettmers", "https://timdettmers.com", "ai-researcher", "personal-blog", ["model-efficiency", "hardware", "training"], "en", "Model efficiency, quantization, hardware, and training.", "", ""),
+("eugene-yan", "Eugene Yan", "https://eugeneyan.com", "ai-engineering", "personal-blog", ["llm-applications", "evaluation", "recommendation"], "en", "Applied ML, LLM systems, evaluation, and engineering patterns.", "", "https://eugeneyan.com/rss/"),
+("tim-dettmers", "Tim Dettmers", "https://timdettmers.com", "ai-researcher", "personal-blog", ["model-efficiency", "hardware", "training"], "en", "Model efficiency, quantization, hardware, and training.", "", "https://timdettmers.com/feed/"),
 ("francois-chollet", "François Chollet", "https://fchollet.substack.com", "ai-researcher", "newsletter", ["reasoning", "evaluation", "ai-opinions"], "en", "Critical perspectives on intelligence, reasoning, and evaluation.", "", ""),
 ("simon-willison", "Simon Willison", "https://simonwillison.net", "ai-engineering", "personal-blog", ["llm-tools", "prompt-engineering", "ai-coding"], "en", "Frequent hands-on notes on LLMs, tools, and coding workflows.", "", "https://simonwillison.net/atom/everything/"),
 ("hamel-husain", "Hamel Husain", "https://hamel.dev", "ai-engineering", "personal-site", ["evaluation", "llm-applications", "research-workflows"], "en", "Practical LLM evaluation and application engineering.", "", ""),
 ("swyx", "swyx / Latent Space", "https://www.swyx.io", "ai-engineering", "personal-blog", ["agents", "ai-engineering", "developer-tools"], "en", "AI engineering, developer workflows, and emerging practices.", "", ""),
 ("jan-leike", "Jan Leike / Alignment", "https://aligned.substack.com", "ai-researcher", "newsletter", ["alignment", "research-opinions", "safety"], "en", "Researcher perspectives on alignment and AI safety.", "", ""),
-("alignment-forum", "Alignment Forum", "https://www.alignmentforum.org", "ai-community", "community", ["alignment", "research-discussion", "safety"], "en", "Long-form research discussion and AI safety essays.", "", ""),
-("dwarkesh", "Dwarkesh Podcast", "https://www.dwarkesh.com", "interviews", "podcast", ["researcher-interviews", "ai-strategy", "technology"], "en", "Long-form interviews with AI researchers and technology leaders.", "", ""),
+("alignment-forum", "Alignment Forum", "https://www.alignmentforum.org", "ai-community", "community", ["alignment", "research-discussion", "safety"], "en", "Long-form research discussion and AI safety essays.", "", "https://www.alignmentforum.org/feed.xml"),
+("dwarkesh", "Dwarkesh Podcast", "https://www.dwarkesh.com", "interviews", "podcast", ["researcher-interviews", "ai-strategy", "technology"], "en", "Long-form interviews with AI researchers and technology leaders.", "", "https://www.dwarkesh.com/feed"),
 ("latent-space", "Latent Space", "https://www.latent.space", "interviews", "podcast", ["ai-engineering", "agents", "researcher-interviews"], "en", "AI engineering interviews, tools, and practical workflows.", "", ""),
 ("cognitive-revolution", "The Cognitive Revolution", "https://www.cognitiverevolution.ai", "interviews", "podcast", ["ai-research", "researcher-interviews", "ai-strategy"], "en", "Long-form conversations about AI research and applications.", "", ""),
 ("pragmatic-engineer", "The Pragmatic Engineer", "https://newsletter.pragmaticengineer.com", "ai-engineering", "newsletter", ["software-engineering", "ai-coding", "engineering-culture"], "en", "Engineering practice, tools, and technology industry analysis.", "", ""),
 # Independent research, evaluation, and thoughtful AI commentary
 ("gwern", "Gwern Branwen", "https://gwern.net/", "ai-researcher", "personal-blog", ["ai-essays", "scaling", "research-methods"], "en", "Long-form essays with extensive sourcing; AI-related posts only are indexed.", "", ""),
 ("import-ai", "Import AI / Jack Clark", "https://importai.substack.com/", "ai-researcher", "newsletter", ["ai-research", "industry-analysis", "policy"], "en", "Research-oriented analysis of important AI developments and their implications.", "", ""),
-("interconnects", "Interconnects / Nathan Lambert", "https://www.interconnects.ai/", "ai-researcher", "newsletter", ["open-models", "post-training", "ai-research"], "en", "Researcher commentary on open models, post-training, and frontier AI.", "", ""),
-("one-useful-thing", "One Useful Thing / Ethan Mollick", "https://www.oneusefulthing.org/", "ai-engineering", "newsletter", ["ai-practice", "workflow", "ai-capabilities"], "en", "Thoughtful practical writing about how AI changes work and problem-solving.", "", ""),
-("ai-snake-oil", "AI Snake Oil", "https://www.aisnakeoil.com/", "ai-researcher", "newsletter", ["critical-analysis", "ai-evaluation", "ai-policy"], "en", "Evidence-focused critique of AI claims, evaluations, and real-world effects.", "", ""),
+("interconnects", "Interconnects / Nathan Lambert", "https://www.interconnects.ai/", "ai-researcher", "newsletter", ["open-models", "post-training", "ai-research"], "en", "Researcher commentary on open models, post-training, and frontier AI.", "", "https://www.interconnects.ai/feed"),
+("one-useful-thing", "One Useful Thing / Ethan Mollick", "https://www.oneusefulthing.org/", "ai-engineering", "newsletter", ["ai-practice", "workflow", "ai-capabilities"], "en", "Thoughtful practical writing about how AI changes work and problem-solving.", "", "https://www.oneusefulthing.org/feed"),
+("ai-snake-oil", "AI Snake Oil", "https://www.aisnakeoil.com/", "ai-researcher", "newsletter", ["critical-analysis", "ai-evaluation", "ai-policy"], "en", "Evidence-focused critique of AI claims, evaluations, and real-world effects.", "", "https://www.aisnakeoil.com/feed"),
 ("epoch-ai", "Epoch AI", "https://epoch.ai/blog", "ai-academic", "research-blog", ["ai-trends", "compute", "scaling"], "en", "Quantitative research on AI progress, compute, and scaling trends.", "", ""),
 ("metr", "METR", "https://metr.org/blog/", "ai-academic", "research-blog", ["ai-evaluation", "agent-capabilities", "safety"], "en", "Empirical evaluations of frontier model capabilities and autonomous task performance.", "", ""),
 ("apollo-research", "Apollo Research", "https://www.apolloresearch.ai/blog", "ai-academic", "research-blog", ["alignment", "evaluations", "agent-behavior"], "en", "Technical research on model behavior, evaluations, and alignment.", "", ""),
@@ -63,7 +76,7 @@ rows = [
 ("distill", "Distill", "https://distill.pub", "ai-academic", "research-publication", ["visualization", "deep-learning", "interpretability"], "en", "Interactive explanations of machine learning.", "", ""),
 ("shlab", "Shanghai AI Laboratory", "https://www.shlab.org.cn/news", "ai-academic", "research-blog", ["open-source", "multimodal", "research"], "zh", "Chinese AI research and open-source projects.", "", ""),
 # Quantitative trading firms and systematic managers
-("jane-street", "Jane Street", "https://blog.janestreet.com/archive/", "quant-firm", "official-blog", ["feature-engineering", "market-microstructure", "ml-systems", "research-engineering"], "en", "Technical articles from Jane Street; includes ML and engineering topics.", "Tier 1", ""),
+("jane-street", "Jane Street", "https://blog.janestreet.com/archive/", "quant-firm", "official-blog", ["feature-engineering", "market-microstructure", "ml-systems", "research-engineering"], "en", "Technical articles from Jane Street; includes ML and engineering topics.", "Tier 1", "https://blog.janestreet.com/feed.xml"),
 ("xtx-markets", "XTX Markets", "https://www.xtxmarkets.com/tech/", "quant-firm", "official-blog", ["ml-systems", "data-infrastructure", "quant-research"], "en", "Public technology articles and research infrastructure write-ups.", "Tier 1", ""),
 ("citadel-securities", "Citadel Securities", "https://www.citadelsecurities.com/news-and-insights/", "quant-firm", "official-blog", ["market-structure", "execution", "technology"], "en", "Market structure, technology, and public research insights.", "Tier 1", ""),
 ("citadel", "Citadel", "https://www.citadel.com/insights/", "quant-firm", "official-blog", ["systematic-investing", "research", "markets"], "en", "Public investment and market insights.", "Tier 1", ""),
@@ -115,6 +128,7 @@ index_source_ids = {
 sources = []
 for row in rows:
     sid, name, url, category, source_type, topics, language, description, tier, feed_url = row
+    category = normalize_category(category, sid)
     item = {
         "id": sid,
         "name": name,
@@ -129,7 +143,7 @@ for row in rows:
         "review_status": "approved" if sid in APPROVED_SOURCE_IDS else ("language-filtered" if language != "en" else "not-curated"),
         "source_quality": SOURCE_QUALITY.get(sid, "watchlist"),
         "feed_url": feed_url or None,
-        "source_index": "joeseesun/ai-blog-res" if sid in index_source_ids else ("curated-quant-and-interviews" if category in ("quant-firm", "interviews") else "curated-ai-sources")
+        "source_index": "joeseesun/ai-blog-res" if sid in index_source_ids else ("curated-quant-and-interviews" if sid in QUANT_SOURCE_IDS else "curated-ai-sources")
     }
     sources.append(item)
 

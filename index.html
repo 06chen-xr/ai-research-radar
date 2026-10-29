@@ -25,13 +25,9 @@
       <div class="side-label topic-label">EXPLORE BY TOPIC</div>
       <nav class="topic-nav" aria-label="Topic filters">
         <button class="topic-item active" data-category="all"><i class="topic-dot all-dot"></i>All updates</button>
-        <button class="topic-item" data-category="ai-researcher"><i class="topic-dot research-dot"></i>AI research & thinking</button>
-        <button class="topic-item" data-category="ai-engineering"><i class="topic-dot engineering-dot"></i>AI engineering & agents</button>
-        <button class="topic-item" data-category="ai-company"><i class="topic-dot company-dot"></i>AI labs & companies</button>
-        <button class="topic-item" data-category="ai-academic"><i class="topic-dot academic-dot"></i>Academic research</button>
-        <button class="topic-item" data-category="quant-firm"><i class="topic-dot quant-dot"></i>Quant firms</button>
-        <button class="topic-item" data-category="interviews"><i class="topic-dot interview-dot"></i>Interviews & talks</button>
-        <button class="topic-item" data-category="ai-community"><i class="topic-dot community-dot"></i>Research communities</button>
+        <button class="topic-item" data-category="ai-lab-research"><i class="topic-dot lab-dot"></i>AI lab research</button>
+        <button class="topic-item" data-category="ai-researcher-blog"><i class="topic-dot research-dot"></i>AI researcher blog</button>
+        <button class="topic-item" data-category="quant-research"><i class="topic-dot quant-dot"></i>Trading firm quant research</button>
       </nav>
       <div class="sidebar-bottom">
         <span class="status-light"></span>
@@ -78,7 +74,7 @@
 
       <section id="view-sources" class="view">
         <div class="page-heading compact-heading"><div><div class="eyebrow">THE DIRECTORY</div><h1>Source directory<span class="heading-period">.</span></h1><p class="page-subtitle">Only curated English-language sources are shown by default. New sources stay pending until reviewed; article titles are also filtered for AI or quant relevance.</p></div></div>
-        <div class="source-toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input id="source-search" type="search" placeholder="Search sources, firms, or topics…" autocomplete="off"></label><select id="source-category-filter" aria-label="Filter source category"><option value="all">All source types</option><option value="ai-researcher">AI researchers</option><option value="ai-engineering">AI engineering</option><option value="ai-company">AI companies</option><option value="ai-academic">Academic research</option><option value="quant-firm">Quant firms</option><option value="interviews">Interviews & podcasts</option><option value="ai-community">Research communities</option></select><select id="source-tier-filter" aria-label="Filter source tier"><option value="all">All tiers</option><option>Tier 1</option><option>Tier 2</option><option>Tier 3</option><option>Tier 4</option><option>Tier 5</option></select><label class="source-toggle"><input id="show-inactive-sources" type="checkbox"> Show inactive English sources</label></div>
+        <div class="source-toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input id="source-search" type="search" placeholder="Search sources, firms, or topics…" autocomplete="off"></label><select id="source-category-filter" aria-label="Filter source category"><option value="all">All source types</option><option value="ai-lab-research">AI lab research</option><option value="ai-researcher-blog">AI researcher blogs</option><option value="quant-research">Trading firm quant research</option></select><select id="source-tier-filter" aria-label="Filter source tier"><option value="all">All tiers</option><option>Tier 1</option><option>Tier 2</option><option>Tier 3</option><option>Tier 4</option><option>Tier 5</option></select><label class="source-toggle"><input id="show-inactive-sources" type="checkbox"> Show inactive English sources</label></div>
         <div class="source-summary" id="source-summary"></div>
         <div id="source-list" class="source-grid"><div class="loading-state"><span class="spinner"></span>Loading sources…</div></div>
       </section>
