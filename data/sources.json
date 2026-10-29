@@ -1,7 +1,7 @@
 {
-  "updated_at": null,
+  "updated_at": "2026-10-29T08:14:49Z",
   "source_index": "https://github.com/joeseesun/ai-blog-res/blob/main/AI%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%BA%90-%E5%AE%8C%E6%95%B4%E7%B4%A2%E5%BC%95.md",
-  "note": "Seed directory for the first version. Some sources are directory-only until a stable feed or article listing can be discovered.",
+  "note": "Source registry syncs newly listed resources from the upstream AI blog index and preserves manually curated quant/interview sources.",
   "sources": [
     {
       "id": "lilian-weng",
@@ -234,7 +234,7 @@
       "tier": null,
       "enabled": true,
       "feed_url": null,
-      "source_index": "curated-ai-sources"
+      "source_index": "joeseesun/ai-blog-res"
     },
     {
       "id": "david-ha",
@@ -1570,6 +1570,972 @@
       "enabled": true,
       "feed_url": null,
       "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "idx-blog-gregbrockman-com-a52ee66",
+      "name": "Greg Brockman",
+      "url": "https://blog.gregbrockman.com",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "技术领导力",
+        "AI基础设施 技术领导力",
+        "ML转型",
+        "分布式系统"
+      ],
+      "language": "zh",
+      "description": "OpenAI · 技术领导力、AI基础设施",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-neelnanda-io-793d37f",
+      "name": "Neel Nanda",
+      "url": "https://neelnanda.io",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "机制可解释性",
+        "逆向工程 Grokking现象",
+        "感应头",
+        "TransformerLens"
+      ],
+      "language": "zh",
+      "description": "DeepMind（前Anthropic） · 机制可解释性、逆向工程",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-yitay-net-282003d",
+      "name": "Yi Tay",
+      "url": "https://yitay.net",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "高效Transformer",
+        "架构设计 T5 vs GPT",
+        "归纳偏置",
+        "Scaling"
+      ],
+      "language": "zh",
+      "description": "DeepMind · 高效Transformer、架构设计",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-rossgirshick-info-34b1046",
+      "name": "Ross Girshick",
+      "url": "https://rossgirshick.info",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "计算机视觉",
+        "目标检测 R-CNN系列",
+        "SAM",
+        "视觉Transformer"
+      ],
+      "language": "zh",
+      "description": "Meta FAIR · 计算机视觉、目标检测",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-smithamilli-com-7b7f47c",
+      "name": "Smitha Milli",
+      "url": "https://smithamilli.com",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "AI对齐",
+        "博弈论 对齐博弈",
+        "推荐系统社会动力学"
+      ],
+      "language": "zh",
+      "description": "Meta FAIR · AI对齐、博弈论",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-github-com-b659017",
+      "name": "Guillaume Lample",
+      "url": "https://github.com/glample",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "高效模型",
+        "Chinchilla优化 Llama训练",
+        "RAG",
+        "数据最优比"
+      ],
+      "language": "zh",
+      "description": "Mistral AI · 高效模型、Chinchilla优化",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-albertqjiang-github-io-b186b70",
+      "name": "Albert Q. Jiang",
+      "url": "https://albertqjiang.github.io",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "数学推理",
+        "MoE模型 数学超智能",
+        "Mixtral",
+        "稀疏激活"
+      ],
+      "language": "zh",
+      "description": "Mistral AI · 数学推理、MoE模型",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-sophiamyang-medium-com-dde47ca",
+      "name": "Sophia Yang",
+      "url": "https://sophiamyang.medium.com",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "开发者关系",
+        "应用落地 Mistral实战",
+        "RAG构建",
+        "函数调用"
+      ],
+      "language": "zh",
+      "description": "Mistral AI · 开发者关系、应用落地",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-alignmentforum-org-f88347c",
+      "name": "Alignment Forum (evhub)",
+      "url": "https://www.alignmentforum.org/users/evhub",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "内对齐",
+        "欺骗性对齐 内对齐",
+        "欺骗性对齐"
+      ],
+      "language": "zh",
+      "description": "Anthropic · 内对齐、欺骗性对齐",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-github-com-08f05d3",
+      "name": "GitHub/YouTube",
+      "url": "https://github.com/hwchung27",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "指令微调",
+        "模型行为 指令微调规模化",
+        "激励vs教导"
+      ],
+      "language": "zh",
+      "description": "Meta（前OpenAI/Google） · 指令微调、模型行为",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-matthias-gerstgrasser-net-699f768",
+      "name": "Personal Site",
+      "url": "https://matthias.gerstgrasser.net",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "多智能体学习",
+        "机制设计 多智能体系统",
+        "激励设计"
+      ],
+      "language": "zh",
+      "description": "OpenAI · 多智能体学习、机制设计",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-sites-google-com-3511407",
+      "name": "The Maximalists",
+      "url": "https://sites.google.com/view/ravi-theja",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "企业级RAG GraphRAG",
+        "CorrectiveRAG",
+        "MoA"
+      ],
+      "language": "zh",
+      "description": "Mistral AI（顾问） · 企业级RAG",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-artfish-ai-5a0bbcd",
+      "name": "Art Fish Intelligence",
+      "url": "https://www.artfish.ai",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "数据叙事",
+        "LLM行为 自我数据分析",
+        "LLM创造力评测"
+      ],
+      "language": "zh",
+      "description": "DeepMind · 数据叙事、LLM行为",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-sites-google-com-cc64cd3",
+      "name": "Personal Site",
+      "url": "https://sites.google.com/view/ashwinvaswani",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "多模态",
+        "医疗AI 多模态融合",
+        "Speech2Face"
+      ],
+      "language": "zh",
+      "description": "DeepMind · 多模态、医疗AI",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-profiles-stanford-edu-b2727c6",
+      "name": "Fei-Fei Li",
+      "url": "https://profiles.stanford.edu/fei-fei-li",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "计算机视觉",
+        "ImageNet",
+        "AI伦理 ImageNet",
+        "视觉识别",
+        "AI人文关怀"
+      ],
+      "language": "zh",
+      "description": "Stanford/Google Cloud · 计算机视觉、ImageNet、AI伦理",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-cs-toronto-edu-a49392e",
+      "name": "Ilya Sutskever",
+      "url": "https://www.cs.toronto.edu/~ilya",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "深度学习理论",
+        "AGI安全 序列建模",
+        "无监督学习",
+        "AGI安全"
+      ],
+      "language": "zh",
+      "description": "SSI（前OpenAI） · 深度学习理论、AGI安全",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-cs-toronto-edu-94ac22b",
+      "name": "Alex Krizhevsky",
+      "url": "https://www.cs.toronto.edu/~kriz",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "卷积神经网络",
+        "ImageNet AlexNet",
+        "CIFAR数据集",
+        "卷积网络"
+      ],
+      "language": "zh",
+      "description": "独立（前Google） · 卷积神经网络、ImageNet",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-cs-toronto-edu-0995f5d",
+      "name": "Geoffrey Hinton",
+      "url": "https://www.cs.toronto.edu/~hinton",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "深度学习基础",
+        "反向传播",
+        "胶囊网络 反向传播",
+        "Dropout",
+        "胶囊网络",
+        "AI风险"
+      ],
+      "language": "zh",
+      "description": "独立（前Google） · 深度学习基础、反向传播、胶囊网络",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-yoshuabengio-org-c857935",
+      "name": "Yoshua Bengio",
+      "url": "https://yoshuabengio.org",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "深度学习理论",
+        "因果推理",
+        "AI安全 注意力机制",
+        "生成模型",
+        "因果AI",
+        "AI伦理"
+      ],
+      "language": "zh",
+      "description": "Mila/Montreal · 深度学习理论、因果推理、AI安全",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-deepmind-com-96a0ba2",
+      "name": "Demis Hassabis",
+      "url": "https://www.deepmind.com/about/demis-hassabis",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "AGI",
+        "强化学习",
+        "神经科学 AlphaGo",
+        "AlphaFold",
+        "AGI路径"
+      ],
+      "language": "zh",
+      "description": "Google DeepMind · AGI、强化学习、神经科学",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-research-google-58c281c",
+      "name": "Jeff Dean",
+      "url": "https://research.google/people/jeff",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "大规模系统",
+        "分布式训练 TensorFlow",
+        "大规模ML系统",
+        "TPU"
+      ],
+      "language": "zh",
+      "description": "Google · 大规模系统、分布式训练",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-zhipu-ai-feishu-cn-af65f0a",
+      "name": "智谱AI技术博客",
+      "url": "https://zhipu-ai.feishu.cn/wiki/space/7309936523038679044",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "智谱AI 中文大模型开发者",
+        "代码生成研究者"
+      ],
+      "language": "zh",
+      "description": "智谱AI · 中文大模型开发者、代码生成研究者",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-baichuan-ai-com-d43d807",
+      "name": "Baichuan AI",
+      "url": "https://www.baichuan-ai.com/home",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "百川智能 垂直领域AI开发者",
+        "开源模型研究者"
+      ],
+      "language": "zh",
+      "description": "百川智能 · 垂直领域AI开发者、开源模型研究者",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-01-ai-c78b037",
+      "name": "Yi Blog",
+      "url": "https://www.01.ai/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "零一万物 中英双语模型研究者",
+        "长文本开发者"
+      ],
+      "language": "zh",
+      "description": "零一万物 · 中英双语模型研究者、长文本开发者",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-modelbest-cn-acd7abc",
+      "name": "ModelBest Blog",
+      "url": "https://modelbest.cn/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "面壁智能 学术界转工业界研究者",
+        "高效训练研究者"
+      ],
+      "language": "zh",
+      "description": "面壁智能 · 学术界转工业界研究者、高效训练研究者",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-stepfun-com-6a93b45",
+      "name": "StepFun Blog",
+      "url": "https://www.stepfun.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "阶跃星辰 数学推理研究者",
+        "科学计算开发者"
+      ],
+      "language": "zh",
+      "description": "阶跃星辰 · 数学推理研究者、科学计算开发者",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-deepseek-com-ccd9bed",
+      "name": "DeepSeek Blog",
+      "url": "https://www.deepseek.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "深度求索 代码生成研究者",
+        "MoE架构开发者"
+      ],
+      "language": "zh",
+      "description": "深度求索 · 代码生成研究者、MoE架构开发者",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-hailuoai-com-e87d087",
+      "name": "MiniMax Hailuo",
+      "url": "https://hailuoai.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "MiniMax 视频生成研究者",
+        "内容创作者"
+      ],
+      "language": "zh",
+      "description": "MiniMax · 视频生成研究者、内容创作者",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-darkrocks-ai-7e33028",
+      "name": "Dark Rocks AI",
+      "url": "https://www.darkrocks.ai/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "暗礁科技 Agent开发者",
+        "企业AI应用工程师"
+      ],
+      "language": "zh",
+      "description": "暗礁科技 · Agent开发者、企业AI应用工程师",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-rcrai-com-905fcd7",
+      "name": "Recurrent AI",
+      "url": "https://www.rcrai.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "循环智能 对话系统开发者",
+        "销售AI研究者"
+      ],
+      "language": "zh",
+      "description": "循环智能 · 对话系统开发者、销售AI研究者",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-xverse-cn-fea9546",
+      "name": "Xverse AI",
+      "url": "https://www.xverse.cn/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "衔远科技 金融AI开发者",
+        "垂直领域研究者"
+      ],
+      "language": "zh",
+      "description": "衔远科技 · 金融AI开发者、垂直领域研究者",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-langboat-com-0175d54",
+      "name": "Langboat",
+      "url": "https://www.langboat.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "澜舟科技 企业NLP工程师",
+        "知识图谱开发者"
+      ],
+      "language": "zh",
+      "description": "澜舟科技 · 企业NLP工程师、知识图谱开发者",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-openai-com-17038ee",
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "GPT系列",
+        "一手资讯 GPT技术解读",
+        "API更新",
+        "安全研究"
+      ],
+      "language": "zh",
+      "description": "GPT系列、一手资讯 · GPT技术解读、API更新、安全研究",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-deepmind-google-a9563a6",
+      "name": "DeepMind Blog",
+      "url": "https://deepmind.google/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "AI先驱",
+        "跨学科研究 强化学习",
+        "蛋白质预测",
+        "游戏AI"
+      ],
+      "language": "zh",
+      "description": "AI先驱、跨学科研究 · 强化学习、蛋白质预测、游戏AI",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-anthropic-com-1a8d6c4",
+      "name": "Anthropic Blog",
+      "url": "https://www.anthropic.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "AI对齐和安全 对齐技术",
+        "安全评估",
+        "可解释性"
+      ],
+      "language": "zh",
+      "description": "AI对齐和安全 · 对齐技术、安全评估、可解释性",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-stability-ai-39acb67",
+      "name": "Stability AI Blog",
+      "url": "https://stability.ai/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "开源生成模型",
+        "Stable Diffusion Stable Diffusion",
+        "图像生成",
+        "开源生成"
+      ],
+      "language": "zh",
+      "description": "开源生成模型、Stable Diffusion · Stable Diffusion、图像生成、开源生成",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-developer-aliyun-com-6553681",
+      "name": "阿里云AI博客",
+      "url": "https://developer.aliyun.com/group/ai",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "通义系列",
+        "云原生AI 通义千问",
+        "PAI平台",
+        "云原生AI"
+      ],
+      "language": "zh",
+      "description": "通义系列、云原生AI · 通义千问、PAI平台、云原生AI",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-ai-tencent-com-d1fafe9",
+      "name": "腾讯AI Lab",
+      "url": "https://ai.tencent.com/ailab/zh/index",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "游戏AI",
+        "多模态",
+        "NLP 游戏AI",
+        "混元模型"
+      ],
+      "language": "zh",
+      "description": "游戏AI、多模态、NLP · 游戏AI、混元模型、多模态",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-ai-baidu-com-2d07c6c",
+      "name": "百度AI博客",
+      "url": "https://ai.baidu.com/forum/topic/list/168",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "文心系列",
+        "产业应用 文心一言",
+        "飞桨框架",
+        "产业AI"
+      ],
+      "language": "zh",
+      "description": "文心系列、产业应用 · 文心一言、飞桨框架、产业AI",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-sensetime-com-93d25d3",
+      "name": "商汤AI博客",
+      "url": "https://www.sensetime.com/cn/news-detail",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "计算机视觉",
+        "具身智能 计算机视觉",
+        "具身智能",
+        "自动驾驶"
+      ],
+      "language": "zh",
+      "description": "计算机视觉、具身智能 · 计算机视觉、具身智能、自动驾驶",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-research-megvii-com-bfd6aa5",
+      "name": "旷视研究院",
+      "url": "https://research.megvii.com",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "计算机视觉",
+        "检测识别 目标检测",
+        "人脸识别",
+        "视觉算法"
+      ],
+      "language": "zh",
+      "description": "计算机视觉、检测识别 · 目标检测、人脸识别、视觉算法",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-air-tsinghua-edu-cn-5334d05",
+      "name": "清华AI研究院",
+      "url": "https://air.tsinghua.edu.cn/info/1007/1055.htm",
+      "category": "ai-academic",
+      "source_type": "research-blog",
+      "topics": [
+        "中国AI学术前沿 基础研究",
+        "产业应用",
+        "人才培养"
+      ],
+      "language": "zh",
+      "description": "中国AI学术前沿 · 基础研究、产业应用、人才培养",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-ai-pku-edu-cn-15c3a10",
+      "name": "北大AI研究院",
+      "url": "https://www.ai.pku.edu.cn/info/1015/1033.htm",
+      "category": "ai-academic",
+      "source_type": "research-blog",
+      "topics": [
+        "跨学科AI研究 AI理论",
+        "跨学科应用"
+      ],
+      "language": "zh",
+      "description": "跨学科AI研究 · AI理论、跨学科应用",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-aisafetysupport-org-6ffb10b",
+      "name": "AI Safety Support",
+      "url": "https://www.aisafetysupport.org",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "AI安全职业与学习资源"
+      ],
+      "language": "zh",
+      "description": "AI安全职业与学习资源",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-80000hours-org-85aebfa",
+      "name": "80,000 Hours AI Safety",
+      "url": "https://80000hours.org/problem-profiles/artificial-intelligence",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "AI安全职业指南"
+      ],
+      "language": "zh",
+      "description": "AI安全职业指南",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-huggingface-co-9564f66",
+      "name": "Hugging Face",
+      "url": "https://huggingface.co",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "开源模型与数据集中心"
+      ],
+      "language": "zh",
+      "description": "开源模型与数据集中心",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-paperswithcode-com-0ab4df3",
+      "name": "Papers With Code",
+      "url": "https://paperswithcode.com",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "论文代码实现索引"
+      ],
+      "language": "zh",
+      "description": "论文代码实现索引",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-github-com-d950690",
+      "name": "GitHub Trending AI",
+      "url": "https://github.com/trending/jupyter-notebook",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "AI项目趋势"
+      ],
+      "language": "zh",
+      "description": "AI项目趋势",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-jiqizhixin-com-1cf7096",
+      "name": "机器之心",
+      "url": "https://www.jiqizhixin.com",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "中文AI资讯与技术解读"
+      ],
+      "language": "zh",
+      "description": "中文AI资讯与技术解读",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-leiphone-com-0e79aa3",
+      "name": "AI科技评论",
+      "url": "https://www.leiphone.com/category/ai",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "中文AI深度报道"
+      ],
+      "language": "zh",
+      "description": "中文AI深度报道",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-paperweekly-site-6717634",
+      "name": "PaperWeekly",
+      "url": "https://www.paperweekly.site",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "中文论文解读社区"
+      ],
+      "language": "zh",
+      "description": "中文论文解读社区",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-youtube-com-ecd8655",
+      "name": "Andrej Karpathy YouTube",
+      "url": "https://www.youtube.com/@AndrejKarpathy",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "深度学习教学视频"
+      ],
+      "language": "zh",
+      "description": "深度学习教学视频",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-youtube-com-a7f227b",
+      "name": "3Blue1Brown",
+      "url": "https://www.youtube.com/@3blue1brown",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "数学与神经网络可视化"
+      ],
+      "language": "zh",
+      "description": "数学与神经网络可视化",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-youtube-com-105a594",
+      "name": "Two Minute Papers",
+      "url": "https://www.youtube.com/@TwoMinutePapers",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "AI论文快速解读"
+      ],
+      "language": "zh",
+      "description": "AI论文快速解读",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
     }
   ]
 }
