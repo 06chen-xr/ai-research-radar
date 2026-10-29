@@ -1,0 +1,1575 @@
+{
+  "updated_at": null,
+  "source_index": "https://github.com/joeseesun/ai-blog-res/blob/main/AI%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%BA%90-%E5%AE%8C%E6%95%B4%E7%B4%A2%E5%BC%95.md",
+  "note": "Seed directory for the first version. Some sources are directory-only until a stable feed or article listing can be discovered.",
+  "sources": [
+    {
+      "id": "lilian-weng",
+      "name": "Lilian Weng / Lil'Log",
+      "url": "https://lilianweng.github.io",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "agents",
+        "reinforcement-learning",
+        "research-surveys"
+      ],
+      "language": "en",
+      "description": "Deep technical explainers and research surveys.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": "https://lilianweng.github.io/index.xml",
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "jason-wei",
+      "name": "Jason Wei",
+      "url": "https://www.jasonwei.net",
+      "category": "ai-researcher",
+      "source_type": "personal-site",
+      "topics": [
+        "reasoning",
+        "prompt-engineering",
+        "scaling"
+      ],
+      "language": "en",
+      "description": "Research notes on reasoning, prompting, and model behavior.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "andrej-karpathy",
+      "name": "Andrej Karpathy",
+      "url": "https://karpathy.github.io",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "deep-learning",
+        "ai-engineering",
+        "education"
+      ],
+      "language": "en",
+      "description": "Code-driven explanations and reflections on AI and software.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "chris-olah",
+      "name": "Chris Olah / Colah's Blog",
+      "url": "https://colah.github.io",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "interpretability",
+        "deep-learning"
+      ],
+      "language": "en",
+      "description": "Visual explanations of neural networks and interpretability.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "jay-alammar",
+      "name": "Jay Alammar",
+      "url": "https://jalammar.github.io",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "visualization",
+        "llms",
+        "transformers"
+      ],
+      "language": "en",
+      "description": "Visual guides to transformers and modern language models.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "sebastian-ruder",
+      "name": "Sebastian Ruder",
+      "url": "https://ruder.io",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "nlp",
+        "research-surveys",
+        "multilingual"
+      ],
+      "language": "en",
+      "description": "NLP research, multilingual models, and research digests.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "neel-nanda",
+      "name": "Neel Nanda",
+      "url": "https://www.neelnanda.io",
+      "category": "ai-researcher",
+      "source_type": "personal-site",
+      "topics": [
+        "interpretability",
+        "agents",
+        "research-methods"
+      ],
+      "language": "en",
+      "description": "Mechanistic interpretability research and hands-on resources.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "nelson-elhage",
+      "name": "Nelson Elhage",
+      "url": "https://blog.nelhage.com",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "systems",
+        "performance",
+        "interpretability"
+      ],
+      "language": "en",
+      "description": "Deep dives into systems engineering and AI research.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "chip-huyen",
+      "name": "Chip Huyen",
+      "url": "https://huyenchip.com",
+      "category": "ai-engineering",
+      "source_type": "personal-blog",
+      "topics": [
+        "ml-systems",
+        "agents",
+        "evaluation"
+      ],
+      "language": "en",
+      "description": "Practical machine-learning systems and production AI.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "eugene-yan",
+      "name": "Eugene Yan",
+      "url": "https://eugeneyan.com",
+      "category": "ai-engineering",
+      "source_type": "personal-blog",
+      "topics": [
+        "llm-applications",
+        "evaluation",
+        "recommendation"
+      ],
+      "language": "en",
+      "description": "Applied ML, LLM systems, evaluation, and engineering patterns.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "tim-dettmers",
+      "name": "Tim Dettmers",
+      "url": "https://timdettmers.com",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "model-efficiency",
+        "hardware",
+        "training"
+      ],
+      "language": "en",
+      "description": "Model efficiency, quantization, hardware, and training.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "yann-lecun",
+      "name": "Yann LeCun",
+      "url": "https://yann.lecun.com",
+      "category": "ai-researcher",
+      "source_type": "personal-site",
+      "topics": [
+        "world-models",
+        "open-research",
+        "ai-opinions"
+      ],
+      "language": "en",
+      "description": "Research and public writing on alternative AI paradigms.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "francois-chollet",
+      "name": "François Chollet",
+      "url": "https://fchollet.substack.com",
+      "category": "ai-researcher",
+      "source_type": "newsletter",
+      "topics": [
+        "reasoning",
+        "evaluation",
+        "ai-opinions"
+      ],
+      "language": "en",
+      "description": "Critical perspectives on intelligence, reasoning, and evaluation.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "david-ha",
+      "name": "David Ha / otoro",
+      "url": "https://blog.otoro.net",
+      "category": "ai-researcher",
+      "source_type": "personal-blog",
+      "topics": [
+        "generative-models",
+        "evolution",
+        "creative-ai"
+      ],
+      "language": "en",
+      "description": "Experiments and visual explorations in neural networks.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "simon-willison",
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net",
+      "category": "ai-engineering",
+      "source_type": "personal-blog",
+      "topics": [
+        "llm-tools",
+        "prompt-engineering",
+        "ai-coding"
+      ],
+      "language": "en",
+      "description": "Frequent hands-on notes on LLMs, tools, and coding workflows.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": "https://simonwillison.net/atom/everything/",
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "hamel-husain",
+      "name": "Hamel Husain",
+      "url": "https://hamel.dev",
+      "category": "ai-engineering",
+      "source_type": "personal-site",
+      "topics": [
+        "evaluation",
+        "llm-applications",
+        "research-workflows"
+      ],
+      "language": "en",
+      "description": "Practical LLM evaluation and application engineering.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "swyx",
+      "name": "swyx / Latent Space",
+      "url": "https://www.swyx.io",
+      "category": "ai-engineering",
+      "source_type": "personal-blog",
+      "topics": [
+        "agents",
+        "ai-engineering",
+        "developer-tools"
+      ],
+      "language": "en",
+      "description": "AI engineering, developer workflows, and emerging practices.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "addy-osmani",
+      "name": "Addy Osmani",
+      "url": "https://addyosmani.com/blog",
+      "category": "ai-engineering",
+      "source_type": "personal-blog",
+      "topics": [
+        "ai-coding",
+        "developer-tools",
+        "software-engineering"
+      ],
+      "language": "en",
+      "description": "Developer productivity, software engineering, and AI coding.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "jan-leike",
+      "name": "Jan Leike / Alignment",
+      "url": "https://aligned.substack.com",
+      "category": "ai-researcher",
+      "source_type": "newsletter",
+      "topics": [
+        "alignment",
+        "research-opinions",
+        "safety"
+      ],
+      "language": "en",
+      "description": "Researcher perspectives on alignment and AI safety.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "alignment-forum",
+      "name": "Alignment Forum",
+      "url": "https://www.alignmentforum.org",
+      "category": "ai-community",
+      "source_type": "community",
+      "topics": [
+        "alignment",
+        "research-discussion",
+        "safety"
+      ],
+      "language": "en",
+      "description": "Long-form research discussion and AI safety essays.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "dwarkesh",
+      "name": "Dwarkesh Podcast",
+      "url": "https://www.dwarkesh.com",
+      "category": "interviews",
+      "source_type": "podcast",
+      "topics": [
+        "researcher-interviews",
+        "ai-strategy",
+        "technology"
+      ],
+      "language": "en",
+      "description": "Long-form interviews with AI researchers and technology leaders.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "latent-space",
+      "name": "Latent Space",
+      "url": "https://www.latent.space",
+      "category": "interviews",
+      "source_type": "podcast",
+      "topics": [
+        "ai-engineering",
+        "agents",
+        "researcher-interviews"
+      ],
+      "language": "en",
+      "description": "AI engineering interviews, tools, and practical workflows.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "no-priors",
+      "name": "No Priors",
+      "url": "https://www.nopriors.com",
+      "category": "interviews",
+      "source_type": "podcast",
+      "topics": [
+        "ai-startups",
+        "researcher-interviews",
+        "ai-strategy"
+      ],
+      "language": "en",
+      "description": "Interviews on AI research, products, and company building.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "cognitive-revolution",
+      "name": "The Cognitive Revolution",
+      "url": "https://www.cognitiverevolution.ai",
+      "category": "interviews",
+      "source_type": "podcast",
+      "topics": [
+        "ai-research",
+        "researcher-interviews",
+        "ai-strategy"
+      ],
+      "language": "en",
+      "description": "Long-form conversations about AI research and applications.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "pragmatic-engineer",
+      "name": "The Pragmatic Engineer",
+      "url": "https://newsletter.pragmaticengineer.com",
+      "category": "ai-engineering",
+      "source_type": "newsletter",
+      "topics": [
+        "software-engineering",
+        "ai-coding",
+        "engineering-culture"
+      ],
+      "language": "en",
+      "description": "Engineering practice, tools, and technology industry analysis.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "openai-blog",
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/news",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "models",
+        "research",
+        "agents",
+        "safety"
+      ],
+      "language": "en",
+      "description": "Official research, model, product, and engineering announcements.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "openai-developer",
+      "name": "OpenAI Developer Blog",
+      "url": "https://developers.openai.com/blog",
+      "category": "ai-engineering",
+      "source_type": "official-blog",
+      "topics": [
+        "api",
+        "agents",
+        "coding",
+        "developer-tools"
+      ],
+      "language": "en",
+      "description": "Developer-focused guides, APIs, and agent workflows.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "anthropic-blog",
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/news",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "models",
+        "safety",
+        "research"
+      ],
+      "language": "en",
+      "description": "Official research and model announcements.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "anthropic-engineering",
+      "name": "Anthropic Engineering",
+      "url": "https://www.anthropic.com/engineering",
+      "category": "ai-engineering",
+      "source_type": "official-blog",
+      "topics": [
+        "agents",
+        "context-engineering",
+        "evaluation"
+      ],
+      "language": "en",
+      "description": "Engineering articles on Claude, agents, and production AI.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "deepmind-blog",
+      "name": "Google DeepMind Blog",
+      "url": "https://deepmind.google/discover/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "research",
+        "reinforcement-learning",
+        "multimodal"
+      ],
+      "language": "en",
+      "description": "Research breakthroughs and technical explanations.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "google-research",
+      "name": "Google Research Blog",
+      "url": "https://research.google/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "research",
+        "models",
+        "systems"
+      ],
+      "language": "en",
+      "description": "Research papers, systems, and applied ML.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "meta-ai",
+      "name": "Meta AI Blog",
+      "url": "https://ai.meta.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "open-models",
+        "multimodal",
+        "research"
+      ],
+      "language": "en",
+      "description": "Open models, research, and applied AI.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI News",
+      "url": "https://mistral.ai/news",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "models",
+        "open-models",
+        "efficiency"
+      ],
+      "language": "en",
+      "description": "Model releases and technical updates.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere Blog",
+      "url": "https://cohere.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "enterprise-ai",
+        "rag",
+        "llm-applications"
+      ],
+      "language": "en",
+      "description": "Enterprise LLM applications and retrieval.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "open-source",
+        "models",
+        "tools"
+      ],
+      "language": "en",
+      "description": "Open-source models, datasets, and practical guides.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "scale-ai",
+      "name": "Scale AI Blog",
+      "url": "https://scale.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "data",
+        "evaluation",
+        "rlhf"
+      ],
+      "language": "en",
+      "description": "Data, evaluation, and model development.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "together-ai",
+      "name": "Together AI Blog",
+      "url": "https://www.together.ai/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "open-models",
+        "inference",
+        "training"
+      ],
+      "language": "en",
+      "description": "Open model training and inference infrastructure.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen Blog",
+      "url": "https://qwenlm.github.io/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "open-models",
+        "multimodal",
+        "long-context"
+      ],
+      "language": "zh",
+      "description": "Qwen model releases and technical reports.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "url": "https://www.deepseek.com",
+      "category": "ai-company",
+      "source_type": "official-site",
+      "topics": [
+        "reasoning",
+        "open-models",
+        "training"
+      ],
+      "language": "zh",
+      "description": "Official DeepSeek model and research updates.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "moonshot",
+      "name": "Moonshot AI Blog",
+      "url": "https://www.moonshot.cn/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "long-context",
+        "reasoning",
+        "models"
+      ],
+      "language": "zh",
+      "description": "Kimi and Moonshot AI product and research updates.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "bytedance-ailab",
+      "name": "ByteDance AI Lab Publications",
+      "url": "https://ailab.bytedance.com/publications",
+      "category": "ai-company",
+      "source_type": "research-index",
+      "topics": [
+        "recommendation",
+        "multimodal",
+        "nlp"
+      ],
+      "language": "en",
+      "description": "Research publications from ByteDance AI Lab.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax Blog",
+      "url": "https://www.minimaxi.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "multimodal",
+        "speech",
+        "models"
+      ],
+      "language": "zh",
+      "description": "MiniMax model and multimodal AI updates.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "zhipu",
+      "name": "Zhipu AI",
+      "url": "https://zhipuai.cn",
+      "category": "ai-company",
+      "source_type": "official-site",
+      "topics": [
+        "models",
+        "agents",
+        "chinese-llms"
+      ],
+      "language": "zh",
+      "description": "GLM models and product updates.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "bair",
+      "name": "Berkeley AI Research (BAIR)",
+      "url": "https://bair.berkeley.edu/blog",
+      "category": "ai-academic",
+      "source_type": "research-blog",
+      "topics": [
+        "reinforcement-learning",
+        "robotics",
+        "research"
+      ],
+      "language": "en",
+      "description": "Research blog from Berkeley AI researchers.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "stanford-hai",
+      "name": "Stanford HAI",
+      "url": "https://hai.stanford.edu/news",
+      "category": "ai-academic",
+      "source_type": "research-blog",
+      "topics": [
+        "human-centered-ai",
+        "policy",
+        "research"
+      ],
+      "language": "en",
+      "description": "AI research, society, and policy.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "mit-csail",
+      "name": "MIT CSAIL",
+      "url": "https://www.csail.mit.edu/news",
+      "category": "ai-academic",
+      "source_type": "research-blog",
+      "topics": [
+        "systems",
+        "ml",
+        "robotics"
+      ],
+      "language": "en",
+      "description": "Computer science and AI research updates.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "cmu-ml",
+      "name": "CMU Machine Learning Blog",
+      "url": "https://blog.ml.cmu.edu",
+      "category": "ai-academic",
+      "source_type": "research-blog",
+      "topics": [
+        "ml-theory",
+        "optimization",
+        "deep-learning"
+      ],
+      "language": "en",
+      "description": "Machine learning research from Carnegie Mellon.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "mila",
+      "name": "Mila Blog",
+      "url": "https://mila.quebec/en/blog",
+      "category": "ai-academic",
+      "source_type": "research-blog",
+      "topics": [
+        "deep-learning",
+        "causal-ai",
+        "research"
+      ],
+      "language": "en",
+      "description": "Research from Mila and its collaborators.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "distill",
+      "name": "Distill",
+      "url": "https://distill.pub",
+      "category": "ai-academic",
+      "source_type": "research-publication",
+      "topics": [
+        "visualization",
+        "deep-learning",
+        "interpretability"
+      ],
+      "language": "en",
+      "description": "Interactive explanations of machine learning.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "shlab",
+      "name": "Shanghai AI Laboratory",
+      "url": "https://www.shlab.org.cn/news",
+      "category": "ai-academic",
+      "source_type": "research-blog",
+      "topics": [
+        "open-source",
+        "multimodal",
+        "research"
+      ],
+      "language": "zh",
+      "description": "Chinese AI research and open-source projects.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "jane-street",
+      "name": "Jane Street",
+      "url": "https://blog.janestreet.com/archive/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "feature-engineering",
+        "market-microstructure",
+        "ml-systems",
+        "research-engineering"
+      ],
+      "language": "en",
+      "description": "Technical articles from Jane Street; includes ML and engineering topics.",
+      "tier": "Tier 1",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "xtx-markets",
+      "name": "XTX Markets",
+      "url": "https://www.xtxmarkets.com/tech/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "ml-systems",
+        "data-infrastructure",
+        "quant-research"
+      ],
+      "language": "en",
+      "description": "Public technology articles and research infrastructure write-ups.",
+      "tier": "Tier 1",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "citadel-securities",
+      "name": "Citadel Securities",
+      "url": "https://www.citadelsecurities.com/news-and-insights/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "market-structure",
+        "execution",
+        "technology"
+      ],
+      "language": "en",
+      "description": "Market structure, technology, and public research insights.",
+      "tier": "Tier 1",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "citadel",
+      "name": "Citadel",
+      "url": "https://www.citadel.com/insights/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "systematic-investing",
+        "research",
+        "markets"
+      ],
+      "language": "en",
+      "description": "Public investment and market insights.",
+      "tier": "Tier 1",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "hrt",
+      "name": "Hudson River Trading",
+      "url": "https://www.hudsonrivertrading.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "market-microstructure",
+        "trading-systems",
+        "research-engineering"
+      ],
+      "language": "en",
+      "description": "Company site; track public technical content and talks.",
+      "tier": "Tier 1",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "jump-trading",
+      "name": "Jump Trading",
+      "url": "https://www.jumptrading.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "trading-systems",
+        "market-microstructure",
+        "research"
+      ],
+      "language": "en",
+      "description": "Company site; track public talks and technical content.",
+      "tier": "Tier 1",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "two-sigma",
+      "name": "Two Sigma",
+      "url": "https://www.twosigma.com/insights/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "data-science",
+        "machine-learning",
+        "systematic-investing"
+      ],
+      "language": "en",
+      "description": "Research, data science, and systematic investment insights.",
+      "tier": "Tier 1",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "deshaw",
+      "name": "D. E. Shaw",
+      "url": "https://www.deshaw.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "quant-research",
+        "technology",
+        "research"
+      ],
+      "language": "en",
+      "description": "Company site; track public technical and research publications.",
+      "tier": "Tier 1",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "optiver",
+      "name": "Optiver",
+      "url": "https://optiver.com/insights/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "market-microstructure",
+        "trading-systems",
+        "execution"
+      ],
+      "language": "en",
+      "description": "Trading technology, market structure, and engineering.",
+      "tier": "Tier 2",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "imc",
+      "name": "IMC Trading",
+      "url": "https://www.imc.com/us/blogs",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "trading-technology",
+        "machine-learning",
+        "research"
+      ],
+      "language": "en",
+      "description": "Technology and research content from IMC.",
+      "tier": "Tier 2",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "sig",
+      "name": "Susquehanna International Group (SIG)",
+      "url": "https://sig.com/insights/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "options",
+        "market-structure",
+        "trading"
+      ],
+      "language": "en",
+      "description": "Public market and trading insights.",
+      "tier": "Tier 2",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "drw",
+      "name": "DRW",
+      "url": "https://www.drw.com/insights",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "trading",
+        "technology",
+        "markets"
+      ],
+      "language": "en",
+      "description": "Trading, technology, and market commentary.",
+      "tier": "Tier 2",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "tower",
+      "name": "Tower Research Capital",
+      "url": "https://www.tower-research.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "low-latency",
+        "trading-systems",
+        "quant-research"
+      ],
+      "language": "en",
+      "description": "Company site; track public engineering and recruiting talks.",
+      "tier": "Tier 2",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "man-group",
+      "name": "Man Group / AHL",
+      "url": "https://www.man.com/insights",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "systematic-investing",
+        "trend-following",
+        "machine-learning"
+      ],
+      "language": "en",
+      "description": "Systematic investing, trend following, and research.",
+      "tier": "Tier 2",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "g-research",
+      "name": "G-Research",
+      "url": "https://www.gresearch.com/news/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "quant-research",
+        "machine-learning",
+        "research"
+      ],
+      "language": "en",
+      "description": "Quantitative research, technology, and research events.",
+      "tier": "Tier 2",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "aqr",
+      "name": "AQR Capital Management",
+      "url": "https://www.aqr.com/Insights",
+      "category": "quant-firm",
+      "source_type": "research-publication",
+      "topics": [
+        "factor-investing",
+        "portfolio-construction",
+        "empirical-finance"
+      ],
+      "language": "en",
+      "description": "Research on factors, systematic investing, and portfolio construction.",
+      "tier": "Tier 3",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "pdt",
+      "name": "PDT Partners",
+      "url": "https://www.pdtpartners.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "quant-research",
+        "systematic-investing",
+        "research"
+      ],
+      "language": "en",
+      "description": "Public company materials and research-related content.",
+      "tier": "Tier 3",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "squarepoint",
+      "name": "Squarepoint Capital",
+      "url": "https://www.squarepoint-capital.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "quant-research",
+        "systematic-investing",
+        "technology"
+      ],
+      "language": "en",
+      "description": "Company site; monitor public research and technical talks.",
+      "tier": "Tier 3",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "qube",
+      "name": "Qube Research & Technologies",
+      "url": "https://www.qube-rt.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "quant-research",
+        "machine-learning",
+        "systematic-investing"
+      ],
+      "language": "en",
+      "description": "Company site; monitor public research and technical content.",
+      "tier": "Tier 3",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "point72",
+      "name": "Point72 / Cubist",
+      "url": "https://point72.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "systematic-investing",
+        "data-science",
+        "quant-research"
+      ],
+      "language": "en",
+      "description": "Company site; monitor public research and data-science material.",
+      "tier": "Tier 3",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "worldquant",
+      "name": "WorldQuant",
+      "url": "https://www.worldquant.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "alpha-research",
+        "quant-research",
+        "education"
+      ],
+      "language": "en",
+      "description": "Quantitative research and public educational resources.",
+      "tier": "Tier 3",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "voleon",
+      "name": "Voleon",
+      "url": "https://voleon.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "machine-learning",
+        "systematic-investing",
+        "quant-research"
+      ],
+      "language": "en",
+      "description": "Machine-learning-driven investment firm; monitor public materials.",
+      "tier": "Tier 3",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "virtu",
+      "name": "Virtu Financial",
+      "url": "https://www.virtu.com/insights/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "market-structure",
+        "execution",
+        "trading-technology"
+      ],
+      "language": "en",
+      "description": "Market structure, execution, and trading technology.",
+      "tier": "Tier 4",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "flow-traders",
+      "name": "Flow Traders",
+      "url": "https://www.flowtraders.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "market-making",
+        "market-structure",
+        "trading"
+      ],
+      "language": "en",
+      "description": "Market-making and market-structure public materials.",
+      "tier": "Tier 4",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "akuna",
+      "name": "Akuna Capital",
+      "url": "https://akunacapital.com/blog",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "options",
+        "trading-technology",
+        "quant-research"
+      ],
+      "language": "en",
+      "description": "Options trading, technical content, and engineering.",
+      "tier": "Tier 4",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "wolverine",
+      "name": "Wolverine Trading",
+      "url": "https://www.wolve.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "options",
+        "market-making",
+        "trading"
+      ],
+      "language": "en",
+      "description": "Company site; track public technical material.",
+      "tier": "Tier 4",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "belvedere",
+      "name": "Belvedere Trading",
+      "url": "https://belvederetrading.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "options",
+        "trading-technology",
+        "market-making"
+      ],
+      "language": "en",
+      "description": "Company site; track public trading and technology content.",
+      "tier": "Tier 4",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "maven",
+      "name": "Maven Securities",
+      "url": "https://www.mavensecurities.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "market-making",
+        "trading-technology",
+        "quant-research"
+      ],
+      "language": "en",
+      "description": "Specialist trading firm; monitor public talks and technical material.",
+      "tier": "Tier 5",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "tibra",
+      "name": "Tibra",
+      "url": "https://tibra.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "quant-research",
+        "systematic-trading",
+        "technology"
+      ],
+      "language": "en",
+      "description": "Quantitative trading firm; monitor public research and interviews.",
+      "tier": "Tier 5",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "eclipse-trading",
+      "name": "Eclipse Trading",
+      "url": "https://www.eclipsetrading.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "options",
+        "market-making",
+        "trading-technology"
+      ],
+      "language": "en",
+      "description": "Asia-focused trading firm; monitor public talks and technology content.",
+      "tier": "Tier 5",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "geneva-trading",
+      "name": "Geneva Trading",
+      "url": "https://genevatrading.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "market-making",
+        "trading-systems",
+        "quant-research"
+      ],
+      "language": "en",
+      "description": "Trading firm; monitor public engineering and recruiting talks.",
+      "tier": "Tier 5",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "ctc-trading",
+      "name": "CTC Trading",
+      "url": "https://www.ctc.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "market-making",
+        "trading-technology",
+        "quant-research"
+      ],
+      "language": "en",
+      "description": "Trading firm; monitor public technical and industry content.",
+      "tier": "Tier 5",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "peak6",
+      "name": "PEAK6",
+      "url": "https://peak6.com",
+      "category": "quant-firm",
+      "source_type": "official-site",
+      "topics": [
+        "trading",
+        "technology",
+        "markets"
+      ],
+      "language": "en",
+      "description": "Trading and technology company; monitor public interviews and talks.",
+      "tier": "Tier 5",
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "top-traders-unplugged",
+      "name": "Top Traders Unplugged",
+      "url": "https://www.toptradersunplugged.com",
+      "category": "interviews",
+      "source_type": "podcast",
+      "topics": [
+        "systematic-investing",
+        "trend-following",
+        "manager-interviews"
+      ],
+      "language": "en",
+      "description": "Interviews and discussions on systematic trading and investing.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "chat-with-traders",
+      "name": "Chat With Traders",
+      "url": "https://chatwithtraders.com",
+      "category": "interviews",
+      "source_type": "podcast",
+      "topics": [
+        "trader-interviews",
+        "trading-systems",
+        "risk"
+      ],
+      "language": "en",
+      "description": "Interviews with traders and systematic market participants.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "alpha-exchange",
+      "name": "The Alpha Exchange",
+      "url": "https://www.alphaexchange.com",
+      "category": "interviews",
+      "source_type": "podcast",
+      "topics": [
+        "quant-research",
+        "market-structure",
+        "researcher-interviews"
+      ],
+      "language": "en",
+      "description": "Conversations with quantitative and financial researchers.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    },
+    {
+      "id": "flirting-with-models",
+      "name": "Flirting With Models",
+      "url": "https://flirtingwithmodels.com",
+      "category": "interviews",
+      "source_type": "podcast",
+      "topics": [
+        "quant-research",
+        "factor-investing",
+        "researcher-interviews"
+      ],
+      "language": "en",
+      "description": "Quantitative finance interviews and research discussions.",
+      "tier": null,
+      "enabled": true,
+      "feed_url": null,
+      "source_index": "curated-quant-and-interviews"
+    }
+  ]
+}
