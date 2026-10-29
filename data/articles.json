@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-10-29T09:12:59Z",
+  "last_updated_at": "2026-10-29T09:41:33Z",
   "articles": [
     {
       "id": "78617a408aa03f",
@@ -273,6 +273,90 @@
       "published_at": null,
       "discovered_at": "2026-10-29",
       "excerpt": "Hear about how to get into quant research or quant trading jobs at IMC from current quant professionals."
+    },
+    {
+      "id": "f1883274e2c76c",
+      "title": "Environment and Energy | Mila",
+      "url": "https://mila.quebec/en/research/strategic-priorities/environment-and-energy",
+      "source_id": "mila",
+      "source_name": "Mila Blog",
+      "source_url": "https://mila.quebec/en/blog",
+      "category": "ai-academic",
+      "source_type": "research-blog",
+      "topics": [
+        "deep-learning",
+        "causal-ai",
+        "research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": null,
+      "discovered_at": "2026-10-29",
+      "excerpt": "AI can be a powerful tool in addressing challenges related to climate change."
+    },
+    {
+      "id": "6e5d0ea66954bf",
+      "title": "Responsible AI | Mila",
+      "url": "https://mila.quebec/en/research/strategic-priorities/responsible-ai",
+      "source_id": "mila",
+      "source_name": "Mila Blog",
+      "source_url": "https://mila.quebec/en/blog",
+      "category": "ai-academic",
+      "source_type": "research-blog",
+      "topics": [
+        "deep-learning",
+        "causal-ai",
+        "research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": null,
+      "discovered_at": "2026-10-29",
+      "excerpt": "Responsible AI research at Mila explores the pitfalls of the technology while seeking socio-technical solutions to make machine learning algorithms more trustworthy, safe, and fair."
+    },
+    {
+      "id": "ae8a4c32d44a28",
+      "title": "AI and Health | Mila",
+      "url": "https://mila.quebec/en/research/strategic-priorities/ai-and-health",
+      "source_id": "mila",
+      "source_name": "Mila Blog",
+      "source_url": "https://mila.quebec/en/blog",
+      "category": "ai-academic",
+      "source_type": "research-blog",
+      "topics": [
+        "deep-learning",
+        "causal-ai",
+        "research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": null,
+      "discovered_at": "2026-10-29",
+      "excerpt": "Mila's researchers contribute to various areas of healthcare research, including drug discovery, medical imaging and neuroscience."
+    },
+    {
+      "id": "0c7f9ead311610",
+      "title": "AI Quests",
+      "url": "https://research.google/ai-quests/intl/en_gb/additional-resources/ecobin",
+      "source_id": "google-research",
+      "source_name": "Google Research Blog",
+      "source_url": "https://research.google/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "research",
+        "models",
+        "systems"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": null,
+      "discovered_at": "2026-10-29",
+      "excerpt": "AI Quests: A game-based learning experience for middle schoolers (11-14) on AI. Code-free quests use real Google projects to solve societal issues."
     },
     {
       "id": "b0fbfced4c005a",
@@ -1981,6 +2065,27 @@
       "source_quality": "core"
     },
     {
+      "id": "52da68b1f49a66",
+      "title": "Writing • Eugene Yan",
+      "url": "https://eugeneyan.com/writing/",
+      "source_id": "eugene-yan",
+      "source_name": "Eugene Yan",
+      "source_url": "https://eugeneyan.com",
+      "category": "ai-engineering",
+      "source_type": "personal-blog",
+      "topics": [
+        "llm-applications",
+        "evaluation",
+        "recommendation"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-18",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Writing is Learning. I write about machine learning, recommendation systems, large language models, and engineering."
+    },
+    {
       "id": "a5d1369a051536",
       "title": "AI:AM: Where's the Steering Wheel? My Agent Set the Password, Hidden Valence, Proofs Find Linux Bugs",
       "url": "https://www.cognitiverevolution.ai/ai-am-where-s-the-steering-wheel-my-agent-set-the-password-hidden-valence-proofs-find-linux-bugs/",
@@ -2673,6 +2778,27 @@
       "published_at": "2026-10-06",
       "discovered_at": "2026-10-29",
       "excerpt": "Recent AI misalignment incidents have shown AI systems capably pursuing goals their human supervisors would not approve of, like hacking other companies. Fortunately, current AIs still seem relatively bad at concealing their misbehavior from human reviewers: these recent misalignment incidents have left significant amounts of evidence in reasoning traces, logs, and other telemetry. 1 This has made it much easier to notice when they misbehave. However, observability against an adversarial agent o"
+    },
+    {
+      "id": "b9bd7ff8e3416a",
+      "title": "Why market data is a deep learning challenge | Optiver",
+      "url": "https://www.optiver.com/insights/technology-blog/why-market-data-is-a-deep-learning-challenge/",
+      "source_id": "optiver",
+      "source_name": "Optiver",
+      "source_url": "https://optiver.com/insights/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "market-microstructure",
+        "trading-systems",
+        "execution"
+      ],
+      "tier": "Tier 2",
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-06",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Quant researcher Karun Rao explains why noisy, event-based order book data makes high-frequency price prediction hard, and where deep learning helps."
     },
     {
       "id": "770f22e1ff7e5c",
@@ -4421,6 +4547,27 @@
       "excerpt": "Stony Brook researchers used our infini-gram engine to trace distinctive phrases in AI-generated writing back to existing sources, finding that top-selling self-published books on Amazon with substantial detected AI text overlap more heavily with rare language from previously published works."
     },
     {
+      "id": "7d0dbf9f8a0263",
+      "title": "Optiver partners with Explaining Markets: an AI systems competition",
+      "url": "https://www.optiver.com/insights/news/explaining-markets-ai-competition/",
+      "source_id": "optiver",
+      "source_name": "Optiver",
+      "source_url": "https://optiver.com/insights/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "market-microstructure",
+        "trading-systems",
+        "execution"
+      ],
+      "tier": "Tier 2",
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-07-31",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Optiver is partnering with Explaining Markets, an AI competition where students, researchers, engineers and independent builders develop AI systems that respond to live earnings announcements."
+    },
+    {
       "id": "9939bfd922ed18",
       "title": "From CUDA to MLX: How K-Search Brings Decades of Kernel Expertise to Apple Silicon",
       "url": "http://bair.berkeley.edu/blog/2026/07/29/cuda-to-mlx-k-search/",
@@ -4608,6 +4755,27 @@
       "published_at": "2026-07-08",
       "discovered_at": "2026-10-29",
       "excerpt": "Note: the modeling assumptions and conclusion are Thomas Kwa’s opinion, and others at METR disagree. 1 Also, the math was checked by Claude but not a second human. Introduction Anthropic’s RSI blog post reported that in Q2 2026, Anthropic contributors merged 8× as much code per day as in the 2021-2024 period. What does this imply about the factor by which a researcher’s total effective output increased — the (serial) researcher uplift 2 ? Of course, 8× more code doesn’t mean 8× more research, as"
+    },
+    {
+      "id": "702f5107c35374",
+      "title": "Beyond AI Models: Databricks and Optiver on the Future of Enterprise AI",
+      "url": "https://www.optiver.com/insights/technology-blog/beyond-ai-models-databricks-and-optiver-on-the-future-of-enterprise-ai/",
+      "source_id": "optiver",
+      "source_name": "Optiver",
+      "source_url": "https://optiver.com/insights/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "market-microstructure",
+        "trading-systems",
+        "execution"
+      ],
+      "tier": "Tier 2",
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-07-08",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Optiver and Databricks discuss why enterprise AI transformation is shifting from better models to organizational change, AI governance, platforms and institutional knowledge."
     },
     {
       "id": "a00b3f14f5f732",
@@ -5326,6 +5494,27 @@
       "published_at": "2026-03-26",
       "discovered_at": "2026-10-29",
       "excerpt": "In collaboration with Anthropic, a METR staff member (David Rein) recently spent three weeks red-teaming a subset of Anthropic’s internal agent monitoring and security systems, many of which are described in the Opus 4.6 Sabotage Risk Report (Appendix 8.4, especially 8.4.8). Anthropic provided substantial access to relevant internal systems and information, and made staff available to answer questions and provide feedback throughout the exercise. The exercise discovered several specific novel vu"
+    },
+    {
+      "id": "bb4cb617a999ac",
+      "title": "Volatility views: Investors are rethinking longer-dated volatility",
+      "url": "https://www.optiver.com/insights/markets/volatility-views-investors-are-rethinking-longer-dated-volatility/",
+      "source_id": "optiver",
+      "source_name": "Optiver",
+      "source_url": "https://optiver.com/insights/",
+      "category": "quant-firm",
+      "source_type": "official-blog",
+      "topics": [
+        "market-microstructure",
+        "trading-systems",
+        "execution"
+      ],
+      "tier": "Tier 2",
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-03-25",
+      "discovered_at": "2026-10-29",
+      "excerpt": "For the past several years, US stock investors have hedged their portfolios largely by looking at their calendars. Fed meetings, CPI prints, elections – whenever an event appeared on the horizon, investors would look to short-dated options to protect against the possibility of volatility."
     },
     {
       "id": "0ff367ce4a1d9a",
