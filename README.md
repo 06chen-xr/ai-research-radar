@@ -141,6 +141,7 @@ For a limited, non-writing test run, use `python scripts/update_content.py --lim
 ## Important collection behavior
 
 - The collector does not generate summaries or infer publication dates with an LLM. It rejects non-English-script titles, off-topic items, generic low-signal company announcements, and articles from paused/unapproved sources.
+- Home pages, section landing pages, and directory/profile pages (for example `/directory/`, `/philanthropy/`, or a site root) are rejected by URL shape; single-segment URLs are accepted only when the page exposes article metadata (`og:type`, JSON-LD `Article`, or a publication date). Duplicate titles within one source are collapsed, so locale mirrors such as `/en/` and `/fr/` keep one entry.
 - If a publication date is not available from the feed/page, the site shows the discovery date and marks the publication date as unknown.
 - RSS/Atom entries are preferred. Sitemap `lastmod` is only a fallback hint and may represent page modification rather than original publication.
 - The collector stores title, original URL, source metadata, publication/discovery dates, topics, and publisher-provided excerpts when present. The UI intentionally does not display excerpts in this first version.

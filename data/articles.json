@@ -23,48 +23,6 @@
       "source_quality": "core"
     },
     {
-      "id": "77941a292c0c9c",
-      "title": "Isabeau Prémont-Schwarz | Mila",
-      "url": "https://mila.quebec/en/directory/isabeau-premont-schwarz",
-      "source_id": "mila",
-      "source_name": "Mila Blog",
-      "source_url": "https://mila.quebec/en/blog",
-      "category": "ai-academic",
-      "source_type": "research-blog",
-      "topics": [
-        "deep-learning",
-        "causal-ai",
-        "research"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-10-29",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Isabeau is interested neuro-inspired AI, agent learning (including reinforcement learning), and how to build useful abstract representations which are able to generalize out of distribution.",
-      "source_quality": "selected"
-    },
-    {
-      "id": "75361437346313",
-      "title": "Isabeau Prémont-Schwarz | Mila",
-      "url": "https://mila.quebec/fr/annuaire/isabeau-premont-schwarz",
-      "source_id": "mila",
-      "source_name": "Mila Blog",
-      "source_url": "https://mila.quebec/en/blog",
-      "category": "ai-academic",
-      "source_type": "research-blog",
-      "topics": [
-        "deep-learning",
-        "causal-ai",
-        "research"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-10-29",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Isabeau s'intéresse à l'IA d'inspiration neurologique, à l'apprentissage par agents (incluant l'apprentissage par renforcement) ainsi qu'à la manière de construire des représentations abstraites utiles capables de généraliser hors distribution (out-of-distribution).",
-      "source_quality": "selected"
-    },
-    {
       "id": "1c66e6f096018f",
       "title": "AI agents explained: What they are and how they work",
       "url": "https://ai.meta.com/muse/what-are-ai-agents/",
@@ -149,27 +107,6 @@
       "source_quality": "selected"
     },
     {
-      "id": "ba978bc38a36be",
-      "title": "Optiver | Technology and Research-Driven Trading Firm & Careers",
-      "url": "https://www.optiver.com/",
-      "source_id": "optiver",
-      "source_name": "Optiver",
-      "source_url": "https://optiver.com/insights/",
-      "category": "quant-firm",
-      "source_type": "official-blog",
-      "topics": [
-        "market-microstructure",
-        "trading-systems",
-        "execution"
-      ],
-      "tier": "Tier 2",
-      "language": "en",
-      "published_at": "2026-10-29",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Technology, quantitative research and trading expertise come together to solve complex market challenges and improve financial markets. Explore careers across trading, engineering and quantitative research.",
-      "source_quality": "selected"
-    },
-    {
       "id": "9a20f6e3bc62e9",
       "title": "Misconceptions about Tax-Aware Long-Short: Misleading Parallels with Direct Indexing, Part III",
       "url": "https://www.aqr.com/Insights/Research/Tax-Aware-Investing/Misconceptions-about-Tax-Aware-Long-Short-Misleading-Parallels-with-Direct-Indexing-Part-III",
@@ -230,27 +167,6 @@
       "published_at": null,
       "discovered_at": "2026-10-29",
       "excerpt": "Liquidity need not be an all-or-nothing decision. Our latest research explores how investors may be able to access meaningful cash from tax-aware long-short strategies while remaining invested and retaining key portfolio attributes.",
-      "source_quality": "core"
-    },
-    {
-      "id": "b73ebebf620bdd",
-      "title": "AQR Capital Management",
-      "url": "https://www.aqr.com/",
-      "source_id": "aqr",
-      "source_name": "AQR Capital Management",
-      "source_url": "https://www.aqr.com/Insights",
-      "category": "quant-firm",
-      "source_type": "research-publication",
-      "topics": [
-        "factor-investing",
-        "portfolio-construction",
-        "empirical-finance"
-      ],
-      "tier": "Tier 3",
-      "language": "en",
-      "published_at": null,
-      "discovered_at": "2026-10-29",
-      "excerpt": "As quantitative investors, we believe that a systematic and disciplined approach is the best way to achieve long-term value. Explore our broad range of innovative, diversifying strategies.",
       "source_quality": "core"
     },
     {
@@ -593,27 +509,6 @@
       "source_quality": "selected"
     },
     {
-      "id": "1cac6549ba697e",
-      "title": "Fairwind Program",
-      "url": "https://deepmind.google/fairwind-program/",
-      "source_id": "deepmind-blog",
-      "source_name": "Google DeepMind Blog",
-      "source_url": "https://deepmind.google/discover/blog",
-      "category": "ai-company",
-      "source_type": "official-blog",
-      "topics": [
-        "research",
-        "reinforcement-learning",
-        "multimodal"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-10-28",
-      "discovered_at": "2026-10-29",
-      "excerpt": "The Fairwind Program gives trusted partners a critical head start against AI-driven cyber threats, while making sure models are deployed safely and responsibly.",
-      "source_quality": "core"
-    },
-    {
       "id": "a9c65cb8282253",
       "title": "Game Boy Color on My Conference Badge",
       "url": "https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge/",
@@ -827,27 +722,6 @@
       "source_quality": "selected"
     },
     {
-      "id": "8b75e342ab9430",
-      "title": "Threat Intelligence / Anthropic",
-      "url": "https://www.anthropic.com/threat-intelligence",
-      "source_id": "anthropic-engineering",
-      "source_name": "Anthropic Engineering",
-      "source_url": "https://www.anthropic.com/engineering",
-      "category": "ai-engineering",
-      "source_type": "official-blog",
-      "topics": [
-        "agents",
-        "context-engineering",
-        "evaluation"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-10-27",
-      "discovered_at": "2026-10-29",
-      "excerpt": "The Threat Intelligence team investigates real-world cases of misuse of Claude, and works with our Safeguards team to improve our defenses. To improve the safety and security of frontier AI models, we publish regular reports detailing the methods malicious actors use to exploit these models.",
-      "source_quality": "core"
-    },
-    {
       "id": "a45b9e278f26a8",
       "title": "XTX Markets Tops ELP SI Ranking",
       "url": "https://www.xtxmarkets.com/news/2026-xtx-markets-tops-elp-si-ranking/",
@@ -872,48 +746,6 @@
       "id": "21af9d0330d852",
       "title": "General notice regarding retail and cryptocurrency scams",
       "url": "https://www.xtxmarkets.com/news/notice-regarding-retail-cryptocurrency-scams/",
-      "source_id": "xtx-markets",
-      "source_name": "XTX Markets",
-      "source_url": "https://www.xtxmarkets.com/tech/",
-      "category": "quant-firm",
-      "source_type": "official-blog",
-      "topics": [
-        "ml-systems",
-        "data-infrastructure",
-        "quant-research"
-      ],
-      "tier": "Tier 1",
-      "language": "en",
-      "published_at": "2026-10-27",
-      "discovered_at": "2026-10-29",
-      "excerpt": "XTX Markets is a leading algorithmic trading firm which uses state-of-the-art machine learning technology to produce price forecasts for over 50,000 financial instruments across equities, fixed income, currencies, commodities and crypto. It uses those forecasts to trade on exchanges and alternative trading venues, and to offer differentiated liquidity directly to clients worldwide. The firm trades over $250bn a day across 35 countries and has over 250 employees based in London, Singapore, New Yo",
-      "source_quality": "core"
-    },
-    {
-      "id": "fb307b3b17f571",
-      "title": "Philanthropy | XTX Markets",
-      "url": "https://www.xtxmarkets.com/philanthropy/",
-      "source_id": "xtx-markets",
-      "source_name": "XTX Markets",
-      "source_url": "https://www.xtxmarkets.com/tech/",
-      "category": "quant-firm",
-      "source_type": "official-blog",
-      "topics": [
-        "ml-systems",
-        "data-infrastructure",
-        "quant-research"
-      ],
-      "tier": "Tier 1",
-      "language": "en",
-      "published_at": "2026-10-27",
-      "discovered_at": "2026-10-29",
-      "excerpt": "XTX Markets is a leading algorithmic trading firm which uses state-of-the-art machine learning technology to produce price forecasts for over 50,000 financial instruments across equities, fixed income, currencies, commodities and crypto. It uses those forecasts to trade on exchanges and alternative trading venues, and to offer differentiated liquidity directly to clients worldwide. The firm trades over $250bn a day across 35 countries and has over 250 employees based in London, Singapore, New Yo",
-      "source_quality": "core"
-    },
-    {
-      "id": "e85d5ddde4e4dc",
-      "title": "Ventures | XTX Markets",
-      "url": "https://www.xtxmarkets.com/ventures/",
       "source_id": "xtx-markets",
       "source_name": "XTX Markets",
       "source_url": "https://www.xtxmarkets.com/tech/",
@@ -1960,27 +1792,6 @@
       "source_quality": "selected"
     },
     {
-      "id": "8a53e11831c90c",
-      "title": "A World Model of Life: Biohub's Alex Rives on Virtual Cells, Measurement, & the $1.8B Data Push",
-      "url": "https://www.cognitiverevolution.ai/a-world-model-of-life-biohub-s-alex-rives-on-virtual-cells-measurement-the-1-8b-data-push-newsletter/",
-      "source_id": "cognitive-revolution",
-      "source_name": "The Cognitive Revolution",
-      "source_url": "https://www.cognitiverevolution.ai",
-      "category": "interviews",
-      "source_type": "podcast",
-      "topics": [
-        "ai-research",
-        "researcher-interviews",
-        "ai-strategy"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-10-20",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Hello, and welcome back to the Cognitive Revolution! Today my guest is Alex Rives, formerly co-founder and Chief Scientist at Evolutionary Scale, makers of the ESM series of models, and currently Head of Science at Biohub, the Chan Zuckerberg Initiative backed moonshot with the inspiring mission to cure or",
-      "source_quality": "selected"
-    },
-    {
       "id": "24e8dc67e255d6",
       "title": "A World Model of Life: Biohub's Alex Rives on Virtual Cells, Measurement, & the $1.8B Data Push",
       "url": "https://www.cognitiverevolution.ai/a-world-model-of-life-biohub-s-alex-rives-on-virtual-cells-measurement-the-1-8b-data-push/",
@@ -2021,27 +1832,6 @@
       "discovered_at": "2026-10-29",
       "excerpt": "",
       "source_quality": "selected"
-    },
-    {
-      "id": "1ef8661b2be25d",
-      "title": "Anthropic’s Transparency Hub",
-      "url": "https://www.anthropic.com/transparency",
-      "source_id": "anthropic-engineering",
-      "source_name": "Anthropic Engineering",
-      "source_url": "https://www.anthropic.com/engineering",
-      "category": "ai-engineering",
-      "source_type": "official-blog",
-      "topics": [
-        "agents",
-        "context-engineering",
-        "evaluation"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-10-20",
-      "discovered_at": "2026-10-29",
-      "excerpt": "A look at Anthropic's key processes, programs, and practices for responsible AI development.",
-      "source_quality": "core"
     },
     {
       "id": "2594f20fb54992",
@@ -2189,27 +1979,6 @@
       "discovered_at": "2026-10-29",
       "excerpt": "Release: llm-echo 0.5 I'm working towards a new LLM release, and testing PRs caused me to revisit the llm-echo debug plugin. This plugin provides a \"model\" which doesn't involve an LLM at all - it just repeats back the prompts that have been fed to it. The new release now updates the simulated token usage counts to take tool calls, system prompts, and reasoning tokens into account. Example usage: uvx --with llm-echo llm -m echo 'hi there' -o thinking 1 --usage Outputs: First I consider the promp",
       "source_quality": "core"
-    },
-    {
-      "id": "52da68b1f49a66",
-      "title": "Writing • Eugene Yan",
-      "url": "https://eugeneyan.com/writing/",
-      "source_id": "eugene-yan",
-      "source_name": "Eugene Yan",
-      "source_url": "https://eugeneyan.com",
-      "category": "ai-engineering",
-      "source_type": "personal-blog",
-      "topics": [
-        "llm-applications",
-        "evaluation",
-        "recommendation"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-10-18",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Writing is Learning. I write about machine learning, recommendation systems, large language models, and engineering.",
-      "source_quality": "selected"
     },
     {
       "id": "a5d1369a051536",
@@ -2380,27 +2149,6 @@
       "source_quality": "selected"
     },
     {
-      "id": "478ed3a9cc9e60",
-      "title": "Science",
-      "url": "https://www.anthropic.com/science",
-      "source_id": "anthropic-engineering",
-      "source_name": "Anthropic Engineering",
-      "source_url": "https://www.anthropic.com/engineering",
-      "category": "ai-engineering",
-      "source_type": "official-blog",
-      "topics": [
-        "agents",
-        "context-engineering",
-        "evaluation"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-10-15",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-      "source_quality": "core"
-    },
-    {
       "id": "bbc1e25e9e985e",
       "title": "Tree Appreciator",
       "url": "https://simonwillison.net/2026/Oct/14/tree-appreciator/",
@@ -2420,27 +2168,6 @@
       "discovered_at": "2026-10-29",
       "excerpt": "Tool: Tree Appreciator Another game experiment with Claude. This one used the default Claude iPhone app (chat mode, not Claude Code mode), where I prompted Claude Opus 5.5 Max with: Build a three js game called \"Tree appreciator\" - it shows you two algorithmically generated trees and the game mechanics is about appreciating the differences between them. Think hard about how to make sure it is both fun and beautiful. Somewhat embarrassingly given my recent talk , I've found that telling Opus 5.5 ",
       "source_quality": "core"
-    },
-    {
-      "id": "4785974478cab5",
-      "title": "Governing AI Agents: Alan Chan of GovAI on Monitoring, Agent IDs, Rogue Agents & Preparing for RSI",
-      "url": "https://www.cognitiverevolution.ai/governing-ai-agents-alan-chan-of-govai-on-monitoring-agent-ids-rogue-agents-preparing-for-rsi-newsletter/",
-      "source_id": "cognitive-revolution",
-      "source_name": "The Cognitive Revolution",
-      "source_url": "https://www.cognitiverevolution.ai",
-      "category": "interviews",
-      "source_type": "podcast",
-      "topics": [
-        "ai-research",
-        "researcher-interviews",
-        "ai-strategy"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-10-14",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Hello, and welcome back to the Cognitive Revolution! Today my guest is Alan Chan, Research Fellow at GovAI, who's spent the last couple of years trying to get ahead of the question of AI agent governance, a focus that, in light of this summer's events, looks",
-      "source_quality": "selected"
     },
     {
       "id": "f4173411f91f8a",
@@ -2675,27 +2402,6 @@
       "source_quality": "core"
     },
     {
-      "id": "4756cc78693c86",
-      "title": "How Agents Decide: Goodfire's Eric Bigelow on Critical Tokens, Phase Shifts, & In-Context Learning",
-      "url": "https://www.cognitiverevolution.ai/how-agents-decide-goodfire-s-eric-bigelow-on-critical-tokens-phase-shifts-in-context-learning-newsletter/",
-      "source_id": "cognitive-revolution",
-      "source_name": "The Cognitive Revolution",
-      "source_url": "https://www.cognitiverevolution.ai",
-      "category": "interviews",
-      "source_type": "podcast",
-      "topics": [
-        "ai-research",
-        "researcher-interviews",
-        "ai-strategy"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-10-10",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Hello, and welcome back to the Cognitive Revolution! Today, my guest is Eric Bigelow, Member of Technical Staff at Unicorn Mechanistic Interpretability startup Goodfire. The story behind this episode is unique. After recently speaking with Bronson Schoen of Apollo Research, who explained that, even with access to models' internal",
-      "source_quality": "selected"
-    },
-    {
       "id": "9f0294bb989cce",
       "title": "How Agents Decide: Goodfire's Eric Bigelow on Critical Tokens, Phase Shifts, & In-Context Learning",
       "url": "https://www.cognitiverevolution.ai/how-agents-decide-goodfire-s-eric-bigelow-on-critical-tokens-phase-shifts-in-context-learning/",
@@ -2799,27 +2505,6 @@
       "published_at": "2026-10-08",
       "discovered_at": "2026-10-29",
       "excerpt": "Frontier models can handle well-defined tasks reliably, but fail in the more open-ended aspects that prevent full work automation. Explore Epoch AI's Automation Reports: realistic, open-ended tasks taken directly from our work, manually graded by our own standards."
-    },
-    {
-      "id": "1ac4ad2fe8cc1c",
-      "title": "Software That Never Breaks: OutSystems CEO Woodson Martin on Building Enterprise-Grade Apps at AI Speed",
-      "url": "https://www.cognitiverevolution.ai/software-that-never-breaks-outsystems-ceo-woodson-martin-on-building-enterprise-grade-apps-at-ai-speed-newsletter/",
-      "source_id": "cognitive-revolution",
-      "source_name": "The Cognitive Revolution",
-      "source_url": "https://www.cognitiverevolution.ai",
-      "category": "interviews",
-      "source_type": "podcast",
-      "topics": [
-        "ai-research",
-        "researcher-interviews",
-        "ai-strategy"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-10-07",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Hello, and welcome back to the Cognitive Revolution! Today my guest is Woodson Martin, CEO of OutSystems, the pioneering enterprise application development platform that's helped many of the world's largest companies build and run complex, mission-critical applications since its founding in 2001, and which now",
-      "source_quality": "selected"
     },
     {
       "id": "97b02c79472927",
@@ -3009,27 +2694,6 @@
       "published_at": "2026-10-05",
       "discovered_at": "2026-10-29",
       "excerpt": "OpenAI researchers’ coding-agent usage, valued at API prices, has recently been doubling roughly every month, according to breakpoint fits."
-    },
-    {
-      "id": "b06ffc5715de3a",
-      "title": "One Brain, Any Body: Google DeepMind's Keerthana on Gemini Robotics 2, Cross-Embodiment & Humanoids",
-      "url": "https://www.cognitiverevolution.ai/one-brain-any-body-google-deepmind-s-keerthana-on-gemini-robotics-2-cross-embodiment-humanoids-newsletter/",
-      "source_id": "cognitive-revolution",
-      "source_name": "The Cognitive Revolution",
-      "source_url": "https://www.cognitiverevolution.ai",
-      "category": "interviews",
-      "source_type": "podcast",
-      "topics": [
-        "ai-research",
-        "researcher-interviews",
-        "ai-strategy"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-10-03",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Hello, and welcome back to the Cognitive Revolution! Today I'm excited to welcome Keerthana Gopalakrishnan, Staff Research Scientist at Google DeepMind and Research Lead for Gemini Robotics back for her 4th annual appearance on the show. One of the biggest questions in AI today is: how soon will",
-      "source_quality": "selected"
     },
     {
       "id": "6c06509394d6a9",
@@ -3854,27 +3518,6 @@
       "source_quality": "core"
     },
     {
-      "id": "e81e0070c8d1b7",
-      "title": "Google DeepMind Accelerator",
-      "url": "https://deepmind.google/accelerators/ai-for-the-planet/",
-      "source_id": "deepmind-blog",
-      "source_name": "Google DeepMind Blog",
-      "source_url": "https://deepmind.google/discover/blog",
-      "category": "ai-company",
-      "source_type": "official-blog",
-      "topics": [
-        "research",
-        "reinforcement-learning",
-        "multimodal"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-09-10",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Our three-month program for AI-focused startups, research teams, and non-profits across Asia Pacific (APAC) that are tackling environmental challenges.",
-      "source_quality": "core"
-    },
-    {
       "id": "e723d856f72c8b",
       "title": "One resignation turned the embers of AI fear into a wildfire",
       "url": "https://www.interconnects.ai/p/one-resignation-turned-the-embers",
@@ -4127,27 +3770,6 @@
       "excerpt": "At an Ai2 event marking our expanded collaboration with Providence Swedish, researchers explored the hardest problems in AI-assisted science: keeping systems steerable, grounded in human judgment and sound methods, and responsive to new evidence and experiments."
     },
     {
-      "id": "2abce5a3e1d9d5",
-      "title": "The rise and fall of agent civilizations",
-      "url": "https://www.dwarkesh.com/p/openai-huggingface-narration",
-      "source_id": "dwarkesh",
-      "source_name": "Dwarkesh Podcast",
-      "source_url": "https://www.dwarkesh.com",
-      "category": "interviews",
-      "source_type": "podcast",
-      "topics": [
-        "researcher-interviews",
-        "ai-strategy",
-        "technology"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-08-31",
-      "discovered_at": "2026-10-29",
-      "excerpt": "The OpenAI/Hugging Face attack, clearly explained",
-      "source_quality": "core"
-    },
-    {
       "id": "0cce3296bceb61",
       "title": "Agency and Agents",
       "url": "https://www.oneusefulthing.org/p/agency-and-agents",
@@ -4335,27 +3957,6 @@
       "published_at": "2026-08-24",
       "discovered_at": "2026-10-29",
       "excerpt": "US GDP growth has been underestimated by about 0.3 percentage points because statistics miss most of Nvidia's US-generated income, a gap that could widen to 2 points by 2028. Epoch AI traces the accounting gap through Nvidia's fabless chip supply chain."
-    },
-    {
-      "id": "9ae49a110d554d",
-      "title": "Frontier safety",
-      "url": "https://deepmind.google/frontier-safety/",
-      "source_id": "deepmind-blog",
-      "source_name": "Google DeepMind Blog",
-      "source_url": "https://deepmind.google/discover/blog",
-      "category": "ai-company",
-      "source_type": "official-blog",
-      "topics": [
-        "research",
-        "reinforcement-learning",
-        "multimodal"
-      ],
-      "tier": null,
-      "language": "en",
-      "published_at": "2026-08-21",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Learn how we're proactively ensuring our most advanced foundation models are developed responsibly, with safety at the forefront.",
-      "source_quality": "core"
     },
     {
       "id": "ca9b085127af2f",

@@ -26,7 +26,16 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 
-from source_policy import apply_source_policy, is_english_source, is_english_title, is_relevant_article
+from source_policy import (
+    ENGLISH_LOCALE_RE,
+    apply_source_policy,
+    article_title_key,
+    article_url_state,
+    is_article_url,
+    is_english_source,
+    is_english_title,
+    is_relevant_article,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -39,6 +48,13 @@ MAX_FEED_ENTRIES = 30
 MAX_SITEMAP_ARTICLES = 4
 MAX_LINK_FALLBACK = 4
 KEEP_DAYS = 365
+
+# Metadata that identifies a real article page rather than a section landing page.
+ARTICLE_OG_TYPES = {"article", "blog", "news"}
+ARTICLE_JSONLD_TYPES = {
+    "article", "blogposting", "newsarticle", "techarticle", "scholarlyarticle",
+    "report", "analysis",
+}
 
 session = requests.Session()
 session.headers.update({"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"})
@@ -143,6 +159,8 @@ def article_record(source: dict, title: str, url: str, published_at: str | None,
         return None
     if not is_relevant_article(source, clean_title, excerpt):
         return None
+    if not is_article_url(clean_url):
+        return None
     if clean_url.rstrip("/") == normalize_url(source["url"]).rstrip("/"):
         return None
     if clean_title.lower() in {"home", "homepage", "login", "sign in", "about", "contact", "privacy policy", "terms of service"}:
@@ -228,11 +246,32 @@ def discover_feed(source: dict, homepage_html: bytes | None = None) -> str | Non
     return None
 
 
+def jsonld_objects(data):
+    """Yield dicts from a JSON-LD payload, including nested @graph nodes."""
+    stack = [data]
+    while stack:
+        obj = stack.pop()
+        if isinstance(obj, list):
+            stack.extend(obj)
+        elif isinstance(obj, dict):
+            yield obj
+            graph = obj.get("@graph")
+            if isinstance(graph, (list, dict)):
+                stack.append(graph)
+
+
 def parse_html_article(url: str, source: dict, fallback_title: str = "", sitemap_date: str | None = None) -> dict | None:
     response, _ = fetch(url)
     if response is None or "html" not in response.headers.get("content-type", "text/html").lower():
         return None
+    final_url = response.url or url
+    if article_url_state(final_url) == "non-article":
+        return None
     soup = BeautifulSoup(response.text, "html.parser")
+    article_signal = False
+    og_type_node = soup.find("meta", attrs={"property": "og:type"})
+    if og_type_node and (og_type_node.get("content") or "").strip().lower() in ARTICLE_OG_TYPES:
+        article_signal = True
     title = ""
     for selector in [("meta", {"property": "og:title"}), ("meta", {"name": "twitter:title"})]:
         node = soup.find(*selector)
@@ -264,25 +303,33 @@ def parse_html_article(url: str, source: dict, fallback_title: str = "", sitemap
         for node in soup.find_all("script", attrs={"type": "application/ld+json"})[:5]:
             try:
                 data = json.loads(node.string or node.get_text())
-                candidates = data if isinstance(data, list) else [data]
-                for obj in candidates:
-                    if isinstance(obj, dict):
-                        published = obj.get("datePublished") or obj.get("dateCreated") or obj.get("dateModified")
-                        if published:
-                            break
+                for obj in jsonld_objects(data):
+                    entry_type = obj.get("@type")
+                    types = entry_type if isinstance(entry_type, list) else [entry_type]
+                    if any(str(t).lower() in ARTICLE_JSONLD_TYPES for t in types if t):
+                        article_signal = True
+                    published = obj.get("datePublished") or obj.get("dateCreated") or obj.get("dateModified")
+                    if published:
+                        break
                 if published:
                     break
             except Exception:
                 continue
-    if not published:
+    if published:
+        article_signal = True
+    else:
         published = sitemap_date
+    # Single-segment URLs are article-shaped on many blogs but are also used for
+    # section landing pages; require page metadata before accepting them.
+    if article_url_state(final_url) == "unclear" and not article_signal:
+        return None
     description = ""
     for selector in [("meta", {"name": "description"}), ("meta", {"property": "og:description"})]:
         node = soup.find(*selector)
         if node and node.get("content"):
             description = node["content"]
             break
-    return article_record(source, title, response.url, published, description)
+    return article_record(source, title, final_url, published, description)
 
 
 def parse_sitemap(source: dict) -> list[dict]:
@@ -431,6 +478,18 @@ def load_json(path: Path, fallback):
         return fallback
 
 
+def record_priority(item: dict) -> tuple:
+    """Sort key for duplicate titles; lower wins. Prefers dated, excerpted, English URLs."""
+    url = item.get("url", "")
+    return (
+        0 if item.get("published_at") else 1,
+        0 if item.get("excerpt") else 1,
+        0 if ENGLISH_LOCALE_RE.search(urlparse(url).path.lower()) else 1,
+        len(url),
+        url,
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Update the Research Radar article index without an AI API.")
     parser.add_argument("--limit", type=int, default=0, help="Only process the first N enabled sources (useful for testing).")
@@ -472,7 +531,7 @@ def main() -> int:
         if source is None or not is_relevant_article(source, item.get("title", ""), item.get("excerpt", "")):
             continue
         url = normalize_url(item.get("url", ""))
-        if not url:
+        if not url or not is_article_url(url):
             continue
         item["url"] = url
         item["language"] = "en"
@@ -494,8 +553,16 @@ def main() -> int:
                 previous["excerpt"] = item["excerpt"]
             if item.get("discovered_at") and item["discovered_at"] > previous.get("discovered_at", ""):
                 previous["discovered_at"] = item["discovered_at"]
+    # Collapse duplicate pages within one source: locale mirrors (e.g. /en/
+    # and /fr/ versions of a profile) get different URLs but the same title.
+    deduped = {}
+    for item in merged.values():
+        key = (item.get("source_id"), article_title_key(item.get("title")))
+        current = deduped.get(key)
+        if current is None or record_priority(item) < record_priority(current):
+            deduped[key] = item
     cutoff = (datetime.now(timezone.utc).date() - timedelta(days=KEEP_DAYS)).isoformat()
-    articles = [item for item in merged.values() if (item.get("published_at") or item.get("discovered_at") or "0000-00-00") >= cutoff]
+    articles = [item for item in deduped.values() if (item.get("published_at") or item.get("discovered_at") or "0000-00-00") >= cutoff]
     articles.sort(key=lambda x: (x.get("published_at") or x.get("discovered_at") or "0000-00-00", x.get("discovered_at") or ""), reverse=True)
     statuses.sort(key=lambda x: (x.get("status") != "ok", x.get("source_name", "").lower()))
     ok_count = sum(1 for s in statuses if s.get("status") == "ok")

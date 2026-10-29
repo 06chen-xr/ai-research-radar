@@ -3,6 +3,7 @@
 from __future__ import annotations
 import re
 import unicodedata
+from urllib.parse import urlparse
 
 # Small, intentionally curated default set. This is a reading-list policy, not
 # a ranking of researchers or firms. New upstream sources stay pending.
@@ -83,9 +84,69 @@ LOW_SIGNAL_ANNOUNCEMENT_RE = re.compile(
     r"^(?:introducing|announcing|meet |now available|available now|launching|"
     r"we(?:'|’)re launching|new partnership|partnering with|customer story|"
     r"case study:|join us|register for|webinar:|event recap|careers at|"
-    r"we are hiring|funding announcement|series [a-f]\b|press release:)",
+    r"we are hiring|funding announcement|series [a-f]\b|press release:|"
+    r"(?:general |public |media |important |customer )?notice\b|"
+    r"(?:press|media) release\b)",
     re.IGNORECASE,
 )
+# Award, ranking and league-table announcements are PR rather than research.
+LOW_SIGNAL_PR_RE = re.compile(
+    r"\b(?:tops?|topped|wins?|won|ranked|award(?:ed|s)?|celebrates?|honou?r(?:ed|s)?)\b"
+    r".{0,40}\b(?:ranking|rankings|award|awards|index|league table|poll|survey|list)\b",
+    re.IGNORECASE,
+)
+
+# Navigation, directory and profile paths are never article pages, even when a
+# sitemap lists them with a fresh lastmod date.
+NON_ARTICLE_PATH_SEGMENTS = {
+    "about", "about-us", "annuaire", "author", "authors", "careers", "category",
+    "categories", "contact", "cookie", "cookies", "directory", "events", "faq",
+    "faculty", "jobs", "leadership", "login", "members", "people", "person",
+    "philanthropy", "press", "privacy", "privacy-policy", "search", "signin",
+    "sign-in", "sitemap", "sponsorship", "sponsorships", "staff", "subscribe",
+    "subscription", "tag", "tags", "team", "terms", "terms-of-service",
+    "ventures",
+}
+# Dated slugs are the usual shape of a single-segment article URL.
+SINGLE_SEGMENT_DATE_RE = re.compile(r"(?:^|[-_])(?:19|20)\d{2}(?:[-_]|$)")
+PAGE_EXTENSION_RE = re.compile(r"\.(?:html?|php|aspx?|jsp)$")
+ENGLISH_LOCALE_RE = re.compile(r"/(?:en|en-us|en-gb)(?:/|$)")
+
+
+def article_url_state(url: str) -> str:
+    """Classify a URL as 'non-article', 'article', or 'unclear'.
+
+    'unclear' covers single-segment paths such as /flex-model-notes/, which are
+    common article URLs on personal blogs and quant sites but are also how some
+    sites expose section landing pages. Callers with HTML available must resolve
+    'unclear' with page metadata; callers without HTML should keep the record.
+    """
+    parsed = urlparse(url or "")
+    segments = [segment for segment in parsed.path.lower().strip("/").split("/") if segment]
+    if not segments:
+        return "non-article"
+    if any(segment in NON_ARTICLE_PATH_SEGMENTS for segment in segments):
+        return "non-article"
+    last = PAGE_EXTENSION_RE.sub("", segments[-1])
+    if last in NON_ARTICLE_PATH_SEGMENTS:
+        return "non-article"
+    if len(segments) == 1:
+        return "article" if SINGLE_SEGMENT_DATE_RE.search(last) else "unclear"
+    return "article"
+
+
+def is_article_url(url: str) -> bool:
+    """True unless the URL is clearly a site root, section index or profile page."""
+    return article_url_state(url) != "non-article"
+
+
+def article_title_key(title: str | None) -> str:
+    """Normalized title used to collapse locale duplicates of the same page."""
+    value = unicodedata.normalize("NFKC", title or "").casefold()
+    value = re.sub(r"[^0-9a-z\u00c0-\u024f]+", " ", value)
+    return re.sub(r"\s+", " ", value).strip()
+
+
 TECHNICAL_ANNOUNCEMENT_RE = re.compile(
     r"\b(?:research|technical report|benchmark|evaluation|architecture|training|inference|"
     r"reasoning|safety|system card|model card|engineering|agent|coding|performance|"
@@ -137,8 +198,9 @@ def is_relevant_article(source: dict, title: str | None, excerpt: str | None = "
             return False
 
     # Avoid generic company PR unless the title/excerpt contains technical substance.
-    if category in {"ai-company", "ai-engineering", "quant-firm"} and LOW_SIGNAL_ANNOUNCEMENT_RE.search(clean_title):
-        if not TECHNICAL_ANNOUNCEMENT_RE.search(text):
+    if category in {"ai-company", "ai-engineering", "quant-firm"}:
+        if (LOW_SIGNAL_ANNOUNCEMENT_RE.search(clean_title) or LOW_SIGNAL_PR_RE.search(clean_title)) \
+                and not TECHNICAL_ANNOUNCEMENT_RE.search(text):
             return False
     return True
 
