@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-29T09:57:10Z",
+  "updated_at": "2026-10-29T10:01:17Z",
   "source_index": "https://github.com/joeseesun/ai-blog-res/blob/main/AI%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%BA%90-%E5%AE%8C%E6%95%B4%E7%B4%A2%E5%BC%95.md",
-  "note": "Curated English-first registry with three sections: AI lab research, AI researcher blogs, and quantitative research. Only approved sources are monitored; new upstream entries stay pending.",
+  "note": "Strict curated allowlist. Upstream personal-blog, official-blog, academic, and AI-safety candidates remain pending until manually approved; generic tool/course sections are not ingested.",
   "sources": [
     {
       "id": "lilian-weng",
@@ -2440,6 +2440,38 @@
       ],
       "language": "en",
       "description": "AI安全职业指南",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-neelnanda-io-793d37f",
+      "name": "Neel Nanda",
+      "url": "https://neelnanda.io",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [],
+      "language": "en",
+      "description": "Listed in the upstream AI blog resource index.",
+      "tier": null,
+      "enabled": false,
+      "review_status": "pending",
+      "source_quality": "watchlist",
+      "feed_url": null,
+      "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "idx-alignmentforum-org-f88347c",
+      "name": "Alignment Forum (evhub)",
+      "url": "https://www.alignmentforum.org/users/evhub",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [],
+      "language": "en",
+      "description": "Listed in the upstream AI blog resource index.",
       "tier": null,
       "enabled": false,
       "review_status": "pending",

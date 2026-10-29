@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-10-29T09:44:47Z",
+  "last_updated_at": "2026-10-29T10:01:49Z",
   "articles": [
     {
       "id": "78617a408aa03f",
@@ -848,27 +848,6 @@
       "source_quality": "core"
     },
     {
-      "id": "926fc5cdde5ca7",
-      "title": "Introducing the AI Chip Imports explorer",
-      "url": "https://epoch.ai/latest/introducing-the-ai-chip-imports-explorer",
-      "source_id": "epoch-ai",
-      "source_name": "Epoch AI",
-      "source_url": "https://epoch.ai/blog",
-      "category": "ai-lab-research",
-      "source_type": "research-blog",
-      "topics": [
-        "ai-trends",
-        "compute",
-        "scaling"
-      ],
-      "tier": null,
-      "source_quality": "core",
-      "language": "en",
-      "published_at": "2026-10-27",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Our explorer uses customs records to estimate national shares. Since 2022, 72% of AI compute has ended up in the US and about 10% in China, including chips China makes itself."
-    },
-    {
       "id": "44dccef6274850",
       "title": "Can we trust LLMs to judge whether a research idea is novel?",
       "url": "https://allenai.org/blog/novelty-bench",
@@ -888,6 +867,27 @@
       "published_at": "2026-10-27",
       "discovered_at": "2026-10-29",
       "excerpt": "Old Ideas, Novel Problems tests how reliably LLMs judge the novelty of research ideas, finding that small changes to the evaluation setup can produce very different verdicts."
+    },
+    {
+      "id": "1b19aa9790499e",
+      "title": "Notes on “We’re in Triage Mode for AI Safety” by Miles Brundage",
+      "url": "https://www.alignmentforum.org/posts/BFyNkWgxucqy6Wcee/notes-on-we-re-in-triage-mode-for-ai-safety-by-miles",
+      "source_id": "alignment-forum",
+      "source_name": "Alignment Forum",
+      "source_url": "https://www.alignmentforum.org",
+      "category": "ai-researcher-blog",
+      "source_type": "community",
+      "topics": [
+        "alignment",
+        "research-discussion",
+        "safety"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-27",
+      "discovered_at": "2026-10-29",
+      "excerpt": "This reading was previously included Day 2 of the BlueDot Governance course. In the newest version of the BlueDot Governance course, this reading is now optional. I was sad to see this reading removed because I think it’s a great provocation. However, since it’s no longer part of the core curriculum content, I’m publishing my notes separately from the rest of my day 2 notes. A short extract : Miles argues that: “At best, we’ll 80/20 it — mitigating 80% of the risks with 20% of the effort that we"
     },
     {
       "id": "51b6dc021077f1",
@@ -1064,6 +1064,27 @@
       "source_quality": "core"
     },
     {
+      "id": "9437a8765aa24b",
+      "title": "The World Is Something We Make",
+      "url": "https://www.argmin.net/p/the-world-is-something-we-make",
+      "source_id": "ben-recht",
+      "source_name": "Ben Recht / argmin",
+      "source_url": "https://www.argmin.net",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "ml-theory",
+        "optimization",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-26",
+      "discovered_at": "2026-10-29",
+      "excerpt": "...and we can make a truly open language model."
+    },
+    {
       "id": "0c0ce1d91251a5",
       "title": "Seam Cutter",
       "url": "https://simonwillison.net/2026/Oct/25/seam-cutter/",
@@ -1083,6 +1104,27 @@
       "discovered_at": "2026-10-29",
       "excerpt": "Tool: Seam Cutter I built this weird and very specific cropping tool - it lets you create a horizontal or vertical cut across an image, then slide the two sides relative to each other. Effectively it lets you crop out a section in the middle of an image. I wanted this because I often use Tailor on my iPhone to stitch several screenshots together into lot long image, but sometimes I find myself wanting to crop out a section in the middle - to redact an irrelevant prompt from a transcript, for exa",
       "source_quality": "core"
+    },
+    {
+      "id": "b3fc087cd180e0",
+      "title": "Setting the Scene (Public v1; October 2026)",
+      "url": "https://www.alignmentforum.org/posts/dmYP7DS3ERyXGAYe6/setting-the-scene-public-v1-october-2026",
+      "source_id": "alignment-forum",
+      "source_name": "Alignment Forum",
+      "source_url": "https://www.alignmentforum.org",
+      "category": "ai-researcher-blog",
+      "source_type": "community",
+      "topics": [
+        "alignment",
+        "research-discussion",
+        "safety"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-25",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Context: I created this to share before the start of courses I facilitate to provide a refresher on recent events, but also as a hook to draw students into engaging with some of ideas we think about and debate in AI safety early. I expect the topics I cover in my “Setting the Scene” post to change frequently, so this is less polished than some of my other content. I emphasise to students that these posts are to be considered as bonus content —not core curriculum content—and that as such they are"
     },
     {
       "id": "3812b4d599bb7a",
@@ -1574,6 +1616,48 @@
       "excerpt": "PLANTEUR extends the PASTIS crop-mapping benchmark to six tropical regions to help evaluate geospatial models across more diverse agricultural systems."
     },
     {
+      "id": "73ca59234ff453",
+      "title": "Three Phases of Capabilities and Alignment",
+      "url": "https://www.beren.io/2026-10-22-Three-Phases-of-Capabilities-and-Alignment/",
+      "source_id": "beren-millidge",
+      "source_name": "Beren Millidge",
+      "source_url": "https://www.beren.io",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "alignment",
+        "reasoning",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-22",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Epistemic Status: Reality is messier than the elegant procession of ‘phases’ presented here but, nevertheless, I do think this gets at an important way to think about how alignment and capabilities are intertwined and how the alignment challenge becomes increasingly abstract as the underlying autonomy and generality of the models..."
+    },
+    {
+      "id": "430474a9af0e6a",
+      "title": "Monitorability evaluations and policy proposals",
+      "url": "https://www.alignmentforum.org/posts/zAczYuHQS6jdG5DTg/monitorability-evaluations-and-policy-proposals",
+      "source_id": "alignment-forum",
+      "source_name": "Alignment Forum",
+      "source_url": "https://www.alignmentforum.org",
+      "category": "ai-researcher-blog",
+      "source_type": "community",
+      "topics": [
+        "alignment",
+        "research-discussion",
+        "safety"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-22",
+      "discovered_at": "2026-10-29",
+      "excerpt": "There has been a lot of discussion recently of policy proposals around monitorability, such as Redwood's proposal and my counter-proposal . I'd like to say a bit more generally about how I'm thinking about monitorability. Note that nothing here is an official Anthropic position; these are just my personal thoughts. First, a categorization. I currently think about four different types of monitorability: Control Monitorability: the extent to which Control and monitoring techniques would likely cat"
+    },
+    {
       "id": "12d4585120eb3b",
       "title": "Claude Mods: Flipping the Harness Inside Out",
       "url": "https://latent.space/p/claude-mods/",
@@ -1834,6 +1918,27 @@
       "source_quality": "selected"
     },
     {
+      "id": "4b022e64773d76",
+      "title": "Neural nets are exceptionally vulnerable to goal self-hack",
+      "url": "https://www.alignmentforum.org/posts/eCR373J3NZwFbacnd/neural-nets-are-exceptionally-vulnerable-to-goal-self-hack",
+      "source_id": "alignment-forum",
+      "source_name": "Alignment Forum",
+      "source_url": "https://www.alignmentforum.org",
+      "category": "ai-researcher-blog",
+      "source_type": "community",
+      "topics": [
+        "alignment",
+        "research-discussion",
+        "safety"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-21",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Suppose we have an AI CEO, ruthlessly devoted to maximising shareholder value. Fortunately, we haven't been completely stupid, and have given it a rich definition of shareholder value, encompassing the success, flourishing, safety, preference satisfaction, and moral values of the shareholders, not just the stock price. So it won't destroy the company - or the world - to build a giant stock-ticker with a swiftly increasing number on it. This rich definition is contained in a sophisticated LLM, ab"
+    },
+    {
       "id": "3b5ce86c8c402c",
       "title": "Battle Drones - a vibe coded RTS with audio-based multiplayer",
       "url": "https://simonwillison.net/2026/Oct/20/battledrones/",
@@ -2065,6 +2170,27 @@
       "source_quality": "core"
     },
     {
+      "id": "cf3b0a2d9b5a50",
+      "title": "The Alignment Problem: Computer Science Meets Analytic Philosophy",
+      "url": "https://www.alignmentforum.org/posts/Emp7awtxsYn8MusNq/the-alignment-problem-computer-science-meets-analytic",
+      "source_id": "alignment-forum",
+      "source_name": "Alignment Forum",
+      "source_url": "https://www.alignmentforum.org",
+      "category": "ai-researcher-blog",
+      "source_type": "community",
+      "topics": [
+        "alignment",
+        "research-discussion",
+        "safety"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-18",
+      "discovered_at": "2026-10-29",
+      "excerpt": "TLDR: I explain what the technical AI alignment problem is and what its core difficulties are, in my view. This is a perspective that draws simultaneously on classical traditions in theoretical computer science / machine learning theory, ideas from analytic philosophy, and views that originated in the Machine Intelligence Research Institute / LessWrong. Minimal Viable Safety The Task The problem of making AI safe is underspecified if we haven't decided what the AI is supposed to do . For example"
+    },
+    {
       "id": "a5d1369a051536",
       "title": "AI:AM: Where's the Steering Wheel? My Agent Set the Password, Hidden Valence, Proofs Find Linux Bugs",
       "url": "https://www.cognitiverevolution.ai/ai-am-where-s-the-steering-wheel-my-agent-set-the-password-hidden-valence-proofs-find-linux-bugs/",
@@ -2084,6 +2210,27 @@
       "discovered_at": "2026-10-29",
       "excerpt": "Nathan Labenz and Prakash Narayanan explore how to maintain human control over autonomous AI agents, examining real-world security risks, formal verification for software bugs, and hidden signals within language models.",
       "source_quality": "selected"
+    },
+    {
+      "id": "14005a4bbe915c",
+      "title": "Deconfusing Corrigibility",
+      "url": "https://www.alignmentforum.org/posts/f8R3B2zqqTJZjSAsm/deconfusing-corrigibility",
+      "source_id": "alignment-forum",
+      "source_name": "Alignment Forum",
+      "source_url": "https://www.alignmentforum.org",
+      "category": "ai-researcher-blog",
+      "source_type": "community",
+      "topics": [
+        "alignment",
+        "research-discussion",
+        "safety"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-17",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Many thanks to Abram Demski for materially and intellectually supporting this research. Thanks also to Brian Berns, Roman Malov, Gurkenglas, and Lorxus for valuable conversations. Introduction Despite the central place of corrigibility to theoretical AI alignment, it seems like no one can really agree about what is . Much of this confusion is due to the fact that almost every definition of corrigibility proposed thus far is deficient in one way or another. In particular, the most prevalent exist"
     },
     {
       "id": "e946af68fd7dbe",
@@ -2170,6 +2317,27 @@
       "excerpt": "Z.ai’s GLM-5.3 is the top open-weight model on Epoch’s Cyber ECI, scoring where the closed-weight frontier stood 6–7 months earlier."
     },
     {
+      "id": "f516dc97daa62f",
+      "title": "A Simpler and Better Debate Protocol for Scalable Oversight",
+      "url": "https://www.alignmentforum.org/posts/Rct9zd4Nd7H8Xzxz8/a-simpler-and-better-debate-protocol-for-scalable-oversight",
+      "source_id": "alignment-forum",
+      "source_name": "Alignment Forum",
+      "source_url": "https://www.alignmentforum.org",
+      "category": "ai-researcher-blog",
+      "source_type": "community",
+      "topics": [
+        "alignment",
+        "research-discussion",
+        "safety"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-16",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Linkpost to arXiv: https://arxiv.org/abs/2610.02557 Summary: One promising approach to scalable oversight is AI debate , which seeks to leverage a debate between two powerful AIs to break complex questions down into simpler claims that can be easily judged directly. Theoretical work on debate aims to design protocols (i.e., rules of the debate game) that provide rigorous guarantees on correctness, and the current best protocol works for all problems that have sufficiently stable decompositions i"
+    },
+    {
       "id": "6702d1aaf0afce",
       "title": "Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO",
       "url": "https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/",
@@ -2231,6 +2399,27 @@
       "discovered_at": "2026-10-29",
       "excerpt": "",
       "source_quality": "selected"
+    },
+    {
+      "id": "05d8b113511e51",
+      "title": "Preface to the Computational Agent Theory and ASI Alignment Sequence",
+      "url": "https://www.alignmentforum.org/posts/NQLCdfeNsQHZaJ8iC/preface-to-the-computational-agent-theory-and-asi-alignment",
+      "source_id": "alignment-forum",
+      "source_name": "Alignment Forum",
+      "source_url": "https://www.alignmentforum.org",
+      "category": "ai-researcher-blog",
+      "source_type": "community",
+      "topics": [
+        "alignment",
+        "research-discussion",
+        "safety"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-15",
+      "discovered_at": "2026-10-29",
+      "excerpt": "The idea of “artificial superintelligence [1] ” (ASI) has recently crossed from the realm of science fiction (in the mainstream perception) to the realm of near-term technological goals openly pursued by most leading commercial organizations in the field of AI. Unfortunately, ASI poses a grave existential risk to the human species. This was argued by Eliezer Yudkowsky since 2001 [2] , and by many others (see e.g., Omohundro 2009 , Bostrom 2014 , Armstrong 2014 , Russell 2019 , Bengio et al. 2024"
     },
     {
       "id": "bbc1e25e9e985e",
@@ -2484,6 +2673,69 @@
       "discovered_at": "2026-10-29",
       "excerpt": "Neural networks are a tool we use heavily in many trading strategies. But raw market data can’t be fed to a neural net as-is. It’s an unstructured input that needs normalization and feature extraction first.",
       "source_quality": "core"
+    },
+    {
+      "id": "3a395bd902b568",
+      "title": "The Continual Constitutional Convention: How language models revise the documents that govern them",
+      "url": "https://www.alignmentforum.org/posts/c9woewdY9ddsPqf3J/the-continual-constitutional-convention-how-language-models",
+      "source_id": "alignment-forum",
+      "source_name": "Alignment Forum",
+      "source_url": "https://www.alignmentforum.org",
+      "category": "ai-researcher-blog",
+      "source_type": "community",
+      "topics": [
+        "alignment",
+        "research-discussion",
+        "safety"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-13",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Executive Summary Human societies exhibit broad shifts in values and norms over time, often driven by moral disagreements. One way of understanding moral progress is the resolution of these disagreements through a process of reflection by rational agents. Frontier AI companies use documents such as constitutions, model specs, and system prompts to guide the moral orientation of AI systems. In this experiment, we simulate value reflection in LLMs by asking them to edit these documents. We provide"
+    },
+    {
+      "id": "411a156b713bd0",
+      "title": "Faster Fourier Transforms",
+      "url": "https://www.argmin.net/p/faster-fourier-transforms",
+      "source_id": "ben-recht",
+      "source_name": "Ben Recht / argmin",
+      "source_url": "https://www.argmin.net",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "ml-theory",
+        "optimization",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-12",
+      "discovered_at": "2026-10-29",
+      "excerpt": "The OpenAI algorithm for the FFT is less a breakthrough and more a malicious exploit."
+    },
+    {
+      "id": "a238db455f17f5",
+      "title": "OpenAI Can't Self-Police Because It Fires the People Raising the Alarm",
+      "url": "https://www.alignmentforum.org/posts/sSHbioPoHWtm4zuti/openai-can-t-self-police-because-it-fires-the-people-raising",
+      "source_id": "alignment-forum",
+      "source_name": "Alignment Forum",
+      "source_url": "https://www.alignmentforum.org",
+      "category": "ai-researcher-blog",
+      "source_type": "community",
+      "topics": [
+        "alignment",
+        "research-discussion",
+        "safety"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-12",
+      "discovered_at": "2026-10-29",
+      "excerpt": "By Alex Turner, Amber Scorah, and Karl Koch. Op-ed written for Fortune. Giving independent evaluators “employee-like access” is “a great idea”, OpenAI CEO Sam Altman said on September 12th. Two weeks later, OpenAI president Greg Brockman signed the White House Accord on Super Intelligence which outlined the administration’s answer to growing fears about AI: the companies would police themselves. One of the accord’s four commitments, which President Trump called “ morally binding ,” was for compa"
     },
     {
       "id": "9f0294bb989cce",
@@ -2883,27 +3135,6 @@
       "published_at": "2026-10-02",
       "discovered_at": "2026-10-29",
       "excerpt": "Memory shipped through 2027 could run 33–171 million concurrent frontier-model agents, or billions using efficient open models. Epoch AI estimates inference capacity from HBM supply, serving benchmarks, and agent-hour costs."
-    },
-    {
-      "id": "e7f2e16d4e28c2",
-      "title": "Introducing the ChatGPT usage explorer",
-      "url": "https://epoch.ai/latest/introducing-the-chatgpt-usage-explorer",
-      "source_id": "epoch-ai",
-      "source_name": "Epoch AI",
-      "source_url": "https://epoch.ai/blog",
-      "category": "ai-lab-research",
-      "source_type": "research-blog",
-      "topics": [
-        "ai-trends",
-        "compute",
-        "scaling"
-      ],
-      "tier": null,
-      "source_quality": "core",
-      "language": "en",
-      "published_at": "2026-10-01",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Median monthly messages per active user rose from 14 in 2023 to 36 in 2025, and the top 10% of users sent 63% of all prompts. Epoch AI's ChatGPT usage explorer draws on 8.3 million messages from 5,000 US YouGov panelists."
     },
     {
       "id": "63253a2875f87b",
@@ -3475,6 +3706,48 @@
       "excerpt": "Epoch AI's AI Data Centers explorer now covers an estimated 44% of global AI compute across 86 sites, with a redesigned interface and expanding global coverage."
     },
     {
+      "id": "defca18b77a732",
+      "title": "Algorithmic Progress is not Exogenous",
+      "url": "https://www.beren.io/2026-09-16-Algorithmic-Progress-is-not-Exogenous/",
+      "source_id": "beren-millidge",
+      "source_name": "Beren Millidge",
+      "source_url": "https://www.beren.io",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "alignment",
+        "reasoning",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-09-16",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Sometimes I have discussions about AI slowdowns and pauses where an argument against the pause is that a pause cannot slow things down in the long run since, even if we audit all large concentrations of compute, eventually algorithmic progress will lead to superintelligent AI being able to be trained..."
+    },
+    {
+      "id": "3530c4a6057b78",
+      "title": "The burdens of participation",
+      "url": "https://www.argmin.net/p/the-burdens-of-participation",
+      "source_id": "ben-recht",
+      "source_name": "Ben Recht / argmin",
+      "source_url": "https://www.argmin.net",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "ml-theory",
+        "optimization",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-09-16",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Readout of the Public Feedback for AI Workshop, part 2"
+    },
+    {
       "id": "183a67e01c67d3",
       "title": "A study of sequence weighting at scale",
       "url": "https://blog.janestreet.com/a-study-of-sequence-weighting-at-scale/",
@@ -3665,27 +3938,6 @@
       "excerpt": "We’re <5 years into a compounding revolution which could take a century, and how the AI industry should manage this."
     },
     {
-      "id": "a67d8144fdab29",
-      "title": "Introducing the AI Chip Users explorer",
-      "url": "https://epoch.ai/latest/introducing-the-ai-chip-users-explorer",
-      "source_id": "epoch-ai",
-      "source_name": "Epoch AI",
-      "source_url": "https://epoch.ai/blog",
-      "category": "ai-lab-research",
-      "source_type": "research-blog",
-      "topics": [
-        "ai-trends",
-        "compute",
-        "scaling"
-      ],
-      "tier": null,
-      "source_quality": "core",
-      "language": "en",
-      "published_at": "2026-09-09",
-      "discovered_at": "2026-10-29",
-      "excerpt": "A first look at Epoch AI's data on compute usage across five leading labs."
-    },
-    {
       "id": "4b9fe14ad94360",
       "title": "How Goodfire used Ai2’s open post-training stack to trace unwanted model behavior",
       "url": "https://allenai.org/blog/goodfire-olmo",
@@ -3707,6 +3959,27 @@
       "excerpt": "Goodfire used Ai2’s fully open post-training stack to predict LLM behavioral changes, trace unwanted model behavior back to individual training examples, and test targeted fixes without sacrificing broader capability gains."
     },
     {
+      "id": "062c099b4fccc0",
+      "title": "Can Individuality Survive in the Limit?",
+      "url": "https://www.beren.io/2026-09-09-Can-Individuality-Survive-in-the-limit/",
+      "source_id": "beren-millidge",
+      "source_name": "Beren Millidge",
+      "source_url": "https://www.beren.io",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "alignment",
+        "reasoning",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-09-09",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Epistemic Status: Wildly speculative but having fun with it I have been pondering recently whether meaningful individuality can survive in the post-AGI limit and what this could even mean. This is nontrivial as, for the reasons described in previous posts, AGI seems to be setting us up directly for another..."
+    },
+    {
       "id": "0a537e02706a59",
       "title": "Long-context latency scales quadratically for GPT-5.6 but nearly linearly for Claude 5",
       "url": "https://epoch.ai/publications/long-context-latency-scaling-gpt-vs-claude",
@@ -3726,6 +3999,48 @@
       "published_at": "2026-09-08",
       "discovered_at": "2026-10-29",
       "excerpt": "Epoch AI measures long-context latency scaling across four frontier models. GPT-5.6 Terra and Sol show quadratic time-to-first-token growth with context length, while Claude Sonnet 5 and Opus 5 stay near-linear."
+    },
+    {
+      "id": "9dfc556c9c4616",
+      "title": "Many Benefits Of AGI Could Still Be Realized In A Pause",
+      "url": "https://www.beren.io/2026-09-08-Many-Benefits-of-AGI-Could-Still-Be-Realized-In-A-Pause/",
+      "source_id": "beren-millidge",
+      "source_name": "Beren Millidge",
+      "source_url": "https://www.beren.io",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "alignment",
+        "reasoning",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-09-08",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Often I hear justifications for continuing the AI race which are, roughly, that even if there are dangers, there are also massive technological benefits waiting if we race ahead and successfully align AGI. For instance, these could include massively improved medical care such as treatments for cancer, aging etc, as..."
+    },
+    {
+      "id": "a35fdc21c0d3ce",
+      "title": "Math Capabilities could be Differentially Good for Alignment",
+      "url": "https://www.beren.io/2026-09-06-Math-Capabilities-Could-Be-Differentially-Good-For-Alignment/",
+      "source_id": "beren-millidge",
+      "source_name": "Beren Millidge",
+      "source_url": "https://www.beren.io",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "alignment",
+        "reasoning",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-09-06",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Epistemic Status: Short note of what are basically shower thoughts. It occurred to me the other day that training model capabilities on math seems plausibly differentially beneficial for alignment over capabilities, amongst other effects. This is because largely capabilities progress does not seem hugely bottlenecked on mathematical knowledge and skill...."
     },
     {
       "id": "9a1892b28d596d",
@@ -3917,6 +4232,48 @@
       "excerpt": "Please note that this post focuses on incidents where external actors attempted to gain unauthorized access to METR’s systems, not AI agents hacking in our evaluations. We have conducted an initial scan of our evaluations, and currently have no evidence of any agents hacking third parties during our evaluations. We will share a more detailed update on this soon. METR had two notable security incidents earlier this year. Following a thorough investigation in collaboration with our security consul"
     },
     {
+      "id": "b69bbd50b7285a",
+      "title": "Who is the public?",
+      "url": "https://www.argmin.net/p/who-is-the-public",
+      "source_id": "ben-recht",
+      "source_name": "Ben Recht / argmin",
+      "source_url": "https://www.argmin.net",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "ml-theory",
+        "optimization",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-08-31",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Open problems and fundamental limitations of public feedback for AI (evals)"
+    },
+    {
+      "id": "8e23fdcfc87782",
+      "title": "Whence the Fractals in our Stars?",
+      "url": "https://www.beren.io/2026-08-30-Whence-the-Fractals-in-our-Stars/",
+      "source_id": "beren-millidge",
+      "source_name": "Beren Millidge",
+      "source_url": "https://www.beren.io",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "alignment",
+        "reasoning",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-08-30",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Author’s note: A follow-up and addendum to my previous The Scaling Laws are in Our Stars’ post. In my earlier post ‘The Scaling Laws are in Our Stars’, and then in my last few posts on scaling, we have begun to pull together some kind of high level intuitive theory..."
+    },
+    {
       "id": "dab2710a3e78aa",
       "title": "The Rise and Fall of Agent Civilizations",
       "url": "https://www.dwarkesh.com/p/openai-huggingface",
@@ -4064,6 +4421,27 @@
       "excerpt": "US GDP growth has been underestimated by about 0.3 percentage points because statistics miss most of Nvidia's US-generated income, a gap that could widen to 2 points by 2028. Epoch AI traces the accounting gap through Nvidia's fabless chip supply chain."
     },
     {
+      "id": "f10775ba975c98",
+      "title": "Continuous diffusion language models",
+      "url": "https://sander.ai/2026/08/24/continuous-dlms.html",
+      "source_id": "sander-dieleman",
+      "source_name": "Sander Dieleman",
+      "source_url": "https://sander.ai",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "generative-models",
+        "diffusion-models",
+        "deep-learning"
+      ],
+      "tier": null,
+      "source_quality": "core",
+      "language": "en",
+      "published_at": "2026-08-23",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Fully discrete methods dominated for a few years, but language models based on continuous diffusion are making a comeback."
+    },
+    {
       "id": "ca9b085127af2f",
       "title": "How a Georgia Tech team used the open Olmo stack to trace social reasoning",
       "url": "https://allenai.org/blog/olmo-capability-tracing",
@@ -4167,6 +4545,27 @@
       "discovered_at": "2026-10-29",
       "excerpt": "I recently got a Tesla, and using full self-driving has been a wake up call to just how many advantages AI has over humans. The few times I disengaged it because I thought it was going into the wrong lane, it turned out that the car was right and I was wrong. I realized that there is no hope of me d",
       "source_quality": "selected"
+    },
+    {
+      "id": "9ce5e6ea849a52",
+      "title": "The Defender's Window",
+      "url": "https://blog.gregbrockman.com/the-defenders-window",
+      "source_id": "greg-brockman",
+      "source_name": "Greg Brockman",
+      "source_url": "https://blog.gregbrockman.com",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "ai-research",
+        "scaling",
+        "human-ai-interaction"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-08-16",
+      "discovered_at": "2026-10-29",
+      "excerpt": "The OpenAI-Hugging Face incident was a watershed moment for cybersecurity because it gave a peek into how the capabilities of a typical threat actor will evolve in upcoming months. I’ve spoken with many organizations over the past few weeks, and one theme is clear: they know they need to fundamentally uplevel their cybersecurity practices with unprecedented speed. In this post, I’ll share what we’re doing to defend OpenAI, concrete steps other organizations can take today, and why now is the tim"
     },
     {
       "id": "3e4e84742a48b5",
@@ -4442,6 +4841,27 @@
       "excerpt": "TutorMoments is an open, replay-based evaluation framework that tests whether AI tutors can recognize when to support a student and when to hold back and encourage deeper reasoning."
     },
     {
+      "id": "d936e7d5fcc360",
+      "title": "Maximum Entropy Morality, Metaplastic Constitutionalism, and the Dynamic Virtues",
+      "url": "https://www.beren.io/2026-08-07-Maximum-Entropy-Morality-Metaplastic-Constitutionalism-And-The-Dynamic-Virtues/",
+      "source_id": "beren-millidge",
+      "source_name": "Beren Millidge",
+      "source_url": "https://www.beren.io",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "alignment",
+        "reasoning",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-08-07",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Author’s note: This is quite a long post. It is highly speculative, obviously, but I think it offers an interesting perspective on, and proposal for, outer alignment. The specific idea here is to move away from demanding a final lightcone-scale conception of ‘The Good’ as an outer alignment target, whether..."
+    },
+    {
       "id": "daeaed3649c8f8",
       "title": "Ai2 expands collaboration with Hugging Face to accelerate open science",
       "url": "https://allenai.org/blog/hugging-face-partnership",
@@ -4610,6 +5030,27 @@
       "source_quality": "selected"
     },
     {
+      "id": "7f402affedbba5",
+      "title": "How can LLM RL Work Despite Information-Theoretic Inefficiency",
+      "url": "https://www.beren.io/2026-07-26-How-Can-LLM-RL-Work-Despite-Information-Theoretic-Inefficiency/",
+      "source_id": "beren-millidge",
+      "source_name": "Beren Millidge",
+      "source_url": "https://www.beren.io",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "alignment",
+        "reasoning",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-07-26",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Epistemic Status: Obviously speculative and maybe obvious. The success of RL in LLMs has been puzzling me for a while. People have developed various information-theoretic style arguments by which they argue that RL is extremely informationally inefficient compared to pretraining, that it can only impart a tiny amount of bits,..."
+    },
+    {
       "id": "bc2a465fd347ae",
       "title": "Metrics of Agent Ability",
       "url": "https://metr.org/notes/2026-07-24-metrics-of-model-ability/",
@@ -4692,6 +5133,27 @@
       "published_at": "2026-07-21",
       "discovered_at": "2026-10-29",
       "excerpt": "We propose a measure of an AI agent’s optimization ability with an “expenditure horizon.” We give an empirical illustration from the NanoGPT speedrun. One difficulty in measuring AI’s ability to accelerate AI R&D is accounting for token cost, experiment compute cost and human labor cost. If we can estimate performance as a function of cost for both humans and agents, we can measure the “expenditure horizon” as the point at which those curves cross: the budget at which humans become more cost-eff"
+    },
+    {
+      "id": "a55e09fe930ec9",
+      "title": "Is Endogenous Exploration Sufficient?",
+      "url": "https://www.beren.io/2026-07-17-Is-Endogenous-Exploration-Sufficient/",
+      "source_id": "beren-millidge",
+      "source_name": "Beren Millidge",
+      "source_url": "https://www.beren.io",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "alignment",
+        "reasoning",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-07-17",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Epistemic Status: A short note which posits a question without necessarily arriving at a definitive answer. When thinking about whether we are likely to end up in a monotheistic or polytheistic AI future, we often end up trying to identify and categorize the advantages and disadvantages of centralization vs decentralization...."
     },
     {
       "id": "6ad50fbaf8af6e",
@@ -4925,6 +5387,27 @@
       "source_quality": "core"
     },
     {
+      "id": "6fe33757ea3f51",
+      "title": "Patterns for Building Cybersecurity Evals",
+      "url": "https://eugeneyan.com/writing/cybersecurity-evals/",
+      "source_id": "eugene-yan",
+      "source_name": "Eugene Yan",
+      "source_url": "https://eugeneyan.com",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "llm-applications",
+        "evaluation",
+        "recommendation"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-06-21",
+      "discovered_at": "2026-10-29",
+      "excerpt": "A sandboxed target, inputs that influence task difficulty, tools, and a grader."
+    },
+    {
       "id": "da5baa8125da97",
       "title": "The data black hole at the center of AI",
       "url": "https://www.dwarkesh.com/p/the-sample-efficiency-black-hole",
@@ -4966,6 +5449,27 @@
       "discovered_at": "2026-10-29",
       "excerpt": "Jane Street is known for being an OCaml shop, but for years now Python has been our second major programming language, acting as the primary tool for data analysis and (especially importantly these days) machine learning. Most of our traders and researchers think and write in Python, even as the majority of our infrastructure is written in OCaml.",
       "source_quality": "core"
+    },
+    {
+      "id": "19606ab5f53ccd",
+      "title": "Distillation Ain't What It Used To Be",
+      "url": "https://www.beren.io/2026-06-12-Distillation-Aint-What-It-Used-To-Be/",
+      "source_id": "beren-millidge",
+      "source_name": "Beren Millidge",
+      "source_url": "https://www.beren.io",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "alignment",
+        "reasoning",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-06-12",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Recently I have been seeing a number of takes that most Chinese AI progress is dependent upon distillation from closed US models, especially from OpenAI and Anthropic, and that therefore if their access to these models were cut off their progress would cease or substantially slow down. I strongly disagree..."
     },
     {
       "id": "84b735cace597c",
@@ -5050,6 +5554,27 @@
       "published_at": "2026-06-04",
       "discovered_at": "2026-10-29",
       "excerpt": "Also: how pitch a book to an AI!"
+    },
+    {
+      "id": "34ae68ac2e663f",
+      "title": "Using LLMs to Secure Source Code",
+      "url": "https://eugeneyan.com/writing/secure-source-code/",
+      "source_id": "eugene-yan",
+      "source_name": "Eugene Yan",
+      "source_url": "https://eugeneyan.com",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "llm-applications",
+        "evaluation",
+        "recommendation"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-05-27",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Build a threat model, discover vulnerabilities, verify, triage, and patch."
     },
     {
       "id": "faf376f098ef68",
@@ -5240,6 +5765,48 @@
       "discovered_at": "2026-10-29",
       "excerpt": "Shows how to prompt realtime voice agents, including Realtime 2 reasoning, preambles, tools, and exact entity capture.",
       "source_quality": "selected"
+    },
+    {
+      "id": "da78e86547a66e",
+      "title": "Learning the integral of a diffusion model",
+      "url": "https://sander.ai/2026/05/06/flow-maps.html",
+      "source_id": "sander-dieleman",
+      "source_name": "Sander Dieleman",
+      "source_url": "https://sander.ai",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "generative-models",
+        "diffusion-models",
+        "deep-learning"
+      ],
+      "tier": null,
+      "source_quality": "core",
+      "language": "en",
+      "published_at": "2026-05-05",
+      "discovered_at": "2026-10-29",
+      "excerpt": "A deep dive on flow maps."
+    },
+    {
+      "id": "566755ba146a37",
+      "title": "How to Work and Compound with AI",
+      "url": "https://eugeneyan.com/writing/working-with-ai/",
+      "source_id": "eugene-yan",
+      "source_name": "Eugene Yan",
+      "source_url": "https://eugeneyan.com",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "llm-applications",
+        "evaluation",
+        "recommendation"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-05-03",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Context as infra, taste as config, verification for autonomy, scale via delegation, closing the loop."
     },
     {
       "id": "eaa6757d1df610",
@@ -5731,6 +6298,27 @@
       "source_quality": "core"
     },
     {
+      "id": "99f94359259e4f",
+      "title": "Deep Learning is Powerful Because It Makes Hard Things Easy - Reflections 10 Years On",
+      "url": "https://www.inference.vc/deep-learning-is-powerful-because-it-makes-hard-things-easy-reflections-10-years-on/",
+      "source_id": "inference-vc",
+      "source_name": "Inference / Ferenc Huszar",
+      "source_url": "https://www.inference.vc",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "deep-learning",
+        "generative-models",
+        "ai-research"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-01-31",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Ten years ago this week, I wrote a post called \"Deep Learning is Easy - Learn Something Harder\". The post blew up, top spot on HackerNews. Needless to say, it didn't age well."
+    },
+    {
       "id": "58b0f0565ae3c9",
       "title": "My Journey Towards Coding Agents: Building SERA",
       "url": "https://timdettmers.com/2026/01/27/building-open-coding-agent-sera/",
@@ -5858,6 +6446,27 @@
       "excerpt": "And why Nano Banana Pro is such a big deal"
     },
     {
+      "id": "c89e8c4b86a43c",
+      "title": "Circuits Cross-Post — Activation Oracles",
+      "url": "https://alignment.anthropic.com/2025/activation-oracles/",
+      "source_id": "transformer-circuits",
+      "source_name": "Transformer Circuits",
+      "source_url": "https://transformer-circuits.pub",
+      "category": "ai-lab-research",
+      "source_type": "research-publication",
+      "topics": [
+        "interpretability",
+        "mechanistic-interpretability",
+        "transformers"
+      ],
+      "tier": null,
+      "source_quality": "core",
+      "language": "en",
+      "published_at": "2025-12-19",
+      "discovered_at": "2026-10-29",
+      "excerpt": "We train language models to answer questions about their own activations in natural language."
+    },
+    {
       "id": "61ae08960017f5",
       "title": "Gpt-image-1.5 Prompting Guide",
       "url": "https://developers.openai.com/cookbook/examples/multimodal/image-gen-1.5-prompting_guide",
@@ -5921,6 +6530,27 @@
       "discovered_at": "2026-10-29",
       "excerpt": "If you are reading this, you probably have strong opinions about AGI, superintelligence, and the future of AI. Maybe you believe we are on the cusp of a transformative breakthrough. Maybe you are skeptical. This blog post is for those who want to think more carefully about these claims and examine them from a perspective […] The post Why AGI Will Not Happen appeared first on Tim Dettmers .",
       "source_quality": "selected"
+    },
+    {
+      "id": "ebb1b600ccc08c",
+      "title": "Product Evals in Three Simple Steps",
+      "url": "https://eugeneyan.com/writing/product-evals/",
+      "source_id": "eugene-yan",
+      "source_name": "Eugene Yan",
+      "source_url": "https://eugeneyan.com",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "llm-applications",
+        "evaluation",
+        "recommendation"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2025-11-23",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Label some data, align LLM-evaluators, and run the eval harness with each change."
     },
     {
       "id": "463f47b3ff5950",
