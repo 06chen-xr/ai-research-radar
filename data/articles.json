@@ -2065,27 +2065,6 @@
       "source_quality": "core"
     },
     {
-      "id": "52da68b1f49a66",
-      "title": "Writing • Eugene Yan",
-      "url": "https://eugeneyan.com/writing/",
-      "source_id": "eugene-yan",
-      "source_name": "Eugene Yan",
-      "source_url": "https://eugeneyan.com",
-      "category": "ai-engineering",
-      "source_type": "personal-blog",
-      "topics": [
-        "llm-applications",
-        "evaluation",
-        "recommendation"
-      ],
-      "tier": null,
-      "source_quality": "selected",
-      "language": "en",
-      "published_at": "2026-10-18",
-      "discovered_at": "2026-10-29",
-      "excerpt": "Writing is Learning. I write about machine learning, recommendation systems, large language models, and engineering."
-    },
-    {
       "id": "a5d1369a051536",
       "title": "AI:AM: Where's the Steering Wheel? My Agent Set the Password, Hidden Valence, Proofs Find Linux Bugs",
       "url": "https://www.cognitiverevolution.ai/ai-am-where-s-the-steering-wheel-my-agent-set-the-password-hidden-valence-proofs-find-linux-bugs/",

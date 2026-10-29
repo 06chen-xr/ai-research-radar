@@ -40,6 +40,9 @@ class SourcePolicyTests(unittest.TestCase):
         self.assertEqual(article_url_state("https://mila.quebec/en/directory/isabeau-premont-schwarz"), "non-article")
         self.assertEqual(article_url_state("https://mila.quebec/fr/annuaire/isabeau-premont-schwarz"), "non-article")
         self.assertEqual(article_url_state("https://example.com/tag/agents/"), "non-article")
+        self.assertEqual(article_url_state("https://eugeneyan.com/writing/"), "non-article")
+        self.assertEqual(article_url_state("https://example.com/index.html"), "non-article")
+        self.assertEqual(article_url_state("https://www.xtxmarkets.com/news/2026-trading-update/"), "article")
 
     def test_article_paths_stay_collectable(self):
         self.assertEqual(article_url_state("https://blog.janestreet.com/flex-model/"), "unclear")

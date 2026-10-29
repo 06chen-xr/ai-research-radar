@@ -107,6 +107,13 @@ NON_ARTICLE_PATH_SEGMENTS = {
     "subscription", "tag", "tags", "team", "terms", "terms-of-service",
     "ventures",
 }
+# Section indexes are recognised by their final path segment only, so that
+# /news/2026-trading-update/ stays an article while /news/ is a landing page.
+NON_ARTICLE_LAST_SEGMENTS = NON_ARTICLE_PATH_SEGMENTS | {
+    "archive", "archives", "blog", "blogs", "feed", "index", "insights", "news",
+    "newsletter", "newsletters", "notes", "podcast", "podcasts", "posts",
+    "publications", "research", "resources", "series", "topics", "writing",
+}
 # Dated slugs are the usual shape of a single-segment article URL.
 SINGLE_SEGMENT_DATE_RE = re.compile(r"(?:^|[-_])(?:19|20)\d{2}(?:[-_]|$)")
 PAGE_EXTENSION_RE = re.compile(r"\.(?:html?|php|aspx?|jsp)$")
@@ -128,7 +135,7 @@ def article_url_state(url: str) -> str:
     if any(segment in NON_ARTICLE_PATH_SEGMENTS for segment in segments):
         return "non-article"
     last = PAGE_EXTENSION_RE.sub("", segments[-1])
-    if last in NON_ARTICLE_PATH_SEGMENTS:
+    if last in NON_ARTICLE_LAST_SEGMENTS:
         return "non-article"
     if len(segments) == 1:
         return "article" if SINGLE_SEGMENT_DATE_RE.search(last) else "unclear"
