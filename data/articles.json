@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-10-29T08:16:05Z",
+  "last_updated_at": "2026-10-29T08:27:52Z",
   "articles": [
     {
       "id": "4bd27d6f7ad29b",
@@ -1166,6 +1166,86 @@
       "published_at": null,
       "discovered_at": "2026-10-29",
       "excerpt": "硬创公开课人工智能的往期公开课实录笔记，供各位读者参考学习。"
+    },
+    {
+      "id": "6b4ade14615332",
+      "title": "Understanding The Virtue of Complexity",
+      "url": "https://www.aqr.com/insights/research/working-paper/understanding-the-virtue-of-complexity",
+      "source_id": "aqr",
+      "source_name": "AQR Capital Management",
+      "source_url": "https://www.aqr.com/Insights",
+      "category": "quant-firm",
+      "source_type": "research-publication",
+      "topics": [
+        "factor-investing",
+        "portfolio-construction",
+        "empirical-finance"
+      ],
+      "tier": "Tier 3",
+      "language": "en",
+      "published_at": null,
+      "discovered_at": "2026-10-29",
+      "excerpt": "We respond to recent academic challenges to aspects of the “virtue of complexity” described in our prior research. We provide detailed discussions of how complex models learn in small samples, the roles of “nominal” and “effective” complexity, the unique effects of implicit regularization, and the importance of limits to learning. We then present new empirical and theoretical analyses that expand on KMZ. Finally, we introduce and demonstrate the virtue of ensemble complexity."
+    },
+    {
+      "id": "4f9364281af7a9",
+      "title": "Autoencoder Asset Pricing Models",
+      "url": "https://www.aqr.com/insights/research/working-paper/autoencoder-asset-pricing-models",
+      "source_id": "aqr",
+      "source_name": "AQR Capital Management",
+      "source_url": "https://www.aqr.com/Insights",
+      "category": "quant-firm",
+      "source_type": "research-publication",
+      "topics": [
+        "factor-investing",
+        "portfolio-construction",
+        "empirical-finance"
+      ],
+      "tier": "Tier 3",
+      "language": "en",
+      "published_at": null,
+      "discovered_at": "2026-10-29",
+      "excerpt": "We propose a new latent factor conditional asset pricing model, which delivers out-of-sample pricing errors that are far smaller (and generally insignificant) compared to other leading factor models."
+    },
+    {
+      "id": "732d5e2a4179f8",
+      "title": "Jordan Brooks",
+      "url": "https://www.aqr.com/our-firm/leadership/jordan-brooks",
+      "source_id": "aqr",
+      "source_name": "AQR Capital Management",
+      "source_url": "https://www.aqr.com/Insights",
+      "category": "quant-firm",
+      "source_type": "research-publication",
+      "topics": [
+        "factor-investing",
+        "portfolio-construction",
+        "empirical-finance"
+      ],
+      "tier": "Tier 3",
+      "language": "en",
+      "published_at": null,
+      "discovered_at": "2026-10-29",
+      "excerpt": ""
+    },
+    {
+      "id": "b73ebebf620bdd",
+      "title": "AQR Capital Management",
+      "url": "https://www.aqr.com/",
+      "source_id": "aqr",
+      "source_name": "AQR Capital Management",
+      "source_url": "https://www.aqr.com/Insights",
+      "category": "quant-firm",
+      "source_type": "research-publication",
+      "topics": [
+        "factor-investing",
+        "portfolio-construction",
+        "empirical-finance"
+      ],
+      "tier": "Tier 3",
+      "language": "en",
+      "published_at": null,
+      "discovered_at": "2026-10-29",
+      "excerpt": "As quantitative investors, we believe that a systematic and disciplined approach is the best way to achieve long-term value. Explore our broad range of innovative, diversifying strategies."
     },
     {
       "id": "b0fbfced4c005a",
@@ -6927,6 +7007,25 @@
       "excerpt": "DeepSeek V4.1 Flash æ­£å¼åå¸ï¼å ·å¤åçå¤æ¨¡æè§è§çè§£è½åãå ¨æ°éå¯¹ç§°æ¨¡åç»æï¼è½åæ´å¼ºãéåº¦æ´å¿«ãææ¬æ´ä½ã"
     },
     {
+      "id": "c07e09ffee57d4",
+      "title": "Introducing DeepSeek-V4.1-Flash: smarter, faster, more efficient.",
+      "url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+      "source_id": "idx-deepseek-com-ccd9bed",
+      "source_name": "DeepSeek Blog",
+      "source_url": "https://www.deepseek.com/blog",
+      "category": "ai-company",
+      "source_type": "official-blog",
+      "topics": [
+        "深度求索 代码生成研究者",
+        "MoE架构开发者"
+      ],
+      "tier": null,
+      "language": "zh",
+      "published_at": "2026-09-10",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Introducing the smallest model in our new architecture family, with native visual understanding. Designed for greater capability, faster inference, and higher throughput."
+    },
+    {
       "id": "bd9f5944e44596",
       "title": "Building Codex with Tibo Sottiaux",
       "url": "https://newsletter.pragmaticengineer.com/p/building-codex-with-tibo-sottiaux",
@@ -7987,6 +8086,26 @@
       "published_at": "2026-08-11",
       "discovered_at": "2026-10-29",
       "excerpt": ""
+    },
+    {
+      "id": "71bb3066854f62",
+      "title": "Forking-Sequences — Part II: Multi-Horizon Forecast Ensembling with Reduced Volatility",
+      "url": "https://blog.ml.cmu.edu/2026/08/10/forking-sequences-part-ii-multi-horizon-forecast-ensembling-with-reduced-volatility/",
+      "source_id": "cmu-ml",
+      "source_name": "CMU Machine Learning Blog",
+      "source_url": "https://blog.ml.cmu.edu",
+      "category": "ai-academic",
+      "source_type": "research-blog",
+      "topics": [
+        "ml-theory",
+        "optimization",
+        "deep-learning"
+      ],
+      "tier": null,
+      "language": "en",
+      "published_at": "2026-08-10",
+      "discovered_at": "2026-10-29",
+      "excerpt": "Based on: Potosnak, W., Wolff, M., Cao, M., Ma, R., Konstantinova, T., Efimov, D., Mahoney, M.W., Oreshkin, B., & Olivares, K.G. \"Forking-Sequences: Statistically and Computationally Efficient Multi-Horizon Forecasting with Reduced Volatility.\" Transactions on Machine Learning Research, 2026. (Disclaimer: Code implementation not used in the paper; not affiliated with Amazon — provided as a reference for forking-sequences and forecast ensembling) TL;DR Ensembling, nearly for free. Forking-sequenc"
     },
     {
       "id": "77e38582749eb8",
