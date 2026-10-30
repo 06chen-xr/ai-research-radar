@@ -1,5 +1,5 @@
 {
-  "last_updated_at": "2026-10-30T08:12:24Z",
+  "last_updated_at": "2026-10-30T08:13:14Z",
   "articles": [
     {
       "id": "410a72e6fed08a",
@@ -147,6 +147,27 @@
       "published_at": null,
       "discovered_at": "2026-10-30",
       "excerpt": "Liquidity need not be an all-or-nothing decision. Our latest research explores how investors may be able to access meaningful cash from tax-aware long-short strategies while remaining invested and retaining key portfolio attributes."
+    },
+    {
+      "id": "6d0ca433464fca",
+      "title": "Bell, Crow, Moon: 11 Variations",
+      "url": "https://gwern.net/blog/2025/bell-crow-moon",
+      "source_id": "gwern",
+      "source_name": "Gwern Branwen",
+      "source_url": "https://gwern.net/",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "ai-essays",
+        "scaling",
+        "research-methods"
+      ],
+      "tier": null,
+      "source_quality": "core",
+      "language": "en",
+      "published_at": null,
+      "discovered_at": "2026-10-30",
+      "excerpt": "Set of 11 𝘩𝑎𝑖𝑘𝑢/𝑤𝑎𝑘𝑎 variations on the theme ‘A struck gong. The crows launch from the trees. Behind them: the moon.’, written using LLMs."
     },
     {
       "id": "cef0e37d47c013",
@@ -653,6 +674,27 @@
       "excerpt": "A trading strategy’s value goes beyond returns—it also depends on what it adds to a portfolio. Our latest case study combines Quantpedia’s Strategy Grading report with a custom API workflow to compare WTMF against 44 peer strategies. The results highlight a useful trade-off: modest risk-adjusted performance, but lower correlations that suggest potential diversification value. Explore how custom peer groups can bring more context to strategy evaluation."
     },
     {
+      "id": "44dccef6274850",
+      "title": "Can we trust LLMs to judge whether a research idea is novel?",
+      "url": "https://allenai.org/blog/novelty-bench",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-27",
+      "discovered_at": "2026-10-30",
+      "excerpt": "Old Ideas, Novel Problems tests how reliably LLMs judge the novelty of research ideas, finding that small changes to the evaluation setup can produce very different verdicts."
+    },
+    {
       "id": "9437a8765aa24b",
       "title": "The World Is Something We Make",
       "url": "https://www.argmin.net/p/the-world-is-something-we-make",
@@ -840,6 +882,27 @@
       "published_at": "2026-10-24",
       "discovered_at": "2026-10-30",
       "excerpt": "Over 11 hours of coding videos on evaluation, inference-time scaling, reinforcement learning, and distillation, with Python and PyTorch."
+    },
+    {
+      "id": "5dc4629811f843",
+      "title": "Why Trend Following Might Outlast the AI Arms Race ft. Mark Rzepczynski",
+      "url": "https://www.toptradersunplugged.com/podcast/why-trend-following-might-outlast-the-ai-arms-race-ft-mark-rzepczynski/",
+      "source_id": "top-traders-unplugged",
+      "source_name": "Top Traders Unplugged",
+      "source_url": "https://www.toptradersunplugged.com",
+      "category": "quant-research",
+      "source_type": "podcast",
+      "topics": [
+        "systematic-investing",
+        "trend-following",
+        "manager-interviews"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-24",
+      "discovered_at": "2026-10-30",
+      "excerpt": "Get Your FREE Copy of the latest Research Paper from DUNN Capital . IT's TRUE 👀 – most CIO's read 50+ books each year – get your copy of the Ultimate Guide to the Best Investment Books ever written here. And you can get a free copy of my latest book “The Many Flavors of Trend […] The post Why Trend Following Might Outlast the AI Arms Race ft. Mark Rzepczynski appeared first on Top Traders Unplugged ."
     },
     {
       "id": "ece6c921b830e7",
@@ -1223,6 +1286,27 @@
       "excerpt": "Flint-interactive gives AI agents a language for creating interactive visualizations. Click a chart, filter data, highlight related content, and explore beyond the view the author originally chose. The post Flint-interactive: A language for creating interactive data visualizations appeared first on Microsoft Research ."
     },
     {
+      "id": "41b30f866552bf",
+      "title": "A crop-mapping benchmark for the tropics",
+      "url": "https://allenai.org/blog/planteur",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-22",
+      "discovered_at": "2026-10-30",
+      "excerpt": "PLANTEUR extends the PASTIS crop-mapping benchmark to six tropical regions to help evaluate geospatial models across more diverse agricultural systems."
+    },
+    {
       "id": "12d4585120eb3b",
       "title": "Claude Mods: Flipping the Harness Inside Out",
       "url": "https://latent.space/p/claude-mods/",
@@ -1410,6 +1494,27 @@
       "published_at": "2026-10-20",
       "discovered_at": "2026-10-30",
       "excerpt": ""
+    },
+    {
+      "id": "f8522215177e81",
+      "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
+      "url": "https://allenai.org/blog/fairstress",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-20",
+      "discovered_at": "2026-10-30",
+      "excerpt": "FairStress is a new benchmark that reveals demographic differences in how LLMs defend and explain their decisions, even when their final choices appear fair."
     },
     {
       "id": "af02b0baed077a",
@@ -2000,6 +2105,27 @@
       "excerpt": "This paper investigates whether longer historical training periods improve the out-of-sample performance of a Hidden Markov Model (HMM) used for identifying financial market regimes. Four four-state Gaussian HMMs are compared, differing only in the starting point of their training data (1970, 1980, 1990, and 2000), while being evaluated on the same test period. The model uses five market-based features capturing volatility, drawdowns, credit conditions, and sector rotation to identify latent ris"
     },
     {
+      "id": "e8da5e1b330f1f",
+      "title": "How Much Longer Can AI Carry the Market ft. Christian Mueller-Glissmann",
+      "url": "https://www.toptradersunplugged.com/podcast/how-much-longer-can-ai-carry-the-market-ft-christian-mueller-glissmann/",
+      "source_id": "top-traders-unplugged",
+      "source_name": "Top Traders Unplugged",
+      "source_url": "https://www.toptradersunplugged.com",
+      "category": "quant-research",
+      "source_type": "podcast",
+      "topics": [
+        "systematic-investing",
+        "trend-following",
+        "manager-interviews"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-14",
+      "discovered_at": "2026-10-30",
+      "excerpt": "IT's TRUE – most CIO's read 50+ books each year – get your copy of the Ultimate Guide to the Best Investment Books ever written here. And you can get a free copy of my latest book “The Many Flavors of Trend Following” here. Learn more about the Trend Barometer here. And please share this episode with a like-minded […] The post How Much Longer Can AI Carry the Market ft. Christian Mueller-Glissmann appeared first on Top Traders Unplugged ."
+    },
+    {
       "id": "3a395bd902b568",
       "title": "The Continual Constitutional Convention: How language models revise the documents that govern them",
       "url": "https://www.alignmentforum.org/posts/c9woewdY9ddsPqf3J/the-continual-constitutional-convention-how-language-models",
@@ -2253,6 +2379,27 @@
       "excerpt": "I’ve often been surprised when I hear from top researchers in industry that they think AI will be better than them at their job in a few years, and I didn’t really know why I doubted it."
     },
     {
+      "id": "333550bff6dccf",
+      "title": "Ai2 at COLM 2026: Open research, from models to agents for science",
+      "url": "https://allenai.org/blog/colm-2026-recap",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-09",
+      "discovered_at": "2026-10-30",
+      "excerpt": "Ai2 joined COLM 2026 to share advances in open language models, training infrastructure, and AI for science, including Olmo Hybrid, Asta, and Bolmo, while connecting with the broader research community."
+    },
+    {
       "id": "1a75183a743998",
       "title": "AI:AM: A Level We Shouldn't Pass? Notes from The Curve + Tokens vs. Salaries & Is SaaS Cooked?",
       "url": "https://www.cognitiverevolution.ai/ai-am-a-level-we-shouldn-t-pass-notes-from-the-curve-tokens-vs-salaries-is-saas-cooked/",
@@ -2419,6 +2566,27 @@
       "published_at": "2026-10-07",
       "discovered_at": "2026-10-30",
       "excerpt": "Training AI agents with reinforcement learning can be challenging because their tools, context, and decision-making are managed by complex frameworks. Agent Lightning connects existing agents to RL training, making it easier to improve them without rebuilding them. The post Agent Lightning v1.0: A 3,500-Line Lightweight Agentic RL Framework for Training Agents with Real Harnesses appeared first on Microsoft Research ."
+    },
+    {
+      "id": "561edd6e4ec098",
+      "title": "Now in Nature: Retrofitting language models to operate over bytes",
+      "url": "https://allenai.org/blog/bolmo-nature",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-10-07",
+      "discovered_at": "2026-10-30",
+      "excerpt": "The technique behind Bolmo, Ai2’s fully open byte-level language models, is now published in Nature, with new checkpoints showing the approach generalizes beyond Olmo to other model families."
     },
     {
       "id": "a7377a3db6895e",
@@ -2948,6 +3116,27 @@
       "excerpt": "Why I'd invest in post-training existing open-weight LLMs, with Fireworks' Ember-1 as an example of more token-efficient reasoning."
     },
     {
+      "id": "e341f2a5130365",
+      "title": "What Happens When AI Starts Building the Portfolio ft. Nick Baltas",
+      "url": "https://www.toptradersunplugged.com/podcast/what-happens-when-ai-starts-building-the-portfolio-ft-nick-baltas/",
+      "source_id": "top-traders-unplugged",
+      "source_name": "Top Traders Unplugged",
+      "source_url": "https://www.toptradersunplugged.com",
+      "category": "quant-research",
+      "source_type": "podcast",
+      "topics": [
+        "systematic-investing",
+        "trend-following",
+        "manager-interviews"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-09-26",
+      "discovered_at": "2026-10-30",
+      "excerpt": "Get Your FREE Copy of the latest Research Paper from DUNN Capital . IT's TRUE 👀 – most CIO's read 50+ books each year – get your copy of the Ultimate Guide to the Best Investment Books ever written here. And you can get a free copy of my latest book “The Many Flavors of Trend […] The post What Happens When AI Starts Building the Portfolio ft. Nick Baltas appeared first on Top Traders Unplugged ."
+    },
+    {
       "id": "72ebc3ae2b569c",
       "title": "Create your own voice for Gemini 3.8 TTS",
       "url": "https://www.philschmid.de/gemini-3-8-tts",
@@ -3305,6 +3494,27 @@
       "excerpt": "Epoch AI's analysis of trade data finds a pattern consistent with $3B worth of chips smuggled to China via Malaysia. China recorded $3.8B of server imports from Malaysia in 2024–25; Malaysia recorded only $0.6B of exports."
     },
     {
+      "id": "edc921e72ebb80",
+      "title": "What a crowdsourced game revealed about steering Olmo 3",
+      "url": "https://allenai.org/blog/olmo-arena",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-09-17",
+      "discovered_at": "2026-10-30",
+      "excerpt": "A crowdsourced game built on Olmo 3 showed how people can exploit unexpected model behaviors to stress-test prosocial AI evaluations—and how open access to a model’s internals can help researchers understand why those tests break."
+    },
+    {
       "id": "3530c4a6057b78",
       "title": "The burdens of participation",
       "url": "https://www.argmin.net/p/the-burdens-of-participation",
@@ -3472,6 +3682,27 @@
       "published_at": "2026-09-14",
       "discovered_at": "2026-10-30",
       "excerpt": "My take on AI model pacing as a framework for release checks and the competitive pressure around model releases."
+    },
+    {
+      "id": "80f31f70585df1",
+      "title": "Teaching future scientists to interrogate AI tools for scientific discovery",
+      "url": "https://allenai.org/blog/autodiscovery-student-challenge",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-09-14",
+      "discovered_at": "2026-10-30",
+      "excerpt": "University of Washington students put Ai2’s AutoDiscovery to the test, showing how AI can surface promising scientific leads while making human judgment, domain expertise, and rigorous validation more important than ever."
     },
     {
       "id": "eb91d623144097",
@@ -3661,6 +3892,27 @@
       "published_at": "2026-09-09",
       "discovered_at": "2026-10-30",
       "excerpt": "A Look at Recurrent Depth, Hidden Chains of Thought, and Recent Research on Looping Transformer Blocks"
+    },
+    {
+      "id": "4b9fe14ad94360",
+      "title": "How Goodfire used Ai2’s open post-training stack to trace unwanted model behavior",
+      "url": "https://allenai.org/blog/goodfire-olmo",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-09-09",
+      "discovered_at": "2026-10-30",
+      "excerpt": "Goodfire used Ai2’s fully open post-training stack to predict LLM behavioral changes, trace unwanted model behavior back to individual training examples, and test targeted fixes without sacrificing broader capability gains."
     },
     {
       "id": "9dfc556c9c4616",
@@ -3936,6 +4188,48 @@
       "excerpt": "Frontier coding agents can compose shell workflows that replace entire catalogs of file tools. Here is what changes when Bash becomes the primary execution interface."
     },
     {
+      "id": "aeaf591c7404aa",
+      "title": "BenchMIRT: What are LLM benchmarks actually measuring?",
+      "url": "https://allenai.org/blog/benchmirt",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-09-01",
+      "discovered_at": "2026-10-30",
+      "excerpt": "BenchMIRT is a new method for auditing LLM benchmarks question by question, revealing which capabilities they actually measure and helping researchers build smaller, more focused, and easier-to-interpret evaluations."
+    },
+    {
+      "id": "13d58ed6cbe853",
+      "title": "The hard parts of AI-assisted science",
+      "url": "https://allenai.org/blog/swedish-autodiscovery-recap",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-09-01",
+      "discovered_at": "2026-10-30",
+      "excerpt": "At an Ai2 event marking our expanded collaboration with Providence Swedish, researchers explored the hardest problems in AI-assisted science: keeping systems steerable, grounded in human judgment and sound methods, and responsive to new evidence and experiments."
+    },
+    {
       "id": "ae5537717b51f9",
       "title": "Import AI 471: Why Hugging Face worries me; space mining; FIve Eyes on AI",
       "url": "https://importai.substack.com/p/import-ai-471-why-hugging-face-worries",
@@ -4125,6 +4419,27 @@
       "excerpt": "How quickly are Anthropic and OpenAI growing their revenue?"
     },
     {
+      "id": "c48b479e7ea7dc",
+      "title": "Ai2 and Providence Swedish Cancer Institute partner to advance AI-assisted scientific discovery",
+      "url": "https://allenai.org/blog/swedish-autodiscovery-partnership",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-08-27",
+      "discovered_at": "2026-10-30",
+      "excerpt": "Ai2 and Providence Swedish Cancer Institute are expanding their collaboration after AutoDiscovery helped researchers uncover and validate a promising new immune signal in invasive lobular breast cancer."
+    },
+    {
       "id": "9ad84ad00d203e",
       "title": "Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident",
       "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
@@ -4144,6 +4459,27 @@
       "published_at": "2026-08-26",
       "discovered_at": "2026-10-30",
       "excerpt": "Dates in scope: June 26th – July 13th Download PDF Redaction summary statement: Except where explicitly noted in this post, OpenAI redacted no additional information that was important to our conclusions. Two METR staff members (Hjalmar Wijk and Ajeya Cotra 1 ) and a Redwood Research staff member contracting with METR (Ryan Greenblatt 2 ) worked on premises at OpenAI over a total of six days 3 to attempt to form an independent understanding of model behavior observed during the recent incident i"
+    },
+    {
+      "id": "214f5b7b800667",
+      "title": "How researchers adapted Dolma for better Thai language models",
+      "url": "https://allenai.org/blog/thai-llm-dolma",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-08-26",
+      "discovered_at": "2026-10-30",
+      "excerpt": "Thai researchers adapted Ai2’s open Dolma toolkit to build Mangosteen, a 47-billion-token Thai corpus that filters low-quality web data while maintaining or improving model performance and strengthening Thai cultural knowledge."
     },
     {
       "id": "56ff059d970486",
@@ -4272,6 +4608,27 @@
       "excerpt": "Agents can already edit their tools, skills, and harness. Recursive self-improvement still needs a system that can raise the verifier without capturing it."
     },
     {
+      "id": "ca9b085127af2f",
+      "title": "How a Georgia Tech team used the open Olmo stack to trace social reasoning",
+      "url": "https://allenai.org/blog/olmo-capability-tracing",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-08-21",
+      "discovered_at": "2026-10-30",
+      "excerpt": "A Georgia Tech team used Ai2’s fully open Olmo stack to trace social reasoning back to the training data that shaped it, finding that dialogue-rich, interpersonal writing had an outsized influence on the capability."
+    },
+    {
       "id": "cee769be5349a9",
       "title": "Cognitive reward shapes in sports and career — Jason Wei",
       "url": "https://www.jasonwei.net/blog/cognitive-reward-shapes-in-sports-and-career",
@@ -4291,6 +4648,27 @@
       "published_at": "2026-08-20",
       "discovered_at": "2026-10-30",
       "excerpt": "Sports are amazing environments to learn. When you play a sport for thousands of hours, you start to see the world through that sport. It is a simple fact—your biological neural network is being conditioned to respond to the behavior incentivized by the rules of the sport. The funny thing is that m"
+    },
+    {
+      "id": "d75f9528591486",
+      "title": "When a model reads a drug's class from its name—not its knowledge",
+      "url": "https://allenai.org/blog/olmo-drug-morphology",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-08-18",
+      "discovered_at": "2026-10-30",
+      "excerpt": "Researchers used Olmo 3 and its open training data to show that models can infer a drug’s class from its name instead of knowing the specific medication, and traced that shortcut to how often drugs appeared in training."
     },
     {
       "id": "3da19aaf0d1908",
@@ -4818,6 +5196,48 @@
       "excerpt": "Short note celebrating the LLMs-from-scratch repository passing 100,000 GitHub stars and summarizing its learning materials."
     },
     {
+      "id": "bbd7ec2ff84e83",
+      "title": "TutorMoments: Do AI tutors know when to help and when to hold back?",
+      "url": "https://allenai.org/blog/tutormoments",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-08-07",
+      "discovered_at": "2026-10-30",
+      "excerpt": "TutorMoments is an open, replay-based evaluation framework that tests whether AI tutors can recognize when to support a student and when to hold back and encourage deeper reasoning."
+    },
+    {
+      "id": "daeaed3649c8f8",
+      "title": "Ai2 expands collaboration with Hugging Face to accelerate open science",
+      "url": "https://allenai.org/blog/hugging-face-partnership",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-08-06",
+      "discovered_at": "2026-10-30",
+      "excerpt": "Ai2 is expanding its partnership with Hugging Face to give its growing portfolio of fully open models, datasets, benchmarks, and applications the storage, bandwidth, and integrations needed to reach more researchers and developers."
+    },
+    {
       "id": "ec0e53c55d9e1a",
       "title": "AI agents can't yet do open-ended AI research",
       "url": "https://www.normaltech.ai/p/ai-agents-cant-yet-do-open-ended",
@@ -4900,6 +5320,27 @@
       "published_at": "2026-07-31",
       "discovered_at": "2026-10-30",
       "excerpt": "Optiver is partnering with Explaining Markets, an AI competition where students, researchers, engineers and independent builders develop AI systems that respond to live earnings announcements."
+    },
+    {
+      "id": "07e86c8bcd4e55",
+      "title": "Tracing distinctive language in AI-written text",
+      "url": "https://allenai.org/blog/infinigram-books",
+      "source_id": "ai2",
+      "source_name": "AI2 / Allen Institute for AI",
+      "source_url": "https://allenai.org/blog",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "open-research",
+        "language-models",
+        "datasets"
+      ],
+      "tier": null,
+      "source_quality": "selected",
+      "language": "en",
+      "published_at": "2026-07-31",
+      "discovered_at": "2026-10-30",
+      "excerpt": "Stony Brook researchers used our infini-gram engine to trace distinctive phrases in AI-generated writing back to existing sources, finding that top-selling self-published books on Amazon with substantial detected AI text overlap more heavily with rare language from previously published works."
     },
     {
       "id": "9939bfd922ed18",
@@ -9802,27 +10243,6 @@
       "published_at": "2020-10-26",
       "discovered_at": "2026-10-30",
       "excerpt": "September 2020 gwern.net newsletter with links on DRL and AI scaling, psychiatric disorders; no reviews."
-    },
-    {
-      "id": "370bf5936bb39f",
-      "title": "August 2020 gwern.net newsletter",
-      "url": "https://gwern.substack.com/p/august-2020-gwernnet-newsletter",
-      "source_id": "gwern",
-      "source_name": "Gwern Branwen",
-      "source_url": "https://gwern.net/",
-      "category": "ai-researcher-blog",
-      "source_type": "personal-blog",
-      "topics": [
-        "ai-essays",
-        "scaling",
-        "research-methods"
-      ],
-      "tier": null,
-      "source_quality": "core",
-      "language": "en",
-      "published_at": "2020-09-01",
-      "discovered_at": "2026-10-30",
-      "excerpt": "with an essay on sidenotes; links on human competence, efficient-computing/hardware-overhangs; no reviews."
     },
     {
       "id": "b08ad42a9abc79",
