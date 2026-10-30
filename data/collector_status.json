@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-10-30T08:08:30Z",
-  "source_count": 133,
-  "checked_count": 69,
-  "sources_with_articles": 58,
-  "article_count": 513,
+  "last_checked_at": "2026-10-30T08:12:24Z",
+  "source_count": 132,
+  "checked_count": 68,
+  "sources_with_articles": 59,
+  "article_count": 481,
   "note": "No AI-generated summaries. Strictly curated English sources and deterministic topic filters are applied; publisher-provided excerpts are used only as source metadata.",
   "sources": [
     {
       "source_id": "ai-snake-oil",
       "source_name": "AI Snake Oil",
-      "checked_at": "2026-10-30T08:07:17Z",
+      "checked_at": "2026-10-30T08:11:06Z",
       "method": "feed",
       "articles_found": 18,
       "status": "ok",
@@ -19,7 +19,7 @@
     {
       "source_id": "alex-irpan",
       "source_name": "Alex Irpan",
-      "checked_at": "2026-10-30T08:07:47Z",
+      "checked_at": "2026-10-30T08:11:37Z",
       "method": "feed",
       "articles_found": 3,
       "status": "ok",
@@ -27,9 +27,19 @@
       "feed_url": "https://www.alexirpan.com/feed.xml"
     },
     {
+      "source_id": "alignment-forum",
+      "source_name": "Alignment Forum",
+      "checked_at": "2026-10-30T08:11:03Z",
+      "method": "feed",
+      "articles_found": 10,
+      "status": "ok",
+      "error": null,
+      "feed_url": "https://www.alignmentforum.org/feed.xml"
+    },
+    {
       "source_id": "andrej-karpathy",
       "source_name": "Andrej Karpathy",
-      "checked_at": "2026-10-30T08:07:08Z",
+      "checked_at": "2026-10-30T08:10:58Z",
       "method": "feed",
       "articles_found": 9,
       "status": "ok",
@@ -39,7 +49,7 @@
     {
       "source_id": "anthropic-engineering",
       "source_name": "Anthropic Engineering",
-      "checked_at": "2026-10-30T08:07:19Z",
+      "checked_at": "2026-10-30T08:11:09Z",
       "method": "sitemap",
       "articles_found": 1,
       "status": "ok",
@@ -48,7 +58,7 @@
     {
       "source_id": "anthropic-blog",
       "source_name": "Anthropic Research",
-      "checked_at": "2026-10-30T08:07:19Z",
+      "checked_at": "2026-10-30T08:11:08Z",
       "method": "sitemap",
       "articles_found": 1,
       "status": "ok",
@@ -57,7 +67,7 @@
     {
       "source_id": "apollo-research",
       "source_name": "Apollo Research",
-      "checked_at": "2026-10-30T08:07:18Z",
+      "checked_at": "2026-10-30T08:11:07Z",
       "method": "homepage-links",
       "articles_found": 2,
       "status": "ok",
@@ -66,7 +76,7 @@
     {
       "source_id": "apple-ml",
       "source_name": "Apple Machine Learning Research",
-      "checked_at": "2026-10-30T08:07:48Z",
+      "checked_at": "2026-10-30T08:11:38Z",
       "method": "feed",
       "articles_found": 9,
       "status": "ok",
@@ -76,7 +86,7 @@
     {
       "source_id": "aqr",
       "source_name": "AQR Capital Management",
-      "checked_at": "2026-10-30T08:07:38Z",
+      "checked_at": "2026-10-30T08:11:28Z",
       "method": "homepage-links",
       "articles_found": 3,
       "status": "ok",
@@ -85,7 +95,7 @@
     {
       "source_id": "arcprize",
       "source_name": "ARC Prize",
-      "checked_at": "2026-10-30T08:07:49Z",
+      "checked_at": "2026-10-30T08:11:38Z",
       "method": "feed",
       "articles_found": 18,
       "status": "ok",
@@ -95,7 +105,7 @@
     {
       "source_id": "ben-recht",
       "source_name": "Ben Recht / argmin",
-      "checked_at": "2026-10-30T08:07:10Z",
+      "checked_at": "2026-10-30T08:11:00Z",
       "method": "feed",
       "articles_found": 11,
       "status": "ok",
@@ -105,7 +115,7 @@
     {
       "source_id": "beren-millidge",
       "source_name": "Beren Millidge",
-      "checked_at": "2026-10-30T08:07:10Z",
+      "checked_at": "2026-10-30T08:11:00Z",
       "method": "feed",
       "articles_found": 12,
       "status": "ok",
@@ -115,7 +125,7 @@
     {
       "source_id": "bair",
       "source_name": "Berkeley AI Research (BAIR)",
-      "checked_at": "2026-10-30T08:07:27Z",
+      "checked_at": "2026-10-30T08:11:14Z",
       "method": "feed",
       "articles_found": 10,
       "status": "ok",
@@ -125,7 +135,7 @@
     {
       "source_id": "chip-huyen",
       "source_name": "Chip Huyen",
-      "checked_at": "2026-10-30T08:07:10Z",
+      "checked_at": "2026-10-30T08:11:01Z",
       "method": "feed",
       "articles_found": 10,
       "status": "ok",
@@ -135,7 +145,7 @@
     {
       "source_id": "chris-olah",
       "source_name": "Christopher Olah",
-      "checked_at": "2026-10-30T08:07:08Z",
+      "checked_at": "2026-10-30T08:10:58Z",
       "method": "feed",
       "articles_found": 3,
       "status": "ok",
@@ -145,7 +155,7 @@
     {
       "source_id": "cmu-ml",
       "source_name": "CMU Machine Learning Blog",
-      "checked_at": "2026-10-30T08:07:28Z",
+      "checked_at": "2026-10-30T08:11:14Z",
       "method": "feed",
       "articles_found": 1,
       "status": "ok",
@@ -155,7 +165,7 @@
     {
       "source_id": "drw",
       "source_name": "DRW",
-      "checked_at": "2026-10-30T08:07:34Z",
+      "checked_at": "2026-10-30T08:11:24Z",
       "method": "sitemap",
       "articles_found": 1,
       "status": "ok",
@@ -164,7 +174,7 @@
     {
       "source_id": "dwarkesh",
       "source_name": "Dwarkesh Podcast",
-      "checked_at": "2026-10-30T08:07:13Z",
+      "checked_at": "2026-10-30T08:11:04Z",
       "method": "feed",
       "articles_found": 12,
       "status": "ok",
@@ -174,7 +184,7 @@
     {
       "source_id": "epoch-ai",
       "source_name": "Epoch AI",
-      "checked_at": "2026-10-30T08:07:18Z",
+      "checked_at": "2026-10-30T08:11:06Z",
       "method": "feed",
       "articles_found": 26,
       "status": "ok",
@@ -184,7 +194,7 @@
     {
       "source_id": "eugene-yan",
       "source_name": "Eugene Yan",
-      "checked_at": "2026-10-30T08:07:10Z",
+      "checked_at": "2026-10-30T08:11:01Z",
       "method": "feed",
       "articles_found": 20,
       "status": "ok",
@@ -194,7 +204,7 @@
     {
       "source_id": "fastai",
       "source_name": "fast.ai",
-      "checked_at": "2026-10-30T08:07:48Z",
+      "checked_at": "2026-10-30T08:11:37Z",
       "method": "feed",
       "articles_found": 14,
       "status": "ok",
@@ -204,7 +214,7 @@
     {
       "source_id": "francois-chollet",
       "source_name": "François Chollet",
-      "checked_at": "2026-10-30T08:07:11Z",
+      "checked_at": "2026-10-30T08:11:02Z",
       "method": "feed",
       "articles_found": 2,
       "status": "ok",
@@ -214,7 +224,7 @@
     {
       "source_id": "deepmind-blog",
       "source_name": "Google DeepMind Blog",
-      "checked_at": "2026-10-30T08:07:21Z",
+      "checked_at": "2026-10-30T08:11:11Z",
       "method": "sitemap",
       "articles_found": 2,
       "status": "ok",
@@ -223,16 +233,16 @@
     {
       "source_id": "google-research",
       "source_name": "Google Research Blog",
-      "checked_at": "2026-10-30T08:07:22Z",
+      "checked_at": "2026-10-30T08:11:11Z",
       "method": "sitemap",
-      "articles_found": 4,
+      "articles_found": 1,
       "status": "ok",
       "error": null
     },
     {
       "source_id": "greg-brockman",
       "source_name": "Greg Brockman",
-      "checked_at": "2026-10-30T08:07:08Z",
+      "checked_at": "2026-10-30T08:10:59Z",
       "method": "feed",
       "articles_found": 9,
       "status": "ok",
@@ -242,7 +252,7 @@
     {
       "source_id": "gwern",
       "source_name": "Gwern Branwen",
-      "checked_at": "2026-10-30T08:07:14Z",
+      "checked_at": "2026-10-30T08:11:04Z",
       "method": "feed",
       "articles_found": 11,
       "status": "ok",
@@ -252,7 +262,7 @@
     {
       "source_id": "hamel-husain",
       "source_name": "Hamel Husain",
-      "checked_at": "2026-10-30T08:07:12Z",
+      "checked_at": "2026-10-30T08:11:03Z",
       "method": "feed",
       "articles_found": 12,
       "status": "ok",
@@ -262,7 +272,7 @@
     {
       "source_id": "huggingface",
       "source_name": "Hugging Face Blog",
-      "checked_at": "2026-10-30T08:07:26Z",
+      "checked_at": "2026-10-30T08:11:12Z",
       "method": "feed",
       "articles_found": 15,
       "status": "ok",
@@ -272,7 +282,7 @@
     {
       "source_id": "imc",
       "source_name": "IMC Trading",
-      "checked_at": "2026-10-30T08:07:32Z",
+      "checked_at": "2026-10-30T08:11:20Z",
       "method": "homepage-links",
       "articles_found": 2,
       "status": "ok",
@@ -281,7 +291,7 @@
     {
       "source_id": "import-ai",
       "source_name": "Import AI / Jack Clark",
-      "checked_at": "2026-10-30T08:07:17Z",
+      "checked_at": "2026-10-30T08:11:05Z",
       "method": "feed",
       "articles_found": 20,
       "status": "ok",
@@ -291,7 +301,7 @@
     {
       "source_id": "inference-vc",
       "source_name": "Inference / Ferenc Huszar",
-      "checked_at": "2026-10-30T08:07:09Z",
+      "checked_at": "2026-10-30T08:10:59Z",
       "method": "feed",
       "articles_found": 14,
       "status": "ok",
@@ -301,7 +311,7 @@
     {
       "source_id": "interconnects",
       "source_name": "Interconnects / Nathan Lambert",
-      "checked_at": "2026-10-30T08:07:17Z",
+      "checked_at": "2026-10-30T08:11:05Z",
       "method": "feed",
       "articles_found": 10,
       "status": "ok",
@@ -311,7 +321,7 @@
     {
       "source_id": "jan-leike",
       "source_name": "Jan Leike / Alignment",
-      "checked_at": "2026-10-30T08:07:12Z",
+      "checked_at": "2026-10-30T08:11:03Z",
       "method": "feed",
       "articles_found": 13,
       "status": "ok",
@@ -321,7 +331,7 @@
     {
       "source_id": "jane-street",
       "source_name": "Jane Street",
-      "checked_at": "2026-10-30T08:07:30Z",
+      "checked_at": "2026-10-30T08:11:16Z",
       "method": "feed",
       "articles_found": 8,
       "status": "ok",
@@ -331,7 +341,7 @@
     {
       "source_id": "jason-wei",
       "source_name": "Jason Wei",
-      "checked_at": "2026-10-30T08:07:08Z",
+      "checked_at": "2026-10-30T08:10:58Z",
       "method": "sitemap",
       "articles_found": 2,
       "status": "ok",
@@ -340,7 +350,7 @@
     {
       "source_id": "jay-alammar",
       "source_name": "Jay Alammar",
-      "checked_at": "2026-10-30T08:07:08Z",
+      "checked_at": "2026-10-30T08:10:58Z",
       "method": "feed",
       "articles_found": 10,
       "status": "ok",
@@ -350,7 +360,7 @@
     {
       "source_id": "latent-space",
       "source_name": "Latent Space",
-      "checked_at": "2026-10-30T08:07:13Z",
+      "checked_at": "2026-10-30T08:11:04Z",
       "method": "feed",
       "articles_found": 16,
       "status": "ok",
@@ -360,7 +370,7 @@
     {
       "source_id": "lilian-weng",
       "source_name": "Lilian Weng / Lil'Log",
-      "checked_at": "2026-10-30T08:07:08Z",
+      "checked_at": "2026-10-30T08:10:58Z",
       "method": "feed",
       "articles_found": 26,
       "status": "ok",
@@ -370,7 +380,7 @@
     {
       "source_id": "man-group",
       "source_name": "Man Group / AHL",
-      "checked_at": "2026-10-30T08:07:35Z",
+      "checked_at": "2026-10-30T08:11:28Z",
       "method": "homepage-links",
       "articles_found": 1,
       "status": "ok",
@@ -379,7 +389,7 @@
     {
       "source_id": "metr",
       "source_name": "METR",
-      "checked_at": "2026-10-30T08:07:18Z",
+      "checked_at": "2026-10-30T08:11:06Z",
       "method": "feed",
       "articles_found": 30,
       "status": "ok",
@@ -389,7 +399,7 @@
     {
       "source_id": "msr",
       "source_name": "Microsoft Research Blog",
-      "checked_at": "2026-10-30T08:07:48Z",
+      "checked_at": "2026-10-30T08:11:38Z",
       "method": "feed",
       "articles_found": 7,
       "status": "ok",
@@ -399,7 +409,7 @@
     {
       "source_id": "neel-nanda",
       "source_name": "Neel Nanda",
-      "checked_at": "2026-10-30T08:07:08Z",
+      "checked_at": "2026-10-30T08:10:58Z",
       "method": "feed",
       "articles_found": 4,
       "status": "ok",
@@ -409,7 +419,7 @@
     {
       "source_id": "nelson-elhage",
       "source_name": "Nelson Elhage",
-      "checked_at": "2026-10-30T08:07:08Z",
+      "checked_at": "2026-10-30T08:10:58Z",
       "method": "feed",
       "articles_found": 15,
       "status": "ok",
@@ -419,7 +429,7 @@
     {
       "source_id": "one-useful-thing",
       "source_name": "One Useful Thing / Ethan Mollick",
-      "checked_at": "2026-10-30T08:07:17Z",
+      "checked_at": "2026-10-30T08:11:05Z",
       "method": "feed",
       "articles_found": 14,
       "status": "ok",
@@ -429,7 +439,7 @@
     {
       "source_id": "openai-developer",
       "source_name": "OpenAI Developer Blog",
-      "checked_at": "2026-10-30T08:07:18Z",
+      "checked_at": "2026-10-30T08:11:08Z",
       "method": "feed",
       "articles_found": 18,
       "status": "ok",
@@ -439,7 +449,7 @@
     {
       "source_id": "openai-blog",
       "source_name": "OpenAI Research",
-      "checked_at": "2026-10-30T08:07:18Z",
+      "checked_at": "2026-10-30T08:11:07Z",
       "method": "sitemap",
       "articles_found": 3,
       "status": "ok",
@@ -448,7 +458,7 @@
     {
       "source_id": "optiver",
       "source_name": "Optiver",
-      "checked_at": "2026-10-30T08:07:32Z",
+      "checked_at": "2026-10-30T08:11:19Z",
       "method": "homepage-links",
       "articles_found": 4,
       "status": "ok",
@@ -457,7 +467,7 @@
     {
       "source_id": "phil-schmid",
       "source_name": "Phil Schmid",
-      "checked_at": "2026-10-30T08:07:47Z",
+      "checked_at": "2026-10-30T08:11:35Z",
       "method": "feed",
       "articles_found": 30,
       "status": "ok",
@@ -467,7 +477,7 @@
     {
       "source_id": "quantpedia",
       "source_name": "Quantpedia",
-      "checked_at": "2026-10-30T08:07:50Z",
+      "checked_at": "2026-10-30T08:11:38Z",
       "method": "feed",
       "articles_found": 7,
       "status": "ok",
@@ -477,7 +487,7 @@
     {
       "source_id": "qwen",
       "source_name": "Qwen Blog",
-      "checked_at": "2026-10-30T08:07:26Z",
+      "checked_at": "2026-10-30T08:11:13Z",
       "method": "feed",
       "articles_found": 30,
       "status": "ok",
@@ -487,7 +497,7 @@
     {
       "source_id": "robotwealth",
       "source_name": "Robot Wealth",
-      "checked_at": "2026-10-30T08:07:49Z",
+      "checked_at": "2026-10-30T08:11:38Z",
       "method": "feed",
       "articles_found": 9,
       "status": "ok",
@@ -497,7 +507,7 @@
     {
       "source_id": "sander-dieleman",
       "source_name": "Sander Dieleman",
-      "checked_at": "2026-10-30T08:07:08Z",
+      "checked_at": "2026-10-30T08:10:58Z",
       "method": "feed",
       "articles_found": 8,
       "status": "ok",
@@ -507,7 +517,7 @@
     {
       "source_id": "sebastian-raschka",
       "source_name": "Sebastian Raschka",
-      "checked_at": "2026-10-30T08:07:45Z",
+      "checked_at": "2026-10-30T08:11:34Z",
       "method": "feed",
       "articles_found": 27,
       "status": "ok",
@@ -517,7 +527,7 @@
     {
       "source_id": "simon-willison",
       "source_name": "Simon Willison",
-      "checked_at": "2026-10-30T08:07:11Z",
+      "checked_at": "2026-10-30T08:11:03Z",
       "method": "feed",
       "articles_found": 20,
       "status": "ok",
@@ -527,7 +537,7 @@
     {
       "source_id": "swyx",
       "source_name": "swyx / Latent Space",
-      "checked_at": "2026-10-30T08:07:12Z",
+      "checked_at": "2026-10-30T08:11:03Z",
       "method": "feed",
       "articles_found": 10,
       "status": "ok",
@@ -537,7 +547,7 @@
     {
       "source_id": "cognitive-revolution",
       "source_name": "The Cognitive Revolution",
-      "checked_at": "2026-10-30T08:07:14Z",
+      "checked_at": "2026-10-30T08:11:04Z",
       "method": "feed",
       "articles_found": 14,
       "status": "ok",
@@ -547,7 +557,7 @@
     {
       "source_id": "tim-dettmers",
       "source_name": "Tim Dettmers",
-      "checked_at": "2026-10-30T08:07:11Z",
+      "checked_at": "2026-10-30T08:11:02Z",
       "method": "feed",
       "articles_found": 8,
       "status": "ok",
@@ -557,7 +567,7 @@
     {
       "source_id": "transformer-circuits",
       "source_name": "Transformer Circuits",
-      "checked_at": "2026-10-30T08:07:09Z",
+      "checked_at": "2026-10-30T08:10:59Z",
       "method": "feed",
       "articles_found": 4,
       "status": "ok",
@@ -567,7 +577,7 @@
     {
       "source_id": "two-sigma",
       "source_name": "Two Sigma",
-      "checked_at": "2026-10-30T08:07:31Z",
+      "checked_at": "2026-10-30T08:11:19Z",
       "method": "sitemap",
       "articles_found": 1,
       "status": "ok",
@@ -576,25 +586,7 @@
     {
       "source_id": "ai2",
       "source_name": "AI2 / Allen Institute for AI",
-      "checked_at": "2026-10-30T08:07:18Z",
-      "method": "none",
-      "articles_found": 0,
-      "status": "robots-disallowed",
-      "error": null
-    },
-    {
-      "source_id": "alignment-forum",
-      "source_name": "Alignment Forum",
-      "checked_at": "2026-10-30T08:07:13Z",
-      "method": "none",
-      "articles_found": 0,
-      "status": "robots-disallowed",
-      "error": null
-    },
-    {
-      "source_id": "alphaarchitect",
-      "source_name": "Alpha Architect",
-      "checked_at": "2026-10-30T08:07:52Z",
+      "checked_at": "2026-10-30T08:11:07Z",
       "method": "none",
       "articles_found": 0,
       "status": "robots-disallowed",
@@ -603,7 +595,7 @@
     {
       "source_id": "citadel-securities",
       "source_name": "Citadel Securities",
-      "checked_at": "2026-10-30T08:07:30Z",
+      "checked_at": "2026-10-30T08:11:18Z",
       "method": "none",
       "articles_found": 0,
       "status": "robots-disallowed",
@@ -612,7 +604,7 @@
     {
       "source_id": "flirting-with-models",
       "source_name": "Flirting With Models",
-      "checked_at": "2026-10-30T08:07:44Z",
+      "checked_at": "2026-10-30T08:11:32Z",
       "method": "none",
       "articles_found": 0,
       "status": "error",
@@ -621,7 +613,7 @@
     {
       "source_id": "meta-ai",
       "source_name": "Meta AI Blog",
-      "checked_at": "2026-10-30T08:07:23Z",
+      "checked_at": "2026-10-30T08:11:11Z",
       "method": "none",
       "articles_found": 0,
       "status": "directory-only",
@@ -630,7 +622,7 @@
     {
       "source_id": "mila",
       "source_name": "Mila Blog",
-      "checked_at": "2026-10-30T08:07:28Z",
+      "checked_at": "2026-10-30T08:11:16Z",
       "method": "none",
       "articles_found": 0,
       "status": "directory-only",
@@ -639,7 +631,7 @@
     {
       "source_id": "sig",
       "source_name": "Susquehanna International Group (SIG)",
-      "checked_at": "2026-10-30T08:07:32Z",
+      "checked_at": "2026-10-30T08:11:22Z",
       "method": "none",
       "articles_found": 0,
       "status": "error",
@@ -648,7 +640,7 @@
     {
       "source_id": "alpha-exchange",
       "source_name": "The Alpha Exchange",
-      "checked_at": "2026-10-30T08:07:40Z",
+      "checked_at": "2026-10-30T08:11:32Z",
       "method": "none",
       "articles_found": 0,
       "status": "directory-only",
@@ -657,7 +649,7 @@
     {
       "source_id": "top-traders-unplugged",
       "source_name": "Top Traders Unplugged",
-      "checked_at": "2026-10-30T08:07:39Z",
+      "checked_at": "2026-10-30T08:11:28Z",
       "method": "none",
       "articles_found": 0,
       "status": "error",
@@ -666,7 +658,7 @@
     {
       "source_id": "xtx-markets",
       "source_name": "XTX Markets",
-      "checked_at": "2026-10-30T08:07:30Z",
+      "checked_at": "2026-10-30T08:11:18Z",
       "method": "none",
       "articles_found": 0,
       "status": "directory-only",
