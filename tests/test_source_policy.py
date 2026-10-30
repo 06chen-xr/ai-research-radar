@@ -85,6 +85,24 @@ class SourcePolicyTests(unittest.TestCase):
         self.assertTrue(is_relevant_article(source, "The Building Blocks of Interpretability"))
         self.assertFalse(is_relevant_article(source, "My favourite recipes for autumn"))
 
+    def test_researcher_technical_essay_without_ai_keyword_is_relevant(self):
+        source = {"id": "nelson-elhage", "language": "en", "name": "Nelson Elhage", "category": "ai-researcher-blog", "source_type": "personal-blog"}
+        self.assertTrue(is_relevant_article(source, "From error-handling to structured concurrency"))
+        self.assertTrue(is_relevant_article(source, "Notes on GPU profiling and kernel latency"))
+        self.assertFalse(is_relevant_article(source, "A short update about my holiday"))
+
+    def test_link_blog_quote_posts_are_filtered(self):
+        source = {"id": "simon-willison", "language": "en", "name": "Simon Willison", "category": "ai-researcher-blog", "source_type": "personal-blog"}
+        self.assertFalse(is_relevant_article(source, "Quoting Dario Amodei on interpretability"))
+        self.assertTrue(is_relevant_article(source, "An LLM tool for coding agents"))
+
+    def test_consumer_explainer_and_nav_pages_are_filtered(self):
+        source = {"id": "meta-ai", "language": "en", "name": "Meta AI", "category": "ai-lab-research", "source_type": "official-blog"}
+        self.assertFalse(is_relevant_article(source, "What is Agentic AI? Definition and examples"))
+        self.assertFalse(is_relevant_article(source, "Generate images with AI for free with Meta AI"))
+        self.assertFalse(is_relevant_article(source, "Responsible AI | Mila"))
+        self.assertTrue(is_relevant_article(source, "Scaling laws for multimodal models"))
+
     def test_quant_interview_feed_stays_relevant(self):
         source = {"id": "alpha-exchange", "language": "en", "name": "The Alpha Exchange", "category": "quant-research", "source_type": "podcast"}
         self.assertTrue(is_relevant_article(source, "Market microstructure with a systematic fund manager"))

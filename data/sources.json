@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T10:01:17Z",
+  "updated_at": "2026-10-30T08:03:59Z",
   "source_index": "https://github.com/joeseesun/ai-blog-res/blob/main/AI%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%BA%90-%E5%AE%8C%E6%95%B4%E7%B4%A2%E5%BC%95.md",
   "note": "Strict curated allowlist. Upstream personal-blog, official-blog, academic, and AI-safety candidates remain pending until manually approved; generic tool/course sections are not ingested.",
   "sources": [
@@ -2478,6 +2478,186 @@
       "source_quality": "watchlist",
       "feed_url": null,
       "source_index": "joeseesun/ai-blog-res"
+    },
+    {
+      "id": "sebastian-raschka",
+      "name": "Sebastian Raschka",
+      "url": "https://sebastianraschka.com",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "llms",
+        "training",
+        "reasoning-models"
+      ],
+      "language": "en",
+      "description": "Hands-on deep technical writing on LLM training, fine-tuning, and reasoning models.",
+      "tier": null,
+      "enabled": true,
+      "review_status": "approved",
+      "source_quality": "core",
+      "feed_url": "https://sebastianraschka.com/rss_feed.xml",
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "phil-schmid",
+      "name": "Phil Schmid",
+      "url": "https://www.philschmid.de",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "llms",
+        "agents",
+        "inference"
+      ],
+      "language": "en",
+      "description": "Practical LLM engineering, agents, and inference tutorials.",
+      "tier": null,
+      "enabled": true,
+      "review_status": "approved",
+      "source_quality": "core",
+      "feed_url": "https://www.philschmid.de/rss",
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "alex-irpan",
+      "name": "Alex Irpan",
+      "url": "https://www.alexirpan.com",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "ai-safety",
+        "robotics",
+        "research-practice"
+      ],
+      "language": "en",
+      "description": "Essays on AI capabilities, safety, and research practice.",
+      "tier": null,
+      "enabled": true,
+      "review_status": "approved",
+      "source_quality": "selected",
+      "feed_url": "https://www.alexirpan.com/feed.xml",
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "fastai",
+      "name": "fast.ai",
+      "url": "https://www.fast.ai",
+      "category": "ai-researcher-blog",
+      "source_type": "personal-blog",
+      "topics": [
+        "deep-learning",
+        "education",
+        "ai-policy"
+      ],
+      "language": "en",
+      "description": "Practical deep learning teaching and commentary.",
+      "tier": null,
+      "enabled": true,
+      "review_status": "approved",
+      "source_quality": "selected",
+      "feed_url": "https://www.fast.ai/index.xml",
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "apple-ml",
+      "name": "Apple Machine Learning Research",
+      "url": "https://machinelearning.apple.com",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "research",
+        "multimodal",
+        "on-device"
+      ],
+      "language": "en",
+      "description": "Research posts from Apple's machine learning teams.",
+      "tier": null,
+      "enabled": true,
+      "review_status": "approved",
+      "source_quality": "core",
+      "feed_url": "https://machinelearning.apple.com/rss.xml",
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "msr",
+      "name": "Microsoft Research Blog",
+      "url": "https://www.microsoft.com/en-us/research",
+      "category": "ai-lab-research",
+      "source_type": "research-blog",
+      "topics": [
+        "research",
+        "agents",
+        "systems"
+      ],
+      "language": "en",
+      "description": "Research announcements across Microsoft Research labs.",
+      "tier": null,
+      "enabled": true,
+      "review_status": "approved",
+      "source_quality": "selected",
+      "feed_url": "https://www.microsoft.com/en-us/research/feed/",
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "arcprize",
+      "name": "ARC Prize",
+      "url": "https://arcprize.org",
+      "category": "ai-lab-research",
+      "source_type": "research-publication",
+      "topics": [
+        "benchmarks",
+        "reasoning",
+        "agi"
+      ],
+      "language": "en",
+      "description": "ARC-AGI benchmark results and analysis.",
+      "tier": null,
+      "enabled": true,
+      "review_status": "approved",
+      "source_quality": "core",
+      "feed_url": "https://arcprize.org/feed.xml",
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "robotwealth",
+      "name": "Robot Wealth",
+      "url": "https://robotwealth.com",
+      "category": "quant-research",
+      "source_type": "personal-blog",
+      "topics": [
+        "systematic-trading",
+        "stat-arb",
+        "backtesting"
+      ],
+      "language": "en",
+      "description": "Practitioner writing on systematic trading and research process.",
+      "tier": null,
+      "enabled": true,
+      "review_status": "approved",
+      "source_quality": "selected",
+      "feed_url": "https://robotwealth.com/feed/",
+      "source_index": "curated-ai-sources"
+    },
+    {
+      "id": "quantpedia",
+      "name": "Quantpedia",
+      "url": "https://quantpedia.com",
+      "category": "quant-research",
+      "source_type": "research-blog",
+      "topics": [
+        "factor-investing",
+        "strategies",
+        "research"
+      ],
+      "language": "en",
+      "description": "Quantitative strategy research and screening.",
+      "tier": null,
+      "enabled": true,
+      "review_status": "approved",
+      "source_quality": "core",
+      "feed_url": "https://quantpedia.com/feed/",
+      "source_index": "curated-ai-sources"
     }
   ]
 }

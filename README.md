@@ -73,13 +73,15 @@ The workflow uses the repository's built-in `GITHUB_TOKEN` with `contents: write
 
 ## Source-quality policy
 
-The default feed is intentionally small. The active allowlist is defined in `scripts/source_policy.py`; the upstream index is only a candidate-discovery mechanism and cannot auto-approve sources. The current registry has 121 source records, of which 59 are active by default; inactive English candidates remain available in the directory toggle.
+The default feed is intentionally small. The active allowlist is defined in `scripts/source_policy.py`; the upstream index is only a candidate-discovery mechanism and cannot auto-approve sources. The current registry has 132 source records, of which 68 are active by default; inactive English candidates remain available in the directory toggle.
 
 - `core`: a high-priority primary source for original AI thinking, research, strong technical essays, or substantive quant research.
 - `selected`: a reputable source or interview feed that is useful but broader or less consistently high-signal.
 - `watchlist`: unapproved, paused, or non-curated source; it does not feed the main article list.
 
-These labels are editorial monitoring priorities, not objective measures of correctness. The collector uses deterministic title/excerpt rules: lab and researcher sources must show AI-topic relevance; quant-research sources must show quant or AI/engineering relevance; podcast/community feeds must show AI or quant relevance. Generic company announcements are filtered unless the title/excerpt contains technical substance. English filtering rejects titles containing non-Latin scripts. This is intentionally conservative and can miss good articles whose titles and publisher excerpts are vague.
+These labels are editorial monitoring priorities, not objective measures of correctness. The collector uses deterministic title/excerpt rules: lab and researcher sources must show AI-topic relevance; quant-research sources must show quant or AI/engineering relevance; podcast/community feeds must show AI or quant relevance. Curated researcher blogs also accept adjacent technical essays (systems, compilers, GPU/hardware, maths) that never mention AI. Generic company announcements are filtered unless the title/excerpt contains technical substance. English filtering rejects titles containing non-Latin scripts. This is intentionally conservative and can miss good articles whose titles and publisher excerpts are vague.
+
+Retention is per source, not global: the index keeps every article from the last `KEEP_DAYS` (365) days plus each source's newest `KEEP_PER_SOURCE` (8) posts. Researcher blogs that publish only a few times a year therefore keep their high-value back catalogue instead of disappearing from the feed.
 
 ## Add or edit sources
 

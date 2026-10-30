@@ -113,6 +113,16 @@ rows = [
 ("chat-with-traders", "Chat With Traders", "https://chatwithtraders.com", "interviews", "podcast", ["trader-interviews", "trading-systems", "risk"], "en", "Interviews with traders and systematic market participants.", "", ""),
 ("alpha-exchange", "The Alpha Exchange", "https://www.alphaexchange.com", "interviews", "podcast", ["quant-research", "market-structure", "researcher-interviews"], "en", "Conversations with quantitative and financial researchers.", "", ""),
 ("flirting-with-models", "Flirting With Models", "https://flirtingwithmodels.com", "interviews", "podcast", ["quant-research", "factor-investing", "researcher-interviews"], "en", "Quantitative finance interviews and research discussions.", "", ""),
+# Researcher blogs and research institutions added after the quality review
+("sebastian-raschka", "Sebastian Raschka", "https://sebastianraschka.com", "ai-researcher", "personal-blog", ["llms", "training", "reasoning-models"], "en", "Hands-on deep technical writing on LLM training, fine-tuning, and reasoning models.", "", "https://sebastianraschka.com/rss_feed.xml"),
+("phil-schmid", "Phil Schmid", "https://www.philschmid.de", "ai-researcher", "personal-blog", ["llms", "agents", "inference"], "en", "Practical LLM engineering, agents, and inference tutorials.", "", "https://www.philschmid.de/rss"),
+("alex-irpan", "Alex Irpan", "https://www.alexirpan.com", "ai-researcher", "personal-blog", ["ai-safety", "robotics", "research-practice"], "en", "Essays on AI capabilities, safety, and research practice.", "", "https://www.alexirpan.com/feed.xml"),
+("fastai", "fast.ai", "https://www.fast.ai", "ai-researcher", "personal-blog", ["deep-learning", "education", "ai-policy"], "en", "Practical deep learning teaching and commentary.", "", "https://www.fast.ai/index.xml"),
+("apple-ml", "Apple Machine Learning Research", "https://machinelearning.apple.com", "ai-academic", "research-blog", ["research", "multimodal", "on-device"], "en", "Research posts from Apple's machine learning teams.", "", "https://machinelearning.apple.com/rss.xml"),
+("msr", "Microsoft Research Blog", "https://www.microsoft.com/en-us/research", "ai-academic", "research-blog", ["research", "agents", "systems"], "en", "Research announcements across Microsoft Research labs.", "", "https://www.microsoft.com/en-us/research/feed/"),
+("arcprize", "ARC Prize", "https://arcprize.org", "ai-academic", "research-publication", ["benchmarks", "reasoning", "agi"], "en", "ARC-AGI benchmark results and analysis.", "", "https://arcprize.org/feed.xml"),
+("robotwealth", "Robot Wealth", "https://robotwealth.com", "quant-firm", "personal-blog", ["systematic-trading", "stat-arb", "backtesting"], "en", "Practitioner writing on systematic trading and research process.", "", "https://robotwealth.com/feed/"),
+("quantpedia", "Quantpedia", "https://quantpedia.com", "quant-firm", "research-blog", ["factor-investing", "strategies", "research"], "en", "Quantitative strategy research and screening.", "", "https://quantpedia.com/feed/"),
 ]
 
 index_source_ids = {

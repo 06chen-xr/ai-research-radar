@@ -27,7 +27,9 @@ import requests
 from bs4 import BeautifulSoup
 
 from source_policy import (
+    CAPPED_SOURCE_IDS,
     ENGLISH_LOCALE_RE,
+    MAX_ARTICLES_PER_CAPPED_SOURCE,
     apply_source_policy,
     article_title_key,
     article_url_state,
@@ -48,6 +50,9 @@ MAX_FEED_ENTRIES = 30
 MAX_SITEMAP_ARTICLES = 4
 MAX_LINK_FALLBACK = 4
 KEEP_DAYS = 365
+# Low-frequency researcher blogs keep their latest posts even when the newest
+# entry is older than KEEP_DAYS.
+KEEP_PER_SOURCE = 8
 
 # Metadata that identifies a real article page rather than a section landing page.
 ARTICLE_OG_TYPES = {"article", "blog", "news"}
@@ -562,8 +567,31 @@ def main() -> int:
         if current is None or record_priority(item) < record_priority(current):
             deduped[key] = item
     cutoff = (datetime.now(timezone.utc).date() - timedelta(days=KEEP_DAYS)).isoformat()
-    articles = [item for item in deduped.values() if (item.get("published_at") or item.get("discovered_at") or "0000-00-00") >= cutoff]
+    articles = list(deduped.values())
     articles.sort(key=lambda x: (x.get("published_at") or x.get("discovered_at") or "0000-00-00", x.get("discovered_at") or ""), reverse=True)
+    # Retain everything published within KEEP_DAYS, plus each source's newest
+    # KEEP_PER_SOURCE posts. Researcher blogs that publish a few times a year
+    # would otherwise be erased entirely by the recency window.
+    retained, per_source = [], {}
+    for item in articles:
+        sid = item.get("source_id")
+        published = item.get("published_at") or item.get("discovered_at") or "0000-00-00"
+        per_source[sid] = per_source.get(sid, 0) + 1
+        if published >= cutoff or per_source[sid] <= KEEP_PER_SOURCE:
+            retained.append(item)
+    articles = retained
+    # Official lab blogs publish several posts a day; keep only the newest few
+    # per vendor so one source cannot fill the daily radar.
+    kept, capped_counts = [], {}
+    for item in articles:
+        sid = item.get("source_id")
+        if sid in CAPPED_SOURCE_IDS:
+            used = capped_counts.get(sid, 0)
+            if used >= MAX_ARTICLES_PER_CAPPED_SOURCE:
+                continue
+            capped_counts[sid] = used + 1
+        kept.append(item)
+    articles = kept
     statuses.sort(key=lambda x: (x.get("status") != "ok", x.get("source_name", "").lower()))
     ok_count = sum(1 for s in statuses if s.get("status") == "ok")
     if args.dry_run:

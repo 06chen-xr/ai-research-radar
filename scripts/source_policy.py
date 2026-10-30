@@ -17,7 +17,8 @@ APPROVED_SOURCE_IDS = {
     # Frontier-lab researcher blogs and publications
     "chris-olah", "sander-dieleman", "greg-brockman", "inference-vc",
     "transformer-circuits", "beren-millidge", "ben-recht", "jay-alammar",
-    "alignment-forum",
+    "alignment-forum", "sebastian-raschka", "phil-schmid", "alex-irpan",
+    "fastai", "arcprize",
     # Long-form AI interviews and engineering conversations
     "dwarkesh", "latent-space", "cognitive-revolution",
     # Frontier labs: research and engineering, not generic corporate news
@@ -25,9 +26,12 @@ APPROVED_SOURCE_IDS = {
     "deepmind-blog", "google-research", "meta-ai", "huggingface", "qwen",
     # Research institutes and independent evaluation groups
     "bair", "cmu-ml", "mila", "epoch-ai", "metr", "apollo-research", "ai2",
+    # Research institutions and quantitative research outlets outside the AI labs
+    "apple-ml", "msr",
     # Quant firm sources with actual insight/research/technology sections
     "jane-street", "xtx-markets", "citadel-securities", "two-sigma",
     "optiver", "imc", "sig", "drw", "man-group", "aqr",
+    "robotwealth", "quantpedia",
     # Focused quantitative interviews
     "alpha-exchange", "flirting-with-models", "top-traders-unplugged",
 }
@@ -37,6 +41,7 @@ CORE_SOURCE_IDS = {
     "lilian-weng", "andrej-karpathy", "francois-chollet", "simon-willison",
     "gwern", "import-ai", "interconnects", "ai-snake-oil", "one-useful-thing",
     "chris-olah", "sander-dieleman", "transformer-circuits", "neel-nanda",
+    "sebastian-raschka", "phil-schmid", "apple-ml", "arcprize", "quantpedia",
     "epoch-ai", "metr", "apollo-research", "openai-blog", "anthropic-blog",
     "anthropic-engineering", "deepmind-blog", "jane-street", "xtx-markets",
     "two-sigma", "man-group", "aqr", "dwarkesh", "latent-space",
@@ -121,6 +126,21 @@ QUANT_TOPIC_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Curated researcher blogs also write substantive technical essays that never
+# mention AI explicitly (systems, compilers, hardware, maths). These are still
+# worth indexing because the author is a hand-picked researcher.
+RESEARCHER_TECH_TOPIC_RE = re.compile(
+    r"\b(?:systems? programming|distributed systems?|concurrency|concurrent|"
+    r"compilers?|type systems?|garbage collection|interpreters?|runtime|"
+    r"gpus?|cuda|kernels?|memory allocator|latency|throughput|performance engineering|"
+    r"operating systems?|databases?|storage|file systems?|networking|tcp|http|"
+    r"debugging|profil(?:er|ing)|benchmarks?|optimization|numerical|"
+    r"linear algebra|probability|statistics|mathematics|"
+    r"hardware|silicon|chips?|semiconductors?|economics|mechanism design|"
+    r"forecasting|simulation|computational biology|physics|robotics)\b",
+    re.IGNORECASE,
+)
+
 # Company feeds often mix research with recruiting, partnerships, events and PR.
 LOW_SIGNAL_ANNOUNCEMENT_RE = re.compile(
     r"^(?:introducing|announcing|meet |now available|available now|launching|"
@@ -131,12 +151,38 @@ LOW_SIGNAL_ANNOUNCEMENT_RE = re.compile(
     r"(?:press|media) release\b)",
     re.IGNORECASE,
 )
+# Announcement phrasing is fine when the subject is actual research output.
+TECHNICAL_SUBJECT_RE = re.compile(
+    r"\b(?:paper|preprint|research|benchmark|benchmarks|models?|dataset|datasets|"
+    r"evaluation|evals?|reasoning|interpretability|training|inference|architecture|"
+    r"algorithm|technique|method|framework|open[- ]source|weights|agents?)\b",
+    re.IGNORECASE,
+)
 # Award, ranking and league-table announcements are PR rather than research.
 LOW_SIGNAL_PR_RE = re.compile(
     r"\b(?:tops?|topped|wins?|won|ranked|award(?:ed|s)?|celebrates?|honou?r(?:ed|s)?)\b"
     r".{0,40}\b(?:ranking|rankings|award|awards|index|league table|poll|survey|list)\b",
     re.IGNORECASE,
 )
+# Link-blog quote posts carry no article body worth indexing.
+LINK_QUOTE_RE = re.compile(r"^(?:quoting|quotes?|excerpt(?:ed)? from|from the archives)\b", re.IGNORECASE)
+# Consumer explainers and product-marketing posts aimed at non-technical readers.
+EXPLAINER_MARKETING_RE = re.compile(
+    r"^(?:what (?:is|are) .{0,60}(?:definition|explained)|"
+    r"[^:]{0,60}explained:\s*what .{0,40}how|"
+    r"generate .{0,50}for free|for free with\b)",
+    re.IGNORECASE,
+)
+# "<short topic> | <Brand>" is usually a section landing page, not an article.
+NAV_TITLE_RE = re.compile(r"^(?P<body>[^|]{2,24})\|\s*[A-Z][A-Za-z&.\- ]{2,20}$")
+
+# Official lab blogs publish many announcements per day; cap them so a single
+# vendor cannot dominate the daily list.
+CAPPED_SOURCE_IDS = {
+    "openai-blog", "openai-developer", "meta-ai", "huggingface", "mila",
+    "google-research", "deepmind-blog", "anthropic-blog", "qwen",
+}
+MAX_ARTICLES_PER_CAPPED_SOURCE = 5
 
 # Navigation, directory and profile paths are never article pages, even when a
 # sitemap lists them with a fresh lastmod date.
@@ -196,16 +242,6 @@ def article_title_key(title: str | None) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
-TECHNICAL_ANNOUNCEMENT_RE = re.compile(
-    r"\b(?:research|technical report|benchmark|evaluation|architecture|training|inference|"
-    r"reasoning|safety|system card|model card|engineering|agent|coding|performance|"
-    r"capabilities|open weights|weights|dataset|paper|researchers|scientific|"
-    r"interpretability|alignment|red[- ]team|reproducib|latency|compiler|kernel|market structure|"
-    r"market making|quant research|execution|trading systems|market data|liquidity|systematic|portfolio)\b",
-    re.IGNORECASE,
-)
-
-
 def has_non_latin_script(text: str | None) -> bool:
     return bool(NON_LATIN_SCRIPT_RE.search(text or ""))
 
@@ -232,6 +268,11 @@ def is_relevant_article(source: dict, title: str | None, excerpt: str | None = "
     clean_title = (title or "").strip()
     if not is_english_title(clean_title) or not is_english_source(source):
         return False
+    if LINK_QUOTE_RE.match(clean_title) or EXPLAINER_MARKETING_RE.search(clean_title):
+        return False
+    nav = NAV_TITLE_RE.match(clean_title)
+    if nav and not re.search(r"\d", nav.group("body")):
+        return False
     text = f"{clean_title} {excerpt or ''}"[:5000]
     category = normalize_category(source.get("category"), source.get("id", ""))
     if category == QUANT_CATEGORY:
@@ -244,13 +285,21 @@ def is_relevant_article(source: dict, title: str | None, excerpt: str | None = "
             return False
     else:
         if not AI_TOPIC_RE.search(text):
-            return False
+            # Researcher blogs are curated by hand, so adjacent technical essays
+            # count even without an explicit AI keyword.
+            if not (
+                category == RESEARCHER_CATEGORY
+                and source.get("source_type") in {"personal-blog", "personal-site", "newsletter", "research-publication"}
+                and RESEARCHER_TECH_TOPIC_RE.search(text)
+            ):
+                return False
 
-    # Avoid generic company PR unless the title/excerpt contains technical substance.
+    # Avoid generic company PR. Personal blogs and podcasts are exempt because
+    # their titles rarely follow corporate announcement phrasing.
     if source.get("source_type") not in {"personal-blog", "personal-site", "podcast", "community"}:
-        if (LOW_SIGNAL_ANNOUNCEMENT_RE.search(clean_title) or LOW_SIGNAL_PR_RE.search(clean_title)) \
-                and not TECHNICAL_ANNOUNCEMENT_RE.search(text):
-            return False
+        if LOW_SIGNAL_ANNOUNCEMENT_RE.search(clean_title) or LOW_SIGNAL_PR_RE.search(clean_title):
+            if not TECHNICAL_SUBJECT_RE.search(clean_title):
+                return False
     return True
 
 
